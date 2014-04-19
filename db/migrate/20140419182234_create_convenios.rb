@@ -4,6 +4,7 @@ class CreateConvenios < ActiveRecord::Migration
       t.string :numeroconvenio
       t.string :uf
       t.string :codigosiafi
+      t.string :nomemunicipio
       t.string :situacaoconvenio
       t.string :numerooriginal
       t.string :objetoconvenio
@@ -13,7 +14,7 @@ class CreateConvenios < ActiveRecord::Migration
       t.string :nomeconcedente
       t.string :codigoconvenente
       t.string :nomeconvenente
-      t.string :tipoentenconvenente
+      t.string :tipoenteconvenente
       t.string :valorconvenio
       t.string :valorliberado
       t.string :datapublicacao
