@@ -1,0 +1,67 @@
+<h1>Listing convenios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Numeroconvenio</th>
+      <th>Uf</th>
+      <th>Codigosiafi</th>
+      <th>Nomemunicipio</th>
+      <th>Situacaoconvenio</th>
+      <th>Numerooriginal</th>
+      <th>Objetoconvenio</th>
+      <th>Codigoorgaosuperior</th>
+      <th>Nomeorgaosuperior</th>
+      <th>Codigoconcedente</th>
+      <th>Nomeconcedente</th>
+      <th>Codigoconvenente</th>
+      <th>Nomeconvenente</th>
+      <th>Tipoenteconvenente</th>
+      <th>Valorconvenio</th>
+      <th>Valorliberado</th>
+      <th>Datapublicacao</th>
+      <th>Datainiciovigencia</th>
+      <th>Datafimvigencia</th>
+      <th>Valorcontrapartida</th>
+      <th>Dataultimaliberacao</th>
+      <th>Valorultimaliberacao</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @convenios.each do |convenio| %>
+      <tr>
+        <td><%= convenio.numeroconvenio %></td>
+        <td><%= convenio.uf %></td>
+        <td><%= convenio.codigosiafi %></td>
+        <td><%= convenio.nomemunicipio %></td>
+        <td><%= convenio.situacaoconvenio %></td>
+        <td><%= convenio.numerooriginal %></td>
+        <td><%= convenio.objetoconvenio %></td>
+        <td><%= convenio.codigoorgaosuperior %></td>
+        <td><%= convenio.nomeorgaosuperior %></td>
+        <td><%= convenio.codigoconcedente %></td>
+        <td><%= convenio.nomeconcedente %></td>
+        <td><%= convenio.codigoconvenente %></td>
+        <td><%= convenio.nomeconvenente %></td>
+        <td><%= convenio.tipoenteconvenente %></td>
+        <td><%= convenio.valorconvenio %></td>
+        <td><%= convenio.valorliberado %></td>
+        <td><%= convenio.datapublicacao %></td>
+        <td><%= convenio.datainiciovigencia %></td>
+        <td><%= convenio.datafimvigencia %></td>
+        <td><%= convenio.valorcontrapartida %></td>
+        <td><%= convenio.dataultimaliberacao %></td>
+        <td><%= convenio.valorultimaliberacao %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= form_tag import_convenios_path, multipart: true do%>
+<%= file_field_tag :file%>
+<%= submit_tag "Import CSV"%>
+<%end%>

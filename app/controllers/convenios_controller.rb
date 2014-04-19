@@ -1,14 +1,32 @@
 class ConveniosController < ApplicationController
+before_action :set_convenio, only: [:show, :edit, :update, :destroy]
 
-private
+
+
+def index
+	@convenios = Convenio.all
+end
+
+def new
+	@convenios = Convenio.new
+end 
+
 
 def set_convenio
-@convenio = Convenio.find(params[:id])
+@convenios = Convenio.find(params[:id])
 end
  
 
 def convenio_params
 params.require(:convenio).permit(:numeroconvenio, :uf, :codigosiafi, :nomemunicipio, :situacaoconvenio, :numerooriginal, :objetoconvenio, :codigoorgaosuperior, :nomeorgaosuperior, :codigoconcedente, :nomeconcedente, :codigoconvenente, :nomeconvenente, :tipoenteconvenente, :valorconvenio, :valorliberado, :datapublicacao, :datainiciovigencia, :datafimvigencia, :valorcontrapartida, :dataultimaliberacao, :valorultimaliberacao)
+end
+
+
+
+def import 
+	Convenio.import(params[:file])
+	redirect_to convenios_url, notice:  "Convenios importados com sucesso"
+
 end
  
 end
