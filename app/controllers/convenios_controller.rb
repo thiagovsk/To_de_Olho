@@ -1,0 +1,2 @@
+class ConveniosController < ApplicationController
+end
