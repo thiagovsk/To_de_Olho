@@ -3,7 +3,12 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'coveralls'
 Coveralls.wear!
+
+require 'simplecov'
+SimpleCov.start
 class ActiveSupport::TestCase
+
+
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   #
   # Note: You'll currently still have to declare fixtures explicitly in integration tests

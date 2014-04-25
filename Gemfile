@@ -28,6 +28,13 @@ gem 'spring',        group: :development
 
 gem 'coveralls', require: false
 
+gem 'simplecov', require: false , group: :test
+
+gem 'rails_best_practices'
+
+group :development, :test do
+  gem 'rspec-rails'
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
