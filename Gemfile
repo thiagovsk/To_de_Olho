@@ -32,6 +32,8 @@ gem 'simplecov', require: false , group: :test
 
 gem 'rails_best_practices'
 
+gem 'simple_form'
+
 group :development, :test do
   gem 'rspec-rails'
 end
