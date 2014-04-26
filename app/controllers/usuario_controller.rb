@@ -3,7 +3,7 @@ class UsuarioController < ApplicationController
 before_action :set_usuario , only:[:new , :create , :destroy ]
 
 	def index 
-		@usuario = Usuario.all
+		@usuarios = Usuario.all
 	end
 
 	def new
