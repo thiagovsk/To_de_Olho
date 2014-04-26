@@ -1,0 +1,8 @@
+<%= simple_form_for @usuarios do |f| %>
+  <%= f.input :nome, input_html: { class: 'special' } %>
+  <%= f.input :cpf, input_html: { maxlength: 11 } %>
+  <%= f.input :email %>
+  <%= f.input :login, input_html: { maxlength: 20 } %>
+  <%= f.input :senha, input_html: { maxlength: 12 } %>
+  <%= f.button :submit %>
+<% end %>
