@@ -32,6 +32,12 @@ gem 'simplecov', require: false , group: :test
 
 gem 'rails_best_practices'
 
+gem 'omniauth' #Gem para fazer login
+
+gem 'omniauth-facebook', '1.4.0' #Gem para fazer login
+
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git' #Interface - Twitter Bootstrap
+
 group :development, :test do
   gem 'rspec-rails'
 end
