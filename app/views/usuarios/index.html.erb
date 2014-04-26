@@ -6,6 +6,8 @@
 			<td>Nome</td>
 			<td>Cpf</td>
 			<td>Email</td>
+			<td>Editar usuário</td>
+			<td>Deletar usuário</td>
 		</tr>
 	</thead>
 
@@ -16,10 +18,14 @@
 				<td> <%= usuarios.nome %>  </td>
 				<td> <%= usuarios.cpf %>  </td>
 				<td> <%= usuarios.email %>  </td>
-				
+				<td><%= link_to 'Editar usuário', edit_usuario_path(usuarios) %></td>
+				<td><%= link_to 'Excluir' , usuarios , method: :delete , data: {confirme: 'Você tem certeza'}%> </td>
 			</tr>
 
 
 		<% end %>
 	</tbody>
 </table>
+
+<%= link_to 'Cadastrar usuário', new_usuario_path %>
+

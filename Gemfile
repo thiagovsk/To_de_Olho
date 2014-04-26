@@ -34,6 +34,8 @@ gem 'rails_best_practices'
 
 gem 'simple_form'
 
+gem 'twitter-bootstrap-rails'
+
 group :development, :test do
   gem 'rspec-rails'
 end

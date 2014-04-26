@@ -14,7 +14,7 @@ before_action :set_usuario , only:[:show, :edit, :destroy, :update]
 		@usuarios = Usuario.new(usuario_params)
 		respond_to do |format|
   		if @usuarios.save
-  			format.html { redirect_to new_usuario_path, notice: 'Usuário Cadastrado com sucesso' }
+  			format.html { redirect_to usuarios_path, notice: 'Usuário Cadastrado com sucesso' }
  		else
   			format.html { render :new }
   		 end
@@ -26,15 +26,25 @@ before_action :set_usuario , only:[:show, :edit, :destroy, :update]
 	end
 
 	def edit
+		#@usuarios = Usuario.find(params[:id])
 		
 	end
 
 	def destroy
 		@usuarios.destroy
-	end
+		respond_to do |format|
+  		format.html { redirect_to usuarios_path, notice: 'Deletado com sucesso' }
+ 		end
+ 	end	
 
 	def update
-		
+		respond_to do |format|
+  		if @usuarios.update(usuario_params)
+  			format.html { redirect_to usuarios_path, notice: 'Alteração realizada com sucesso' }
+ 		else
+  			format.html { render :new }
+  		 end
+  		end
 	end
 
 	private 
