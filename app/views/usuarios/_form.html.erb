@@ -1,17 +1,28 @@
-<%= simple_form_for @usuarios do |f| %>
-  <%= f.input :nome, input_html: { class: 'special' } %>
-  <%= f.input :cpf, input_html: { maxlength: 11 } %>
-  <%= f.input :email %>
-  <%= f.input :login, input_html: { maxlength: 20 } %>
-  <%= f.input :senha, input_html: { maxlength: 12 } %>
- 
- 
-  <%=link_to raw("<i class=\"fa fa-plus-circle\"> Voltar "),
-                   usuarios_path,
-                   class: "btn btn-warning  btn-small"%>
-                   
-  <%= button_tag :class => 'btn-success btn' , :id => 'criar-usuario' do %>
-        <i class='fa fa-plus-circle'></i> Cadastrar Usuário
-    <% end %>
- 
-<% end %>
+<div class = "container">
+  <h1 class = "text-center">Cadastro de Usuários</h1>
+
+    <form class="form-horizontal" role="form">
+      <div class="form-group">
+       
+        <%= simple_form_for @usuarios do |f| %>
+        <%= f.input :nome, input_html: { class: 'special' }%>
+        <%= f.input :cpf, input_html: { maxlength: 11 } %>
+        <%= f.input :email %>
+        <%= f.input :login, input_html: { maxlength: 20 } %>
+        <%= f.input :senha, input_html: { maxlength: 12 } %>
+       
+       
+        <%=link_to raw("<i class=\"fa fa-plus-circle\"> Voltar "),
+                         usuarios_path,
+                         class: "btn btn-warning  btn-small"%>
+                         
+          <%= button_tag :class => 'btn-success btn' , :id => 'criar-usuario' do %>
+              <i class='fa fa-plus-circle'></i> Cadastrar Usuário
+          <% end %>
+       
+        <% end %>
+      </div> 
+
+    </form>
+
+</div>

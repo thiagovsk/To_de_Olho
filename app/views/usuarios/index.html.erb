@@ -1,6 +1,7 @@
-<h1>Lista de Usuários</h1>
- 
-<table >
+
+<div class	="container">
+<h1 class = "text-center">Lista de Usuários</h1>
+<table class = "table table-bordered">
 	<thead> 
 		<tr>
 			<td>Nome</td>
@@ -20,13 +21,13 @@
 				<td> <%= usuarios.email %>  </td>
 
 				<td> 
-					<%=link_to raw("<i class=\"icon-white icon-edit \"> Editar Usuário </i>"),                         edit_usuario_path(usuarios) , class: "btn-small  btn-info"%>
+					<%=link_to raw("<i class=\"icon-white icon-edit \"> Editar Usuário </i>"),                         edit_usuario_path(usuarios) , class: "btn btn-default  btn-info"%>
  
 				</td>
 
 				<td> 
  
-					<%=link_to raw("<i class=\"icon-white icon-remove\"> Deletar Usuário </i>"),usuarios , method: :delete ,data: {confirme: 'Você tem certeza'} , class: "btn-small  btn-danger"%>
+					<%=link_to raw("<i class=\"icon-white icon-remove\"> Deletar Usuário </i>"),usuarios , method: :delete ,data: {confirme: 'Você tem certeza'} , class: "btn btn-default  btn-danger"%>
  
 				</td>
 			</tr>
@@ -39,3 +40,4 @@
  
  
 	<%=link_to raw("<i class=\"icon-white icon-share\"> Cadastrar novo Usuário </i>"), new_usuario_path , class: "btn  btn-success"%>
+</div>
