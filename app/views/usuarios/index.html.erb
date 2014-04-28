@@ -1,6 +1,6 @@
 <h1>Lista de Usuários</h1>
-
-<table border = "1">
+ 
+<table >
 	<thead> 
 		<tr>
 			<td>Nome</td>
@@ -10,22 +10,32 @@
 			<td>Deletar usuário</td>
 		</tr>
 	</thead>
-
+ 
 	<tbody>
 		<% @usuarios.each do |usuarios| %>
-			
+
 			<tr> 
 				<td> <%= usuarios.nome %>  </td>
 				<td> <%= usuarios.cpf %>  </td>
 				<td> <%= usuarios.email %>  </td>
-				<td><%= link_to 'Editar usuário', edit_usuario_path(usuarios) %></td>
-				<td><%= link_to 'Excluir' , usuarios , method: :delete , data: {confirme: 'Você tem certeza'}%> </td>
+
+				<td> 
+					<%=link_to raw("<i class=\"icon-white icon-edit \"> Editar Usuário </i>"),                         edit_usuario_path(usuarios) , class: "btn-small  btn-info"%>
+ 
+				</td>
+
+				<td> 
+ 
+					<%=link_to raw("<i class=\"icon-white icon-remove\"> Deletar Usuário </i>"),usuarios , method: :delete ,data: {confirme: 'Você tem certeza'} , class: "btn-small  btn-danger"%>
+ 
+				</td>
 			</tr>
-
-
+ 
+ 
 		<% end %>
 	</tbody>
 </table>
-
-<%= link_to 'Cadastrar usuário', new_usuario_path %>
-
+ 
+ 
+ 
+	<%=link_to raw("<i class=\"icon-white icon-share\"> Cadastrar novo Usuário </i>"), new_usuario_path , class: "btn  btn-success"%>
