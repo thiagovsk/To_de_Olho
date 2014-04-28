@@ -4,5 +4,14 @@
   <%= f.input :email %>
   <%= f.input :login, input_html: { maxlength: 20 } %>
   <%= f.input :senha, input_html: { maxlength: 12 } %>
-  <%= f.button :submit %>
+ 
+ 
+  <%=link_to raw("<i class=\"fa fa-plus-circle\"> Voltar "),
+                   usuarios_path,
+                   class: "btn btn-warning  btn-small"%>
+                   
+  <%= button_tag :class => 'btn-success btn' , :id => 'criar-usuario' do %>
+        <i class='fa fa-plus-circle'></i> Cadastrar Usuário
+    <% end %>
+ 
 <% end %>
