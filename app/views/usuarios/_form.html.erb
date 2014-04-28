@@ -1,10 +1,10 @@
-<div class = "container">
+<%= content_tag :div, class: "container" do -%>
+
   <h1 class = "text-center">Cadastro de Usuários</h1>
 
-    <form class="form-horizontal" role="form">
-      <div class="form-group">
+    <%= content_tag :div, class: "form-group" do -%>
        
-        <%= simple_form_for @usuarios do |f| %>
+      <%= simple_form_for @usuarios do |f| %>
         <%= f.input :nome, input_html: { class: 'special' }%>
         <%= f.input :cpf, input_html: { maxlength: 11 } %>
         <%= f.input :email %>
@@ -21,8 +21,7 @@
           <% end %>
        
         <% end %>
-      </div> 
 
-    </form>
+    <% end %> 
 
-</div>
+<% end -%>
