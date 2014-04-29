@@ -54,6 +54,7 @@ gem 'rails-bootstrap-helpers'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
