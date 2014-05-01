@@ -56,4 +56,19 @@ describe UsuariosController do
       end
     end
   end
+
+  describe "DELETE destroy" do
+    it "destroys the requested usuario" do
+      usuario = Usuario.create! valid_attributes
+      expect {
+        delete :destroy, {:id => usuario.to_param}
+      }.to change(Usuario, :count).by(-1)
+    end
+
+    it "redirects to the usuarios list" do
+      usuario = Usuario.create! valid_attributes
+        delete :destroy, {:id => usuario.to_param}
+      expect(response).to redirect_to(usuarios_url)
+    end
+  end
 end

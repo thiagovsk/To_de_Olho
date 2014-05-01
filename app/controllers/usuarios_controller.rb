@@ -30,7 +30,7 @@ before_action :set_usuario , only:[:show, :edit, :destroy, :update]
 	end
 
 	def destroy
-		@usuarios.destroy
+		
 	end
 
 	def update
@@ -43,6 +43,8 @@ before_action :set_usuario , only:[:show, :edit, :destroy, :update]
 		end
 
 		def usuario_params
-			params.require(:usuario).permit(:nome,:cpf,:email,:login,:senha)
+			params.fetch(:usuario, {}).permit(:nome,:cpf,:email,:login,:senha)
+			#Ao invés de utilizar params.require, utilize params.fetch
+			#Esse problema é intrínseco ao Rails e é solucionado com o fetch
 		end
 end

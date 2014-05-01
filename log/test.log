@@ -3080,3 +3080,2121 @@ Completed 200 OK in 53ms (Views: 36.7ms | ActiveRecord: 0.1ms)
   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/usuarios" for 127.0.0.1 at 2014-04-30 21:28:40 -0300
+Processing by UsuariosController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered usuarios/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 262ms (Views: 227.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:28:40.354273"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:28:40.354273"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by UsuariosController#index as HTML
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#new as HTML
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuarios"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios"
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:28:40.410664"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:28:40.410664"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:28:40.417023"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:28:40.417023"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:28:40.423304"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:28:40.423304"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "login", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-01 00:28:40.428198"], ["login", "a"], ["updated_at", "2014-05-01 00:28:40.428198"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cpf", "a"], ["created_at", "2014-05-01 00:28:40.529962"], ["updated_at", "2014-05-01 00:28:40.529962"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/usuarios" for 127.0.0.1 at 2014-04-30 21:29:08 -0300
+Processing by UsuariosController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered usuarios/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 55ms (Views: 37.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:29:08.981625"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:29:08.981625"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by UsuariosController#index as HTML
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#new as HTML
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuarios"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios"
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:29:09.003246"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:29:09.003246"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:29:09.009441"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:29:09.009441"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:29:09.015649"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:29:09.015649"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "login", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-01 00:29:09.045794"], ["login", "a"], ["updated_at", "2014-05-01 00:29:09.045794"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cpf", "a"], ["created_at", "2014-05-01 00:29:09.101145"], ["updated_at", "2014-05-01 00:29:09.101145"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/usuarios" for 127.0.0.1 at 2014-04-30 21:29:15 -0300
+Processing by UsuariosController#index as HTML
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered usuarios/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 55ms (Views: 38.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:29:15.594922"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:29:15.594922"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 18ms (ActiveRecord: 0.8ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:29:15.603246"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:29:15.603246"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios"
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:29:15.611056"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:29:15.611056"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuarios"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#new as HTML
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:29:15.623993"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:29:15.623993"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsuariosController#index as HTML
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "login", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-01 00:29:15.668447"], ["login", "a"], ["updated_at", "2014-05-01 00:29:15.668447"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cpf", "a"], ["created_at", "2014-05-01 00:29:15.701529"], ["updated_at", "2014-05-01 00:29:15.701529"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:32:40.713340"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:32:40.713340"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 23ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:32:40.722074"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:32:40.722074"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios"[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:32:40.729993"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:32:40.729993"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuarios"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#new as HTML
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:32:40.748051"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:32:40.748051"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by UsuariosController#index as HTML
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/usuarios" for 127.0.0.1 at 2014-04-30 21:32:40 -0300
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT "usuarios".* FROM "usuarios"
+Completed 200 OK in 50ms (Views: 33.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "login", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-01 00:32:40.842356"], ["login", "a"], ["updated_at", "2014-05-01 00:32:40.842356"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cpf", "a"], ["created_at", "2014-05-01 00:32:40.868765"], ["updated_at", "2014-05-01 00:32:40.868765"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:34:52.077950"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:34:52.077950"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsuariosController#index as HTML
+  Rendered usuarios/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios"[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:34:52.096950"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:34:52.096950"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:34:52.103322"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:34:52.103322"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:34:52.109109"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:34:52.109109"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#new as HTML
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/usuarios" for 127.0.0.1 at 2014-04-30 21:34:52 -0300
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT "usuarios".* FROM "usuarios"
+Completed 200 OK in 48ms (Views: 30.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "login", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-01 00:34:52.189289"], ["login", "a"], ["updated_at", "2014-05-01 00:34:52.189289"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cpf", "a"], ["created_at", "2014-05-01 00:34:52.313289"], ["updated_at", "2014-05-01 00:34:52.313289"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cpf", "a"], ["created_at", "2014-05-01 00:35:17.325213"], ["updated_at", "2014-05-01 00:35:17.325213"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "login", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-01 00:35:17.362905"], ["login", "a"], ["updated_at", "2014-05-01 00:35:17.362905"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:35:17.411664"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:35:17.411664"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:35:17.417667"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:35:17.417667"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios"[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:35:17.425278"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:35:17.425278"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#new as HTML
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:35:17.438682"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:35:17.438682"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by UsuariosController#index as HTML
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/usuarios" for 127.0.0.1 at 2014-04-30 21:35:17 -0300
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios"
+Completed 200 OK in 57ms (Views: 40.6ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cpf", "a"], ["created_at", "2014-05-01 00:42:19.494343"], ["updated_at", "2014-05-01 00:42:19.494343"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "login", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-01 00:42:19.509676"], ["login", "a"], ["updated_at", "2014-05-01 00:42:19.509676"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:42:19.560285"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:42:19.560285"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsuariosController#index as HTML
+  Rendered usuarios/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#new as HTML
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios"[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:42:19.586263"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:42:19.586263"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE ("usuarios"."cpf" = '12345678900' AND "usuarios"."id" != 1) LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE ("usuarios"."login" = 'abcdewerwe' AND "usuarios"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:42:19.594822"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:42:19.594822"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE ("usuarios"."cpf" = '12345678900' AND "usuarios"."id" != 1) LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE ("usuarios"."login" = 'abcdewerwe' AND "usuarios"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:42:19.602527"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:42:19.602527"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE ("usuarios"."cpf" = '12345678900' AND "usuarios"."id" != 1) LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE ("usuarios"."login" = 'abcdewerwe' AND "usuarios"."id" != 1) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/usuarios" for 127.0.0.1 at 2014-04-30 21:42:19 -0300
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios"
+Completed 200 OK in 57ms (Views: 39.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/usuarios" for 127.0.0.1 at 2014-04-30 21:42:40 -0300
+Processing by UsuariosController#index as HTML
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered usuarios/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 54ms (Views: 37.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "usuarios" ("created_at", "login", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-01 00:42:40.503037"], ["login", "a"], ["updated_at", "2014-05-01 00:42:40.503037"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "updated_at") VALUES (?, ?, ?)  [["cpf", "a"], ["created_at", "2014-05-01 00:42:40.575830"], ["updated_at", "2014-05-01 00:42:40.575830"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:42:40.612003"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:42:40.612003"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE ("usuarios"."cpf" = '12345678900' AND "usuarios"."id" != 1) LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE ("usuarios"."login" = 'abcdewerwe' AND "usuarios"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:42:40.620550"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:42:40.620550"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE ("usuarios"."cpf" = '12345678900' AND "usuarios"."id" != 1) LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE ("usuarios"."login" = 'abcdewerwe' AND "usuarios"."id" != 1) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios"
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:42:40.631036"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:42:40.631036"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE ("usuarios"."cpf" = '12345678900' AND "usuarios"."id" != 1) LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE ("usuarios"."login" = 'abcdewerwe' AND "usuarios"."id" != 1) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#new as HTML
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:42:40.647302"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:42:40.647302"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsuariosController#index as HTML
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:42:55.048573"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:42:55.048573"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsuariosController#index as HTML
+  Rendered usuarios/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#new as HTML
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios"[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:42:55.071091"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:42:55.071091"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE ("usuarios"."cpf" = '12345678900' AND "usuarios"."id" != 1) LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE ("usuarios"."login" = 'abcdewerwe' AND "usuarios"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:42:55.078787"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:42:55.078787"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE ("usuarios"."cpf" = '12345678900' AND "usuarios"."id" != 1) LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE ("usuarios"."login" = 'abcdewerwe' AND "usuarios"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:42:55.085935"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:42:55.085935"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE ("usuarios"."cpf" = '12345678900' AND "usuarios"."id" != 1) LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE ("usuarios"."login" = 'abcdewerwe' AND "usuarios"."id" != 1) LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuarios"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/usuarios" for 127.0.0.1 at 2014-04-30 21:42:55 -0300
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT "usuarios".* FROM "usuarios"
+Completed 200 OK in 46ms (Views: 30.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "login", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-01 00:42:55.259355"], ["login", "a"], ["updated_at", "2014-05-01 00:42:55.259355"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cpf", "a"], ["created_at", "2014-05-01 00:42:55.274228"], ["updated_at", "2014-05-01 00:42:55.274228"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cpf", "a"], ["created_at", "2014-05-01 00:52:38.782686"], ["updated_at", "2014-05-01 00:52:38.782686"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "login", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-01 00:52:38.834118"], ["login", "a"], ["updated_at", "2014-05-01 00:52:38.834118"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/usuarios" for 127.0.0.1 at 2014-04-30 21:52:38 -0300
+Processing by UsuariosController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered usuarios/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 60ms (Views: 44.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:52:38.933700"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:52:38.933700"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by UsuariosController#index as HTML
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios"
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:52:38.944577"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:52:38.944577"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 3ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:52:38.949769"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:52:38.949769"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 500 Internal Server Error in 3ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:52:38.954890"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:52:38.954890"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 3ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuarios"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#new as HTML
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/usuarios" for 127.0.0.1 at 2014-04-30 21:52:58 -0300
+Processing by UsuariosController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  Rendered usuarios/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 56ms (Views: 38.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "usuarios" ("created_at", "login", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-01 00:52:58.478819"], ["login", "a"], ["updated_at", "2014-05-01 00:52:58.478819"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "updated_at") VALUES (?, ?, ?)  [["cpf", "a"], ["created_at", "2014-05-01 00:52:58.552599"], ["updated_at", "2014-05-01 00:52:58.552599"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:52:58.620714"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:52:58.620714"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by UsuariosController#index as HTML
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#new as HTML
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios"
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:52:58.635360"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:52:58.635360"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:52:58.641604"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:52:58.641604"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:52:58.649097"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:52:58.649097"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuarios"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:57:32.300363"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:57:32.300363"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsuariosController#index as HTML
+  Rendered usuarios/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#new as HTML
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios"[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:57:32.323678"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:57:32.323678"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:57:32.330057"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:57:32.330057"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 00:57:32.336209"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 00:57:32.336209"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuarios"=>{}}
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{}}
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/usuarios" for 127.0.0.1 at 2014-04-30 21:57:32 -0300
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT "usuarios".* FROM "usuarios"
+Completed 200 OK in 47ms (Views: 31.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "login", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-01 00:57:32.472394"], ["login", "a"], ["updated_at", "2014-05-01 00:57:32.472394"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cpf", "a"], ["created_at", "2014-05-01 00:57:32.487508"], ["updated_at", "2014-05-01 00:57:32.487508"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 01:07:48.376310"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 01:07:48.376310"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsuariosController#index as HTML
+  Rendered usuarios/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 01:07:48.392093"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 01:07:48.392093"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios"
+Processing by UsuariosController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"  WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "usuarios" WHERE "usuarios"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Completed 500 Internal Server Error in 23ms
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 01:07:48.421808"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 01:07:48.421808"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsuariosController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT  "usuarios".* FROM "usuarios"  WHERE "usuarios"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "usuarios" WHERE "usuarios"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 2ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#new as HTML
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios"
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 01:07:48.436397"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 01:07:48.436397"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 01:07:48.442589"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 01:07:48.442589"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 01:07:48.447990"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 01:07:48.447990"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuarios"=>{}}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{}}
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "login", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-01 01:07:48.520016"], ["login", "a"], ["updated_at", "2014-05-01 01:07:48.520016"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cpf", "a"], ["created_at", "2014-05-01 01:07:48.535697"], ["updated_at", "2014-05-01 01:07:48.535697"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/usuarios" for 127.0.0.1 at 2014-04-30 22:07:48 -0300
+Processing by UsuariosController#index as HTML
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT "usuarios".* FROM "usuarios"[0m
+Completed 200 OK in 49ms (Views: 32.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "usuarios" ("created_at", "login", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2014-05-01 01:12:11.310640"], ["login", "a"], ["updated_at", "2014-05-01 01:12:11.310640"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["cpf", "a"], ["created_at", "2014-05-01 01:12:11.325800"], ["updated_at", "2014-05-01 01:12:11.325800"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 01:12:11.363519"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 01:12:11.363519"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsuariosController#index as HTML
+  Rendered usuarios/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 01:12:11.378700"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 01:12:11.378700"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios"
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 01:12:11.386232"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 01:12:11.386232"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 01:12:11.392422"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 01:12:11.392422"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuarios"=>{}}
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{}}
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsuariosController#new as HTML
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 01:12:11.407830"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 01:12:11.407830"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios"[0m
+Processing by UsuariosController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT  "usuarios".* FROM "usuarios"  WHERE "usuarios"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "usuarios" WHERE "usuarios"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 01:12:11.415115"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 01:12:11.415115"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsuariosController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUsuario Load (0.0ms)[0m  SELECT  "usuarios".* FROM "usuarios"  WHERE "usuarios"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "usuarios" WHERE "usuarios"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/usuarios" for 127.0.0.1 at 2014-04-30 22:12:11 -0300
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT "usuarios".* FROM "usuarios"
+Completed 200 OK in 98ms (Views: 81.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by UsuariosController#new as HTML
+  Rendered usuarios/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.2ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 01:12:44.852356"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 01:12:44.852356"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by UsuariosController#index as HTML
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{}}
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuarios"=>{}}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 01:12:44.873370"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 01:12:44.873370"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios"
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 01:12:44.880691"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 01:12:44.880691"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios"
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by UsuariosController#create as HTML
+  Parameters: {"usuario"=>{"nome"=>"Victor", "cpf"=>"12345678900", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe", "senha"=>"abcsdfdsw"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 01:12:44.886501"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 01:12:44.886501"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/usuarios/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["cpf", "12345678900"], ["created_at", "2014-05-01 01:12:44.890368"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 01:12:44.890368"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by UsuariosController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"  WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "usuarios" WHERE "usuarios"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/usuarios
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = '12345678900' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'abcdewerwe' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "email", "login", "nome", "senha", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["cpf", "12345678900"], ["created_at", "2014-05-01 01:12:44.896567"], ["email", "asdwer@gmail.com"], ["login", "abcdewerwe"], ["nome", "Victor"], ["senha", "abcsdfdsw"], ["updated_at", "2014-05-01 01:12:44.896567"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "usuarios"
+Processing by UsuariosController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUsuario Load (0.1ms)[0m  [1mSELECT  "usuarios".* FROM "usuarios"  WHERE "usuarios"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "usuarios" WHERE "usuarios"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/usuarios
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "usuarios"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "usuarios" ("created_at", "login", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-05-01 01:12:44.932077"], ["login", "a"], ["updated_at", "2014-05-01 01:12:44.932077"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" = 'a' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Load (0.1ms)[0m  SELECT  "usuarios".* FROM "usuarios"   ORDER BY "usuarios"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "usuarios" ("cpf", "created_at", "updated_at") VALUES (?, ?, ?)  [["cpf", "a"], ["created_at", "2014-05-01 01:12:44.978207"], ["updated_at", "2014-05-01 01:12:44.978207"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" = 'a' LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35mUsuario Exists (0.1ms)[0m  SELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."cpf" IS NULL LIMIT 1
+  [1m[36mUsuario Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "usuarios"  WHERE "usuarios"."login" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/usuarios" for 127.0.0.1 at 2014-04-30 22:12:45 -0300
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios"
+Completed 200 OK in 50ms (Views: 33.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
