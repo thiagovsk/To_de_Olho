@@ -45362,3 +45362,163 @@ Processing by Devise::RegistrationsController#new as HTML
   Rendered devise/registrations/_form.html.erb (16.4ms)
   Rendered devise/registrations/new.html.erb within layouts/application (17.9ms)
 Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2014-05-03 14:14:14 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsuariosController#index as HTML
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT "usuarios".* FROM "usuarios"
+  Rendered usuarios/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 1240ms (Views: 1209.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/convenios.css?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/convenios.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/usuario.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2014-05-03 14:14:16 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-03 14:14:21 -0300
+Processing by ApplicationController#index as HTML
+  Rendered devise/sessions/_form_sign_in.html.erb (315.5ms)
+  Rendered devise/sessions/_sign_in.html.erb (316.5ms)
+  Rendered application/index.html.erb within layouts/application (351.7ms)
+Completed 200 OK in 361ms (Views: 359.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:22 -0300
+
+
+Started GET "/assets/convenios.css?body=1" for 127.0.0.1 at 2014-05-03 14:14:22 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:22 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:22 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:22 -0300
+
+
+Started GET "/assets/usuario.css?body=1" for 127.0.0.1 at 2014-05-03 14:14:22 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:22 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:22 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:22 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:22 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:22 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:22 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:22 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:22 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:22 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:22 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:22 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:22 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:22 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-05-03 14:14:22 -0300
