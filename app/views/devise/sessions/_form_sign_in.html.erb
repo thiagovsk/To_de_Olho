@@ -1,0 +1,26 @@
+<%= simple_form_for(:usuario, :url => session_path(:usuario)) do |f| %>
+
+
+    <div class="form-inputs">
+
+
+      <%= f.input :login, :autofocus => true, :label => 'Usuário'%>
+      <%= f.input :password, :label => 'Senha' %>
+      
+
+      <%= button_tag :class => 'btn-info btn' ,:id => 'login' do %>
+          <i class='icon-white icon-upload'></i> Login
+      <% end %>
+
+      <%=link_to raw("<i class=\"icon-white icon-ok\"> Cadastre-se </i>"),
+                         new_usuario_registration_path,
+                         class: "btn btn-warning  btn-small"%>
+
+
+
+       <%= link_to('Logout', destroy_usuario_session_path, :method => :delete) %>       
+
+
+    </div>
+
+<% end %>

@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   devise_for :usuarios
   resources :convenios do
-	collection {post :import}
+    collection {post :import}
   end
 
   resources :usuarios
-  root :to => "home#index"
+  root :to => "application#index"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
