@@ -37,17 +37,19 @@
 
 	<div class="container-fluid">
   <div class="row-fluid">
-    <div class="span2 backgroundColor">
+    <div class="span2 ">
       <!--conteúdo da lateral-->
       <h1>TOP 5</h1>
-      <a href="usuarios#index" target="carregar">Os Cinco mais caros</a> <br>
+      <% @usuarios.each do |usuario| %>
+      <%= link_to usuario.nome, home_path(usuario), :remote => true %>
+      <%end%>
+
       <a href="">OS Cincos mais demorados</a><br>
       <a href="">Os Cincos mais </a><br>
       
     </div>
-    <div class="span10 backgroundColor" id="carregar">
-      <!--conteúdo do corpo-->
-      -------------------------------------------------------------------------------------------------------------------------------------
+    <div class="span10 " id="carregar">
+    
     </div>
   </div>
 </div>
