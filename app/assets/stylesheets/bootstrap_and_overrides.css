@@ -6,5 +6,14 @@
   =require twitter-bootstrap-static/fontawesome
   */
   .backgroundColor{
-  	background-color: #555;
+  	background-color: LightBlue;
+  	height: 500px;
+  	border-radius: 6px;
+  }
+
+  .backgroundColorWhite{
+  	background-color: white;
+	
+	height: 500px;
+
   }
