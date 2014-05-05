@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   helper_method :resource, :resource_name, :devise_mapping
 
   def after_sign_in_path_for(resource)
-    convenios_path
+    home_path
   end
 
 
