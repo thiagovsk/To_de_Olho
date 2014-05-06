@@ -3,21 +3,31 @@
  
  
 
-	<div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span2 ">
-      <!--conteúdo da lateral-->
-      <h1>TOP 5</h1>
-      <% @usuarios.each do |usuario| %>
-      <%= link_to usuario.nome, home_path(usuario), :remote => true %>
-      <%end%>
+<div class="container">
+    <div class=" white tabbable tabs-left">
+      <ul class="nav nav-tabs">
+        <h1 class="btn btn-success btn-lg active btn-block" role="button">TOP 5</h1>
 
-      <a href="">OS Cincos mais demorados</a><br>
-      <a href="">Os Cincos mais </a><br>
+        <li >
+            <% @usuarios.each do |usuario| %>
+            <%= link_to usuario.nome, home_path(usuario), :remote => true %>
+            <%end%><br>
+        </li>
+        <li >
+          <a href="" class="btn btn-primary btn-lg a active" >OS Cincos mais Demorados</a><br>
+        </li>
+        <li>
+          <a href="" class="btn btn-primary btn-lg  a active">Os Cincos mais Caros</a><br>
+        </li>
       
-    </div>
-    <div class="span10 " id="carregar">
+      </ul>
+    
+    <div class="tab-content" id="carregar">
+    
+    <h1 class ="pull-center">BEM VINDO</h1>
+      
     
     </div>
+
   </div>
 </div>
