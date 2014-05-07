@@ -1,5 +1,10 @@
 <%= simple_form_for(:usuario, :url => session_path(:usuario)) do |f| %>
 
+  <% flash.each do |name, msg| %>
+       <p class="alert"><%= alert %></p>
+       <p class="notice"><%= notice %></p>
+<% end %>
+
 
     <div class="form-inputs">
 
