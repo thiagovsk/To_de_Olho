@@ -36,6 +36,7 @@ gem 'simple_form'
 
 gem 'twitter-bootstrap-rails'
 
+gem 'rails-i18n'
 
 group :development, :test do
   gem 'rspec-rails'
