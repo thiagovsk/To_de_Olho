@@ -27,7 +27,6 @@ class UsuariosController < ApplicationController
 
   def edit
     #@usuarios = Usuario.find(params[:id])
-
   end
 
   def destroy
