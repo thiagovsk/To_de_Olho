@@ -44,7 +44,6 @@ ActiveRecord::Schema.define(version: 20140429170038) do
     t.string   "nome"
     t.string   "cpf"
     t.string   "login"
-    t.string   "senha"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email",                  default: "", null: false
