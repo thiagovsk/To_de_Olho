@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   resources :usuarios
   root :to => "application#index"
 
-  get '/home' => 'home#index', as: :home
-  
+  get '/home' => 'home#index', as: :home_index
+  get '/home/:id' =>'home#show', as: :home 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
