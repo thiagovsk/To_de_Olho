@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   helper_method :resource, :resource_name, :devise_mapping
 
   def after_sign_in_path_for(resource)
-    home_path
+    home_index_path
   end
 
 
