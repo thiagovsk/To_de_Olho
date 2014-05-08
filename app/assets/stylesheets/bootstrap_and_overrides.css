@@ -13,7 +13,7 @@
 		margin:0px;
 		padding:0px;
 		height:100%;
-		background-color:#5cb85c;
+		background-color:#DCF0BA;
 	}
 	.white{
 	  	background-color: white;
@@ -25,8 +25,17 @@
  		height: 100%;
  		width: 70%;
  	}
+ 	.a{
+ 		text-decoration: none;
+ 		color: white;
+ 	}
  	.a:hover{
  		color: black;
  	}
+ 	.color{
+ 		background-color:#262B13;
+ 	}
+ 	.espacamento{
+ 		margin: 10px;
+ 	}
 
-  	

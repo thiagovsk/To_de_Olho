@@ -1,7 +1,7 @@
 <div class="container">
   <div class=" white tabbable tabs-left">
     <ul class="nav nav-tabs">
-      <h1 class="btn btn-success btn-lg active btn-block" role="button">TOP 5</h1>
+      <h1 class="btn btn-lg active btn-block " role="button">TOP 5</h1>
       <li >
         <% @usuarios.each do |usuario| %>
           <%= link_to usuario.nome, home_path(usuario), :remote => true %>
@@ -14,6 +14,7 @@
         <a href="" class="btn btn-primary btn-lg  a active">Os Cincos mais Caros</a><br>
       </li>
     </ul>
+
     <div class="tab-content" id="carregar">
       <h1 class ="pull-center">BEM VINDO</h1>
     </div>

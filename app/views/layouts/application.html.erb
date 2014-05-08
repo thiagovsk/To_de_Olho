@@ -9,9 +9,14 @@
 	</head>
 	
 	<body>
+		<% if usuario_signed_in? %>
 		
-		<%= render "home/navbar" %>	
-		<br><br><br>
+			<%= render "home/navbar" %>	
+		<% else %>
+			<%= render "home/navbarPre" %>		
+
+		<% end %>
+		
 		
 		<% flash.each do |name, msg| %>
        		<p class="alert"> <%= alert %> <%= notice %> </p>
