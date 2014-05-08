@@ -23,13 +23,6 @@ class UsuariosController < ApplicationController
     end
   end
 
-  def show
-
-  end
-
-  def edit
-    #@usuarios = Usuario.find(params[:id])
-  end
 
   def destroy
     @usuarios.destroy
@@ -54,6 +47,8 @@ class UsuariosController < ApplicationController
   end
 
   def usuario_params
-    params.require(:usuario).permit(:nome,:cpf,:email,:login,:senha)
+    params.fetch(:usuario, {}).permit(:nome,:cpf,:email,:login)
+    #Ao invés de utilizar params.require, utilize params.fetch
+    #Esse problema é intrínseco ao Rails e é solucionado com o fetch
   end
 end

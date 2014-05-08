@@ -5,7 +5,6 @@ class CreateUsuarios < ActiveRecord::Migration
       t.string :cpf
 
       t.string :login
-      t.string :senha
 
       t.timestamps
     end
