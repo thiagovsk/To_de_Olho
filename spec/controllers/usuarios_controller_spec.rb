@@ -1,3 +1,4 @@
+
 require 'spec_helper'
 
 describe UsuariosController do
@@ -14,6 +15,7 @@ describe UsuariosController do
 
   describe "GET new" do
     it "assigns a new usuario as @usuario" do
+      usuario = Usuario.create! valid_attributes
       get :new, {}
       expect(assigns(:usuarios)).to be_a_new(Usuario)
     end
@@ -21,6 +23,7 @@ describe UsuariosController do
 
   describe "PUT update" do
     describe "with valid params" do
+
       it "updates the requested usuario" do
         usuario = Usuario.create! valid_attributes
         Usuario.any_instance.should_receive(:update).with("nome"=>"Victor", "cpf"=>"03713770141", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe")
@@ -54,17 +57,15 @@ describe UsuariosController do
         }.to change(Usuario, :count).by(1)
       end
 
-      it "assigns a newly created usuario as @usuario" do
-        post :create, {:usuario => valid_attributes}
-        expect(assigns(:usuario)).to be_a(Usuario)
-        assigns(:usuario).should be_persisted
-      end
 
       it "redirects to the created usuario" do
+
+        usuario = Usuario.create! valid_attributes
         post :create, {:usuario => valid_attributes}
         expect(response.status).to be(200)
       end
     end
+
 
     describe "with invalid params" do
       it "assigns a newly created but unsaved usuario as @usuario" do

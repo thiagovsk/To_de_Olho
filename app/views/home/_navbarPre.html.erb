@@ -1,13 +1,8 @@
 <div class="navbar navbar-inverse color">
   <div class="navbar-inner">
 
-    <div class="btn-group pull-left" >
-      <button type="button" class="btn btn-primary btn-lg activeicon-white icon-flag ">
-     <%= link_to "Portal da Transparência ", 'http://www.portaltransparencia.gov.br' ,class: "a" %>
-
-      
-      </button>
-    </div>
+<%= link_to raw("<i class=\"activeicon-white icon-flag\"> Portal da Transparência </i>"), "http://www.portaltransparencia.gov.br/", :target => "_blank" ,class: "btn btn-primary btn-lg" %>
+    
     <div class="btn-group pull-right" >
       <button type="button" class="btn btn-success dropdown-toggle icon-white icon-eye-open"data-toggle="dropdown">
       Quem somos? <span class="caret"></span>
@@ -20,4 +15,4 @@
       </ul>
     </div>
   </div>
-  </div>
+  </div>  
