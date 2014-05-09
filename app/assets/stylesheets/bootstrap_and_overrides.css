@@ -38,4 +38,40 @@
  	.espacamento{
  		margin: 10px;
  	}
-
+ 	.inicial{
+ 		background-color: white;
+	   	box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 125px rgba(255,255,255,0.35);
+	  	
+ 	}
+ 	.front-welcome {
+		padding: 24px;
+		height: 279px;
+		width: 475px;
+		border: 1px solid #6fa3c4;
+		border-radius: 4px;
+		
+		background-image: url("logo.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: white;
+		border: 0;
+		box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 125px rgba(255,255,255,0.35);
+		display: block;
+		height: 328px;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 520px;
+	}
+	.front-card {
+		height: 328px;
+		margin: -15% 0 0 -418px;
+		top: 50%;
+		width: 838px;
+	}
+	.front-card {
+		left: 50%;
+		position: absolute;
+		width: 838px;
+	}
+	
