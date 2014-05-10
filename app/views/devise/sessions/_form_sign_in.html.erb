@@ -14,7 +14,10 @@
 
       <%=link_to raw("<i class=\"icon-white icon-ok\"> Cadastre-se </i>"),
                          new_usuario_registration_path,
-                         class: "btn btn-warning  btn-small"%>
+                         class: "btn btn-warning  btn-small" %>
+                         <br><br> 
+      <%= link_to "Sign in with Facebook", usuario_omniauth_authorize_path(:facebook) ,
+                        class: "btn btn-primary  btn-small"%>
 
 
 

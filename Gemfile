@@ -44,6 +44,10 @@ gem 'jquery-ui-rails'
 
 gem 'authority'
 
+gem 'omniauth'
+
+gem 'omniauth-facebook' 
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
