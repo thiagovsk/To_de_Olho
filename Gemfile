@@ -42,6 +42,8 @@ gem 'jquery-datatables-rails'
 
 gem 'jquery-ui-rails'
 
+gem 'authority'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
