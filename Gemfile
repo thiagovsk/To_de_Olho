@@ -38,6 +38,10 @@ gem 'twitter-bootstrap-rails'
 
 gem 'rails-i18n'
 
+gem 'jquery-datatables-rails'
+
+gem 'jquery-ui-rails'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
