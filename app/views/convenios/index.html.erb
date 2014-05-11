@@ -1,6 +1,13 @@
 <h1>Lista de Convênios</h1>
 
+
+
+<%= render 'form' %>
+
+
+
 <table id="convenios" class="display">
+
   <thead>
     <tr>
         <th>Número</th>
@@ -33,8 +40,9 @@
 </table>
 
 <br>
-
 <%= form_tag import_convenios_path, multipart: true do%>
   <%= file_field_tag :file%>
   <%= submit_tag "Importar CSV"%>
+
+
 <%end%>

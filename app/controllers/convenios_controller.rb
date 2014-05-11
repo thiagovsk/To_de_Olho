@@ -6,8 +6,16 @@ class ConveniosController < ApplicationController
 
 
   def index
-    @convenios = Convenio.all
+
+    if params[:search]
+      @convenios = Convenio.search(params[:search]).order("created_at DESC")
+
+    else
+      @convenios = Convenio.all
+
+    end
   end
+
 
   def new
     @convenios = Convenio.new
