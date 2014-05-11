@@ -46,12 +46,14 @@ gem 'authority'
 
 gem 'omniauth'
 
-gem 'omniauth-facebook' 
+gem 'omniauth-facebook'
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
 end
+
+gem 'metric_fu'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -63,4 +65,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
