@@ -11,6 +11,7 @@ describe HomeController do
       expect(assigns(:usuarios)).to eq([usuario])
     end
   end
+=begin
 
   describe "GET show" do
     it "assigns the requested usuario as @usuario" do
@@ -19,5 +20,6 @@ describe HomeController do
       response.should render_template("show")
     end
   end
+=end
 
 end
