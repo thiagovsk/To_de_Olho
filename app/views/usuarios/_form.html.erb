@@ -1,0 +1,32 @@
+<%= content_tag :div, class: "container" do -%>
+
+  <h1 class = "text-center">Cadastro de Usuários</h1>
+
+  <%= content_tag :div, class: "form-group" do -%>
+       
+      <%= simple_form_for(:usuario, :url => session_path(:usuario)) do |f| %>
+        <%= f.error_notification %>
+
+
+          <div class="form-inputs">
+            <%= f.input :cpf,  autofocus: true %>
+            <%= f.input :nome %>
+            <%= f.input :login %>
+            <%= f.input :email %>
+            <%= f.input :password  %>
+            <%= f.input :password_confirmation %>
+          </div>
+                           
+            <%= button_tag :class => 'btn-success btn' , :id => 'criar-usuario' do %>
+                <i class='fa fa-plus-circle'></i> Cadastrar Usuário
+            <% end %>
+
+             <%= link_to raw("<i class=\"icon-white icon-arrow-left\"> Voltar </i>"),
+                        root_path ,
+                        class: "btn  btn-warning"%>
+
+          
+      <% end %>
+
+  <% end %> 
+<% end -%>

@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>App</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+	  <title>Tô de Olho</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
 
-<%= yield %>
+	</head>
+	
+	<body>
+		<% if usuario_signed_in? %>
+		
+			<%= render "home/navbar" %>	
+		<% else %>
+			<%= render "home/navbarPre" %>		
 
-</body>
+		<% end %>
+		
+		
+		<% flash.each do |name, msg| %>
+       		<p class="alert"> <%= alert %> <%= notice %> </p>
+       		
+		<% end %>
+
+		<%= yield %>
+
+	</body>
 </html>

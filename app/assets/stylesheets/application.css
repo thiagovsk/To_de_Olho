@@ -12,4 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require dataTables/jquery.dataTables
+ *= require dataTables/jquery.dataTables.bootstrap3
  */
+
+.alert{
+    text-align:center;
+}

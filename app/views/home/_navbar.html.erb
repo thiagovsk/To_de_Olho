@@ -1,0 +1,26 @@
+<div class="navbar navbar-inverse">
+  <div class="navbar-inner">
+    <a class="brand" href="home#">Inicio</a>
+    <ul class="nav">
+    </ul>
+    <div>
+      <%=link_to raw("<i class=\"icon-white icon-remove\"> Sair </i>"),
+        destroy_usuario_session_path, :method => :delete,
+        class: "btn btn-danger btn-small pull-right"%>
+      <form class="navbar-search pull-right">
+        <input type="text" class="search-query" placeholder="Busca">
+      </form>
+    </div>
+    <div class="btn-group " >
+      <button type="button" class=" btn btn-success dropdown-toggle icon-white icon-user"data-toggle="dropdown">
+      Usuario <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="">Minhas reclacações</a></li>
+        <li><a href="#">Meus abaixo-assinados </a></li>
+        <li><a href="usuarios/edit">Editar Perfil</a></li>
+        <li class="divider"></li>
+      </ul>
+    </div>
+  </div>
+</div>
