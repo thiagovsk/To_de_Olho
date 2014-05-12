@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140429170038) do
+ActiveRecord::Schema.define(version: 20140510035728) do
 
   create_table "convenios", force: true do |t|
     t.string   "numeroconvenio"
@@ -56,6 +56,8 @@ ActiveRecord::Schema.define(version: 20140429170038) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "usuarios", ["email"], name: "index_usuarios_on_email", unique: true
