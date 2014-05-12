@@ -21,6 +21,12 @@
 	  	border-radius: 6px;
 	  	box-shadow: 5px 5px 5px gray;
  	}
+ 	.whiteTable{
+	  	background-color: white;
+	  	height: inherit;
+	  	border-radius: 6px;
+	  	box-shadow: 5px 5px 5px gray;
+ 	}
  	.container{
  		height: 100%;
  		width: 70%;
