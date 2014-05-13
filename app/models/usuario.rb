@@ -2,7 +2,7 @@ class Usuario < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-    :recoverable, :rememberable, :trackable, :omniauthable,:validatable,:authentication_keys => [:email]
+    :recoverable, :rememberable, :trackable, :omniauthable,:validatable,:authentication_keys => [:login]
 
   validates_presence_of :nome
 
