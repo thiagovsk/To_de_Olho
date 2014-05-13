@@ -3,13 +3,16 @@
     <ul class="nav nav-tabs">
       
       <li >
-           <%= link_to raw("Convênios "), "http://localhost:3000/convenios", :target => "_blanc",class: "btn btn-primary btn-lg a active" %><br>
+           <%= link_to raw("Todos convênios "), convenios_path, :target => "_self",class: "btn btn-primary btn-lg a active" %><br>
       </li>
       <li >
         <a href="" class="btn btn-primary btn-lg a active" >Os Cincos mais Demorados</a><br>
       </li>
       <li>
         <a href="" class="btn btn-primary btn-lg  a active">Os Cincos mais Caros</a><br>
+      </li>
+      <li>
+        <a href="" class="btn btn-primary btn-lg  a active">Importar convênios </a><br>
       </li>
     </ul>
 
@@ -19,6 +22,8 @@
       <p align="justify">"Convênios são acordos, ajustes ou qualquer outro instrumento que discipline a transferência de recursos financeiros de dotações consignadas nos Orçamentos Fiscal e da Seguridade Social da União e tenha como participe, de um lado, órgão ou entidade da administração pública federal, direta ou indireta , ou ainda, entidades privadas sem fins lucrativos, visando a execução de programa de governo, envolvendo a realização de projeto, atividade, seviço, aquisição de bens ou evento de interesse recíproco, em regime de mútua cooperação."</p>
       <br>
       <h5 class ="pull-right">Decreto nº 6.170, de 25 de julho de 2007</h5>
+     <%= render 'convenios/form' %>
+
     </div>
   </div>
 </div>
