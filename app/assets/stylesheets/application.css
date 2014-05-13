@@ -23,3 +23,9 @@
 .front-welcome h1{
     text-align: center;
 }
+.tab-content h1{
+	text-align: center;
+}
+.tab-content p{
+	text-align: justify;
+}
