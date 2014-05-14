@@ -29,3 +29,42 @@
 .tab-content p{
 	text-align: justify;
 }
+.a{
+ 		text-decoration: none;
+ 		color: white;
+}
+.a:hover{
+ 		color: black;
+
+}
+.navbar-inner {
+	background-color: #0064A1;
+	background-image: none;
+	height: 50px;
+	border-radius: 0px 0px 0px 0px;
+	border-color: none;
+	border:none;
+}
+.btn-primary {
+	background-color: #003366;
+	background-image: none;
+}
+.btn-primary:hover {
+	background-color: #172D3A;
+	background-image: none;
+}
+.btn-success {
+	background-color: #627834;
+	background-image: none;
+}
+.btn-success:hover {
+	background-color: #1E8531;
+	background-image: none;
+}
+.brand{
+	background-image: url("background2.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	color: white;
+
+}
