@@ -54,11 +54,43 @@
 	background-image: none;
 }
 .btn-success {
-	background-color: #627834;
+	background-color: #7E9154;
 	background-image: none;
 }
 .btn-success:hover {
-	background-color: #1E8531;
+	background-color: #627834;
+	background-image: none;
+}
+.btn-info {
+	background-color: #238191;
+	background-image: none;
+}
+.btn-info:hover {
+	background-color: #154B4F;
+	background-image: none;
+}
+.btn-warning {
+	background-color: #7E9154;
+	background-image: none;
+}
+.btn-warning:hover {
+	background-color: #627834;
+	background-image: none;
+}
+.btn-danger {
+	background-color: #B33E2F;
+	background-image: none;
+}
+.btn-danger:hover {
+	background-color: #CC2F1B;
+	background-image: none;
+}
+.btn-div {
+	background-color: #252E40;
+	background-image: none;
+}
+.btn-div:hover {
+	background-color: #1F3C60;
 	background-image: none;
 }
 .brand{
