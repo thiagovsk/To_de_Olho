@@ -19,3 +19,16 @@
 .alert{
     text-align:center;
 }
+
+.front-welcome h1{
+    text-align: center;
+}
+
+.tab-content h1{
+    text-align: center;
+}
+
+.tab-content blockquote{
+    text-align: justify;
+    margin-top: 20px;
+}

@@ -232,15 +232,24 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+config.omniauth :facebook, "1603488076542893", "4f5f870e054ff67cd7cfe63d30063edd"
+
+
+  if Rails.env == "development" || Rails.env == "test"
+        config.omniauth :facebook, "1603488076542893", "4f5f870e054ff67cd7cfe63d30063edd"
+  else
+        config.omniauth :facebook, "App_ID (Production Facebook App)", "App_Secret (Production Facebook App)"
+  end
+
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
   #
-  # config.warden do |manager|
-  #   manager.intercept_401 = false
-  #   manager.default_strategies(scope: :user).unshift :some_external_strategy
-  # end
+   config.warden do |manager|
+    manager.strategies.add(:password, Devise::Strategies::Password)
+    manager.default_strategies(:scope => :usuario).unshift :password
+   end
 
   # ==> Mountable engine configurations
   # When using Devise inside an engine, let's call it `MyEngine`, and this engine
@@ -257,13 +266,4 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   
   
-  config.omniauth :facebook, "1603488076542893", "4f5f870e054ff67cd7cfe63d30063edd"
-
-
-  if Rails.env == "development" || Rails.env == "test"
-        config.omniauth :facebook, "1603488076542893", "4f5f870e054ff67cd7cfe63d30063edd"
-  else
-        config.omniauth :facebook, "App_ID (Production Facebook App)", "App_Secret (Production Facebook App)"
   end
-
-end
