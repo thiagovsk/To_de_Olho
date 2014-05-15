@@ -23,9 +23,12 @@
 .front-welcome h1{
     text-align: center;
 }
+
 .tab-content h1{
-	text-align: center;
+    text-align: center;
 }
-.tab-content p{
-	text-align: justify;
+
+.tab-content blockquote{
+    text-align: justify;
+    margin-top: 20px;
 }
