@@ -69,16 +69,12 @@ html {
  	.front-welcome {
 		padding: 24px;
 		height: 279px;
-		width: 475px;
-		border: 1px solid #6fa3c4;
-		border-radius: 4px;
+		width: 800px;
 		
-		background-image: url("logo.jpg");
-		background-repeat: no-repeat;
 		background-position: center;
-		background-color: white;
+		
 		border: 0;
-		box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 125px rgba(255,255,255,0.35);
+		
 		display: block;
 		height: 328px;
 		left: 0;
@@ -88,12 +84,11 @@ html {
 	}
 	.front-card {
 		height: 328px;
-		margin: -5% 0 0 0;
-		top: 20%;
+		margin: -10% 0 0 -418px;
+		top: 30%;
 		width: 838px;
-	}
-	.front-card {
-		right: 10px;
+	
+		left: 50%;
 		position: absolute;
 		width: 838px;
 	}
