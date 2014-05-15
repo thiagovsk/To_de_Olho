@@ -3,6 +3,7 @@
   
 <h1 style="margin-left: 18px">Lista de Convênios</h1>
 
+<% render 'form'%>
 
 <table id="convenios" class="display whiteTable">
 
@@ -38,8 +39,9 @@
 </table>
 
 <br>
-
-
+  <%= form_tag import_convenios_path, multipart: true do%>
+ -  <%= file_field_tag :file%>
+ -  <%= submit_tag "Importar CSV"%>
 
 <%end%>
 </div>
