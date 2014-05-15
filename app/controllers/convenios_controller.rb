@@ -34,6 +34,7 @@ class ConveniosController < ApplicationController
 
 
   def import
+    
     Convenio.import(params[:file])
     redirect_to convenios_url, notice:  "Convenios importados com sucesso"
 
