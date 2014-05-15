@@ -1,9 +1,11 @@
 jQuery ->
  $('#convenios').dataTable({
   sPaginationType: "bootstrap"
-  aLengthMenu: [ 10, 25, 50, 100 ],
+  aLengthMenu: [ 10, 25, 50, 100 ]
   iDisplayLength: 10
   bScrollCollapse: true
+  bProcessing: true
+  bDeferRender: true
   oLanguage: 
   	sInfo: "Exibindo _START_  à _END_  de _TOTAL_ registros"
   	sInfoEmpty: "Exibindo 0 à 0 de 0 entradas"
