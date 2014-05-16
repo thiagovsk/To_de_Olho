@@ -22,14 +22,13 @@ html {
 	}
 
 	body {
-		margin:0px;
-		padding:0px;
 		height:100%;
 		background-color:#859CA4;
 		background-image: url("teste.png");
 	}
+
 	.white{
-	  	background-color: white;
+        background-color: white;
 	  	height: 100%;
 	  	border-radius: 6px;
 	  	box-shadow: 5px 5px 5px gray;
@@ -40,13 +39,23 @@ html {
 	  	border-radius: 6px;
 	  	box-shadow: 5px 5px 5px gray;
  	}
- 	.container{
- 		height: 100%;
- 		width: 70%;
- 	}
+
+    .container{
+    height: 90%;
+    overflow: auto;
+    width: 69%;
+    background-color: #ffffff;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
  	.container-fluid{
  		height: 100%;
  	}
+
  	.a{
  		text-decoration: none;
  		color: white;
@@ -68,8 +77,8 @@ html {
  	}
  	.front-welcome {
 		padding: 24px;
-		height: 279px;
-		width: 800px;
+		/*height: 279px;*/
+		/*width: 800px;*/
 		
 		background-position: center;
 		
@@ -90,7 +99,6 @@ html {
 	
 		left: 50%;
 		position: absolute;
-		width: 838px;
 	}
 
 .alert{
@@ -120,7 +128,6 @@ html {
 	background-color: #0064A1;
 	background-image: none;
 	height: 50px;
-	border-radius: 0px 0px 0px 0px;
 	border-color: none;
 	border:none;
 }
@@ -189,3 +196,53 @@ html {
 	margin-top: 10px;
 	border: solid 2px black;
 }
+
+
+/*===============================================Begin Form Sign in Style=============================================*/
+#form-sign-in.container {
+    width: 200px;
+    position: fixed;
+    right: 20px;
+    background-color: #ffffff;
+    height: auto;
+    overflow: visible;
+}
+
+/* The white background content wrapper */
+#form-sign-in.container > .content {
+    background-color: #fff;
+    padding: 0px;
+    margin: 0 -20px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
+.login-form {
+    margin-left: 35px;
+    margin-right:35px;
+    padding: 5px;
+}
+
+
+#btn-form-sign-in-face{
+    display: block;
+    margin: 5px 10px 10px 5px;
+    text-align: left;
+
+}
+
+#login{
+    margin:5px;
+}
+/*===================================================End Form Sign In style===========================================*/
+
+/*==================================================Begin Slider Style================================================*/
+.slider{
+  margin: auto;
+  width: 70%;
+}
+/*==================================================End Slider Style==================================================*/
