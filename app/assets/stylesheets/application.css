@@ -16,6 +16,91 @@
  *= require dataTables/jquery.dataTables.bootstrap3
  */
 
+
+html {
+		height: 100%;
+	}
+
+	body {
+		height:100%;
+		background-color:#859CA4;
+		background-image: url("teste.png");
+	}
+
+	.white{
+        background-color: white;
+	  	height: 100%;
+	  	border-radius: 6px;
+	  	box-shadow: 5px 5px 5px gray;
+ 	}
+ 	.whiteTable{
+	  	background-color: white;
+	  	height: inherit;
+	  	border-radius: 6px;
+	  	box-shadow: 5px 5px 5px gray;
+ 	}
+
+    .container{
+    min-height: 90%;
+    width: 62%;
+    background-color: #ffffff;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    padding: 10px;
+    }
+ 	.container-fluid{
+ 		height: 100%;
+ 	}
+
+ 	.a{
+ 		text-decoration: none;
+ 		color: white;
+ 	}
+ 	.a:hover{
+ 		color: black;
+ 		background-color: #172D3A;
+ 	}
+ 	.color{
+ 		background-color:#262B13;
+ 	}
+ 	.espacamento{
+ 		margin: 10px;
+ 	}
+ 	.inicial{
+ 		background-color: white;
+	   	box-shadow: 0 1px 0 rgba(0,0,0,0.2),0 0 125px rgba(255,255,255,0.35);
+	  	
+ 	}
+ 	.front-welcome {
+		padding: 24px;
+		/*height: 279px;*/
+		/*width: 800px;*/
+		
+		background-position: center;
+		
+		border: 0;
+		
+		display: block;
+		height: 328px;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 520px;
+	}
+	.front-card {
+		height: 328px;
+		margin: -10% 0 0 -418px;
+		top: 30%;
+		width: 838px;
+	
+		left: 50%;
+		position: absolute;
+	}
+
 .alert{
     text-align:center;
 }
@@ -28,7 +113,138 @@
     text-align: center;
 }
 
+.tab-content p{
+	text-align: justify;
+}
+.a{
+ 		text-decoration: none;
+ 		color: white;
+}
+.a:hover{
+ 		color: black;
+
+}
+.navbar-inner {
+	background-color: #0064A1;
+	background-image: none;
+	height: 50px;
+	border-color: none;
+	border:none;
+}
+.btn-primary {
+	background-color: #003366;
+	background-image: none;
+}
+.btn-primary:hover {
+	background-color: #172D3A;
+	background-image: none;
+}
+.btn-success {
+	background-color: #7E9154;
+	background-image: none;
+}
+.btn-success:hover {
+	background-color: #627834;
+	background-image: none;
+}
+.btn-info {
+	background-color: #238191;
+	background-image: none;
+}
+.btn-info:hover {
+	background-color: #154B4F;
+	background-image: none;
+}
+.btn-warning {
+	background-color: #7E9154;
+	background-image: none;
+}
+.btn-warning:hover {
+	background-color: #627834;
+	background-image: none;
+}
+.btn-danger {
+	background-color: #B33E2F;
+	background-image: none;
+}
+.btn-danger:hover {
+	background-color: #CC2F1B;
+	background-image: none;
+}
+.btn-div {
+	background-color: #252E40;
+	background-image: none;
+}
+.btn-div:hover {
+	background-color: #1F3C60;
+	background-image: none;
+}
+.brand{
+	background-image: url("background2.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	color: white;
+}
+
 .tab-content blockquote{
     text-align: justify;
     margin-top: 20px;
 }
+
+.tab-content{
+    margin-right: 18px
+}
+
+.nav.nav-tabs .btn{
+	margin-right: 10px;
+	margin-top: 10px;
+	border: solid 2px black;
+}
+
+
+/*===============================================Begin Form Sign in Style=============================================*/
+
+/* The white background content wrapper */
+#form-sign-in .content {
+    width: 235px;
+    position: fixed;
+    right: 15px;
+    background-color: #fff;
+    margin: -10px -10px 0px 0px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
+.login-form {
+    margin-left: 35px;
+    margin-right:35px;
+    padding: 5px;
+}
+
+
+#btn-form-sign-in-face{
+    display: block;
+    margin: 5px 10px 10px 5px;
+    text-align: left;
+
+}
+
+#login{
+    margin:5px;
+}
+/*===================================================End Form Sign In style===========================================*/
+
+/*==================================================Begin Slider Style================================================*/
+.slider{
+  margin: auto;
+  width: 70%;
+}
+/*==================================================End Slider Style==================================================*/
+
+/*==================================================Begin Sign up form Style================================================*/
+
+/*==================================================End Sign up form Style================================================*/

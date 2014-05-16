@@ -9,21 +9,19 @@
 	</head>
 	
 	<body>
+
 		<% if usuario_signed_in? %>
-		
-			<%= render "home/navbar" %>	
+
+			<%= render "home/navbar" %>
 		<% else %>
-			<%= render "home/navbarPre" %>		
+			<%= render "home/navbarPre" %>
 
 		<% end %>
-		
-		
-		<% flash.each do |name, msg| %>
-       		<p class="alert"> <%= alert %> <%= notice %> </p>
-       		
-		<% end %>
-
-		<%= yield %>
-
+        <% flash.each do |name, msg| %>
+            <p class="alert notice"> <%= alert %> <%= notice %> </p>
+        <% end %>
+        <div class="container">
+            <%= yield %>
+        </div>
 	</body>
 </html>
