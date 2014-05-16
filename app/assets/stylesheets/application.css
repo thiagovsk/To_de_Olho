@@ -42,7 +42,7 @@ html {
 
     .container{
     min-height: 90%;
-    width: 62%;
+    width: 70%;
     background-color: #ffffff;
     -webkit-border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
@@ -206,11 +206,15 @@ html {
 
 /* The white background content wrapper */
 #form-sign-in .content {
-    width: 235px;
+	vertical-align: middle 	
+	align: center;
+    width: 320px;
+    height: 350px;
     position: fixed;
     right: 15px;
     background-color: #fff;
-    margin: -10px -10px 0px 0px;
+    margin-left: auto;
+    margin-right: auto;
     -webkit-border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
@@ -229,7 +233,9 @@ html {
 #btn-form-sign-in-face{
     display: block;
     margin: 5px 10px 10px 5px;
-    text-align: left;
+    text-align: center;
+    height: 20px;
+    width: 180px;
 
 }
 
@@ -242,6 +248,7 @@ html {
 .slider{
   margin: auto;
   width: 70%;
+  height: 70%;
 }
 /*==================================================End Slider Style==================================================*/
 

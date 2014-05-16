@@ -48,6 +48,8 @@ gem 'omniauth'
 
 gem 'omniauth-facebook' 
 
+gem 'thin'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
