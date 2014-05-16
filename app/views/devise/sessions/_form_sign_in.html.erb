@@ -1,29 +1,33 @@
 <%= simple_form_for(:usuario, :url => session_path(:usuario)) do |f| %>
 
+    <div id="form-sign-in">
+      <div class="content">
+        <div class="row">
+          <div class="login-form">
+            <h3>Login</h3>
+            <form action="">
+              <fieldset>
+                <div class="clearfix">
+                  <%= f.input :login, :autofocus => true, :label => 'Usuário'%>
+                </div>
+                <div class="clearfix">
+                  <%= f.input :password, :label => 'Senha' %>
+                </div>
+                <%= button_tag :class => 'btn btn-info ' ,:id => 'login' do %>
+                    <i class='icon-white icon-upload'></i> Login
+                <% end %>
 
-    <div class="form-inputs espacamento">
+                <%=link_to raw("<i class=\"icon-white icon-ok\"> Cadastre-se </i>"),
+                           new_usuario_registration_path,
+                           class: "btn btn-warning  btn-small"%>
 
-
-      <%= f.input :login, :autofocus => true, :label => 'Usuário'%>
-      <%= f.input :password, :label => 'Senha' %>
-      
-
-      <%= button_tag :class => 'btn-info btn' ,:id => 'login' do %>
-          <i class='icon-white icon-upload'></i> Login
-      <% end %>
-
-      <%=link_to raw("<i class=\"icon-white icon-ok\"> Cadastre-se </i>"),
-                         new_usuario_registration_path,
-                         class: "btn btn-warning  btn-small" %>
-                         <br><br> 
-      <%= link_to " Entre com Facebook", usuario_omniauth_authorize_path(:facebook) ,
-                        class: "btn btn-primary  btn-small icon-thumbs-up"%>
-
-
-
-           
-
-
+                <%= link_to " Entre com Facebook", usuario_omniauth_authorize_path(:facebook) ,
+                            class: "btn  btn-primary  btn-small icon-thumbs-up ", id: "btn-form-sign-in-face" %>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
 
 <% end %>
