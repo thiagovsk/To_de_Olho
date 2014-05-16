@@ -20,7 +20,11 @@
         <% flash.each do |name, msg| %>
             <p class="alert notice"> <%= alert %> <%= notice %> </p>
         <% end %>
-            <%= yield %>
+        <div class="container">
+        	
+        	<%= yield %>
        
+        </div>
+            
 	</body>
 </html>
