@@ -163,6 +163,16 @@ html {
 	background-color: #627834;
 	background-image: none;
 }
+.btn-orange {
+	color: white;
+	background-color: #ED8A00;
+	background-image: none;
+}
+.btn-orange:hover{
+	color: white;
+	background-color: #FEBD62;
+	background-image: none;
+}
 .btn-danger {
 	background-color: #B33E2F;
 	background-image: none;

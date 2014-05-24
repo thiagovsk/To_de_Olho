@@ -5,18 +5,18 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseDescricao">
           Descrição do Convênio
         </a>
       </h4>
     </div>
-    <div id="collapseOne" class="panel-collapse collapse in">
+    <div id="collapseDescricao" class="panel-collapse collapse in">
       <div class="panel-body">
           Número Convênio: <%= @convenios.numeroconvenio %> <br>
           Código Siafi: <%= @convenios.codigosiafi %> <br>
           Número do Convênio: <%= @convenios.numerooriginal %> <br>
           Objeto do Convênio: <%= @convenios.objetoconvenio %> <br>
-          Município: <%= @convenios.nomemunicipio %> / <%= @convenios.uf %>
+          Município: <%= @convenios.nomemunicipio %> / <%= @convenios.uf %> <br>
           Situação do Convênio: <%= @convenios.situacaoconvenio %>
       </div>
     </div>
@@ -25,14 +25,17 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseData">
           Datas do Convênio
         </a>
       </h4>
     </div>
-    <div id="collapseTwo" class="panel-collapse collapse">
+    <div id="collapseData" class="panel-collapse collapse">
       <div class="panel-body">
-        Data última Liberação: <%= @convenios.dataultimaliberacao %>
+        Data de publicação: <%= @convenios.datapublicacao %> <br>
+        Data de Início de Vigência: <%= @convenios.datainiciovigencia %> <br>
+        Data de Fim de Vigência: <%= @convenios.datafimvigencia %> <br>
+        Data da Ultima Liberação: <%= @convenios.dataultimaliberacao %>
       </div>
     </div>
   </div>
@@ -40,14 +43,20 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseAdministrativo">
           Informações Administrativas do Convênio
         </a>
       </h4>
     </div>
-    <div id="collapseThree" class="panel-collapse collapse">
+    <div id="collapseAdministrativo" class="panel-collapse collapse">
       <div class="panel-body">
-        Convenente/concedente
+        Código do Órgão Superior: <%= @convenios.codigoorgaosuperior %> <br>
+        Nome do Órgão Superior: <%= @convenios.nomeorgaosuperior %> <br>
+        Código do Concedente: <%= @convenios.codigoconcedente %> <br>
+        Nome do Concedente: <%= @convenios.nomeconcedente %> <br>
+        Código do Convenente: <%= @convenios.codigoconvenente %> <br>
+        Nome do Convenente: <%= @convenios.nomeconvenente %> <br>
+        Tipo do Ente de Convenente: <%= @convenios.tipoenteconvenente %>
       </div>
     </div>
   </div>
@@ -62,24 +71,18 @@
     </div>
     <div id="collapseFour" class="panel-collapse collapse">
       <div class="panel-body">
-        
+        Valor do Convênio: <%= @convenios.valorconvenio %> <br>
+        Valor Liberado: <%= @convenios.valorliberado %> <br>
+        Valor de Contrapartida: <%= @convenios.valorcontrapartida %> <br>
+        Valor da Última Liberação <%= @convenios.valorultimaliberacao %>
       </div>
     </div>
   </div>
 
-   <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
-          Collapsible Group Item #5
-        </a>
-      </h4>
-    </div>
-    <div id="collapseFive" class="panel-collapse collapse">
-      <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
+  <br>
+
+  <%= link_to raw("<i class=\"icon-white icon-arrow-left\"> Voltar </i>"),
+                           convenios_url,:target => "_self",
+                           class: "btn btn-primary  btn-small"%>
 
 </div>
