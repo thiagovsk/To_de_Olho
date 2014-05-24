@@ -31,6 +31,20 @@ class ConveniosController < ApplicationController
     params.require(:convenio).permit(:numeroconvenio, :uf, :codigosiafi, :nomemunicipio, :situacaoconvenio, :numerooriginal, :objetoconvenio, :codigoorgaosuperior, :nomeorgaosuperior, :codigoconcedente, :nomeconcedente, :codigoconvenente, :nomeconvenente, :tipoenteconvenente, :valorconvenio, :valorliberado, :datapublicacao, :datainiciovigencia, :datafimvigencia, :valorcontrapartida, :dataultimaliberacao, :valorultimaliberacao)
   end
 
+  def update
+    respond_to do |format|
+    if @convenios.update(convenios_params)
+      format.html { redirect_to @convenios, notice: 'Alteração realizada com sucesso' }
+      format.json { render :show}
+    else
+      format.html { render :show }
+    end
+    end
+  end
+
+  def show
+   
+  end
 
 
   def import
