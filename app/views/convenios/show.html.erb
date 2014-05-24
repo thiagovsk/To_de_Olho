@@ -1,0 +1,35 @@
+<h1>Dados do Convênio</h1>
+
+<table id="convenios" class="display">
+
+  <thead>
+    <tr>
+        <th>Número</th>
+        <th>Uf</th>
+        <th>Município</th>
+        <th>Situação</th>
+        <th>Descrição</th>
+        <th>Orgão Superior</th>
+        <th>Valor</th>
+        <th>Data de Inicio</th>
+        <th>Data de Fim</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= @convenios.numeroconvenio %></td>
+        <td><%= @convenios.uf %></td>
+        <td><%= @convenios.nomemunicipio %></td>
+        <td><%= @convenios.situacaoconvenio %></td>
+        <td><%= @convenios.objetoconvenio %></td>
+        <td><%= @convenios.nomeorgaosuperior %></td>
+        <td><%= @convenios.valorconvenio %></td>
+        <td><%= @convenios.datainiciovigencia %></td>
+        <td><%= @convenios.datafimvigencia %></td>
+      </tr>
+
+  </tbody>
+</table>
+
+  
