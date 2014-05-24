@@ -18,11 +18,19 @@ describe ConveniosController do
   let(:valid_session) { {} }
 
   describe "GET index" do
+    
+    it "assigns search convenios as @convenios" do
+      convenios = Convenio.create! valid_attributes
+      get :index, {search:"SC"}, valid_session
+      assigns(:convenios).should eq([convenios])
+    end
+
     it "assigns all convenios as @convenios" do
       convenios = Convenio.create! valid_attributes
       get :index, {}, valid_session
       assigns(:convenios).should eq([convenios])
     end
+
   end
 
   describe "GET new" do
