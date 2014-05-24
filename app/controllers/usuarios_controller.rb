@@ -1,6 +1,10 @@
 # -*- encoding : utf-8 -*-
 
 class UsuariosController < ApplicationController
+    before_action :authenticate_usuario!
+
+  load_and_authorize_resource
+
   
   before_action :set_usuario , only:[:show, :edit, :destroy, :update]
 

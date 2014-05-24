@@ -2,6 +2,8 @@
 
 class ConveniosController < ApplicationController
   before_action :set_convenio, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
+
 
 
 

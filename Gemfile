@@ -51,6 +51,8 @@ gem 'omniauth-facebook'
 
 gem 'thin'
 
+gem 'rolify'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
