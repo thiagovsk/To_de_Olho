@@ -34,6 +34,7 @@ GEM
     awesome_print (1.2.0)
     bcrypt (3.1.7)
     builder (3.2.2)
+    cancancan (1.8.0)
     code_analyzer (0.4.5)
       sexp_processor
     coffee-rails (4.0.1)
@@ -221,6 +222,7 @@ PLATFORMS
 
 DEPENDENCIES
   authority
+  cancancan (~> 1.8)
   coffee-rails (~> 4.0.0)
   coveralls
   devise
