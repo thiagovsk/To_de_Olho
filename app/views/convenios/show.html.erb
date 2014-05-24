@@ -1,35 +1,85 @@
 <h1>Dados do Convênio</h1>
-
-<table id="convenios" class="display">
-
-  <thead>
-    <tr>
-        <th>Número</th>
-        <th>Uf</th>
-        <th>Município</th>
-        <th>Situação</th>
-        <th>Descrição</th>
-        <th>Orgão Superior</th>
-        <th>Valor</th>
-        <th>Data de Inicio</th>
-        <th>Data de Fim</th>
-    </tr>
-  </thead>
-
-  <tbody>
-      <tr>
-        <td><%= @convenios.numeroconvenio %></td>
-        <td><%= @convenios.uf %></td>
-        <td><%= @convenios.nomemunicipio %></td>
-        <td><%= @convenios.situacaoconvenio %></td>
-        <td><%= @convenios.objetoconvenio %></td>
-        <td><%= @convenios.nomeorgaosuperior %></td>
-        <td><%= @convenios.valorconvenio %></td>
-        <td><%= @convenios.datainiciovigencia %></td>
-        <td><%= @convenios.datafimvigencia %></td>
-      </tr>
-
-  </tbody>
-</table>
-
   
+<div class="panel-group" id="accordion">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          Descrição do Convênio
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+          Número Convênio: <%= @convenios.numeroconvenio %> <br>
+          Código Siafi: <%= @convenios.codigosiafi %> <br>
+          Número do Convênio: <%= @convenios.numerooriginal %> <br>
+          Objeto do Convênio: <%= @convenios.objetoconvenio %> <br>
+          Município: <%= @convenios.nomemunicipio %> / <%= @convenios.uf %>
+          Situação do Convênio: <%= @convenios.situacaoconvenio %>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          Datas do Convênio
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        Data última Liberação: <%= @convenios.dataultimaliberacao %>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          Informações Administrativas do Convênio
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        Convenente/concedente
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+          Valores do Convênio
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse">
+      <div class="panel-body">
+        
+      </div>
+    </div>
+  </div>
+
+   <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+          Collapsible Group Item #5
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFive" class="panel-collapse collapse">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -42,7 +42,7 @@ html {
 
     .container{
     min-height: 90%;
-    width: 70%;
+    width: 90%;
     background-color: #fff;
     -webkit-border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
@@ -177,8 +177,8 @@ html {
 }
 .btn-div:hover {
 	background-color: #1F3C60;
-	background-image: none;
-}
+	background-image: none
+};
 .brand{
 	background-image: url("background2.png");
 	background-position: center;

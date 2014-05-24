@@ -3,8 +3,6 @@
 class ConveniosController < ApplicationController
   before_action :set_convenio, only: [:show, :edit, :update, :destroy]
 
-
-
   def index
 
     if params[:search]
