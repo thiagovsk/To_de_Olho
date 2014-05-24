@@ -53,6 +53,10 @@ gem 'thin'
 
 gem 'rolify'
 
+gem 'factory_girl'
+
+gem 'factory_girl_rails'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
