@@ -1,4 +1,5 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
+  
   def facebook
     @usuario = Usuario.find_for_facebook_oauth(request.env["omniauth.auth"], current_usuario)
     if @usuario.persisted?
