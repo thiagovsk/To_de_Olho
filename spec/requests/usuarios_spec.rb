@@ -1,5 +1,5 @@
 require 'spec_helper'
-
+=begin
 describe "Usuarios" do
   describe "GET /usuarios" do
     it "works! (now write some real specs)" do
@@ -9,3 +9,4 @@ describe "Usuarios" do
     end
   end
 end
+=end
