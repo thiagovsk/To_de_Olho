@@ -8,9 +8,9 @@ describe UsuariosController do
 
   describe "GET index" do
     it "assigns all usuarios as @usuarios" do
-      #usuario = Usuario.create! valid_attributes
+      usuarios = Usuario.all
       get :index, {}
-      expect(assigns(:usuarios)).to eq([usuarios])
+      expect(assigns(:usuarios)).to eq(usuarios)
     end
   end
 

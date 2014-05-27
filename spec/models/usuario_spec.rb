@@ -1,7 +1,5 @@
 require 'spec_helper'
 
-require 'spec_helper'
-
 describe Usuario do
   it "Pode ser instanciado" do
     Usuario.new.should be_an_instance_of(Usuario)
