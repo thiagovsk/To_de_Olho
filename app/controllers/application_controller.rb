@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 
 
 
-  before_filter :require_login, :configure_permitted_parameters, if: :devise_controller?
+  before_filter  :configure_permitted_parameters, if: :devise_controller?
 
   protected
 
@@ -22,10 +22,4 @@ class ApplicationController < ActionController::Base
   end
 end
 
-  private
-
-  def require_login
-    unless @current_user
-    redirect_to root_path
-  end
-end
+ 
