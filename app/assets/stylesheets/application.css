@@ -210,6 +210,9 @@ html {
 	margin-top: 10px;
 	border: solid 2px black;
 }
+.strong{
+	font-weight: bold;
+}
 
 
 /*===============================================Begin Form Sign in Style=============================================*/
