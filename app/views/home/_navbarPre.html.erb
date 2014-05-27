@@ -2,7 +2,7 @@
   <div class="navbar-inner">
   <i class="brand">Tô de olho!</i>
 
-  <%= link_to raw("<i class=\"activeicon-white icon-flag\"> SINCOV - Portal dos convênios </i>"), "https://www.convenios.gov.br/siconv/secure/entrar-login.jsp", :target => "_blank" ,class: "btn btn-primary btn-lg" %>
+  <%= link_to raw("<i class=\"activeicon-white icon-flag\"> SINCOV  </i>"), "https://www.convenios.gov.br/siconv/secure/entrar-login.jsp", :target => "_blank" ,class: "btn btn-primary btn-lg" %>
     
    
   <%= link_to raw("<i class=\"activeicon-white icon-eye-open \"> Quem somos? </i>"), "http://164.41.86.12/redm/projects/to-de-olho/wiki", :target => "_blank" ,class: "btn btn-success btn-lg pull-right" %>
@@ -20,14 +20,12 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
       </div>
       <div class="modal-body">      
-        <%= render "devise/sessions/form_sign_in" %>
+        <%= render "devise/sessions/form_sign_in", :remote => true %>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar  </button>
       </div>
+     </div>
     </div>
-  </div>
-
-
-  </div>  
+    </div>  
   </div>

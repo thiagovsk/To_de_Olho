@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 
 
 
-  before_filter :configure_permitted_parameters, if: :devise_controller?
+  before_filter :require_login, :configure_permitted_parameters, if: :devise_controller?
 
   protected
 
@@ -19,5 +19,13 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:nome, :cpf, :login, :email, :password, :password_confirmation, :remember_me) }
     devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:nome, :cpf, :login, :login, :email, :password, :remember_me) }
     devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:nome, :cpf, :login, :email, :password, :password_confirmation, :current_password) }
+  end
+end
+
+  private
+
+  def require_login
+    unless @current_user
+    redirect_to root_path
   end
 end
