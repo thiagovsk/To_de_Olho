@@ -1,24 +1,23 @@
 require 'cancan/matchers'
 require 'spec_helper'
 
-describe Usuario do
+describe "Usuario" do
 
-	describe "ability" do
+	describe "abilities" do
   
 		subject(:ability) {Ability.new(usuario)}
 		let(:usuario) {nil}
 
 		context "quando o usuario for administrador" do
+      let(:usuario) {FactoryGirl.create(:admin)}
 
-			let(:usuario) {FactoryGirl.create(:admin)}
-			it "o administrador pode ler todos usuarios" do
-				should be_able_to(:read, Usuario.new)
+			it "pode gerenciar todos usuarios" do
+				should be_able_to(:manage, Usuario.new)
 			end
 
-			let(:usuario) {FactoryGirl.create(:admin)}
-			it "o administrador pode ler todos usuarios" do
-				should be_able_to(:create, Usuario.new)
-			end
+      it "pode gerenciar todos convenios" do
+        should be_able_to(:manage, Convenio.new)
+      end
 
 		end
 
