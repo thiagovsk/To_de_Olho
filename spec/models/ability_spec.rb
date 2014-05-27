@@ -19,7 +19,14 @@ describe "Usuario" do
         should be_able_to(:manage, Convenio.new)
       end
 
-		end
+    end
+    context "quando o usuario for padrao" do
+      let(:usuario) {FactoryGirl.create(:default)}
+
+      it "pode ler convenios" do
+        should be_able_to(:read, Convenio.new)
+      end
+    end
 
 	end
 end
