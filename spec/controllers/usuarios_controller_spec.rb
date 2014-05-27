@@ -18,6 +18,10 @@ describe UsuariosController do
     sign_in usuario
   end
 
+  after :each do
+    sign_out usuario
+  end
+
   it "have a current_user" do
     subject.current_user.should_not be_nil
   end
