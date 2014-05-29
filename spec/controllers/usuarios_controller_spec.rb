@@ -1,39 +1,65 @@
-
 require 'spec_helper'
 
 describe UsuariosController do
 
-  let(:valid_attributes) { { :nome  => "Victor", :cpf => "03713770141", :email => "asdwer@gmail.com", :login => "abcdewerwe", :password => "12345678", :password_confirmation => "12345678"  } }
 
-  describe "GET index" do
-    it "assigns all usuarios as @usuarios" do
-      usuario = Usuario.create! valid_attributes
-      get :index, {}
-      expect(assigns(:usuarios)).to eq([usuario])
-    end
+  let (:usuario) do
+    FactoryGirl.create(:admin)
+  end
+  let (:usuario_padrao) do
+    FactoryGirl.create(:default)
+  end
+  let (:valid_attributes) do
+    {:nome => "Usuario teste", :cpf => "000.000.000-00", :email => "example@teste.com.br", :login => "Teste", :password => "1234567h", :password_confirmation => "1234567h"}
+  end
+
+  before :each do
+    @request.env["devise.mapping"] = Devise.mappings[:usuario]
+    sign_in usuario
+  end
+
+  after :each do
+    sign_out usuario
+  end
+
+  it "have a current_user" do
+    subject.current_user.should_not be_nil
+  end
+
+  it "get index" do
+    get :index
+    response.should be_success
+  end
+
+  it "populates a list of users" do
+    get :index
+    expect(assigns(:usuarios)).to eq([usuario])
   end
 
   describe "GET new" do
     it "assigns a new usuario as @usuario" do
-      usuario = Usuario.create! valid_attributes
-      get :new, {}
+      get :new
       expect(assigns(:usuarios)).to be_a_new(Usuario)
     end
   end
 
-  describe "PUT update" do
+  context "PUT update" do
     describe "with valid params" do
 
       it "updates the requested usuario" do
-        usuario = Usuario.create! valid_attributes
-        Usuario.any_instance.should_receive(:update).with("nome"=>"Victor", "cpf"=>"03713770141", "email"=>"asdwer@gmail.com", "login"=>"abcdewerwe")
-        put :update, {:id => usuario.to_param, :usuario => valid_attributes }
+        put :update, :id => usuario.to_param, :usuario => valid_attributes
+        usuario.reload
+        usuario.nome.should eq(valid_attributes[:nome])
+        usuario.cpf.should eq(valid_attributes[:cpf])
+        usuario.email.should eq(valid_attributes[:email])
+        usuario.login.should eq(valid_attributes[:login])
       end
 
       it "assigns the requested usuario as @usuario" do
         usuario = Usuario.create! valid_attributes
-        put :update, {:id => usuario.to_param, :usuario => valid_attributes}
-        assigns(:usuarios).should eq(usuario)
+        put :update, :id => usuario.to_param, :usuario => valid_attributes
+        usuario.reload
+        assigns(:usuario).should eq(usuario)
       end
     end
 
@@ -42,13 +68,14 @@ describe UsuariosController do
         usuario = Usuario.create! valid_attributes
         Usuario.any_instance.stub(:save).and_return(false)
         put :update, {:id => usuario.to_param, :usuario => {  }}
-        assigns(:usuarios).should eq(usuario)
+        usuario.reload
+        assigns(:usuario).should eq(usuario)
       end
     end
   end
 
 
-  describe "POST create" do
+  context "POST create" do
     describe "with valid params" do
       it "creates a new Usuario" do
         expect {
@@ -82,18 +109,17 @@ describe UsuariosController do
     end
   end
 
-  describe "DELETE destroy" do
+  describe "DELETE" do
     it "destroys the requested usuario" do
-      usuario = Usuario.create! valid_attributes
       expect {
         delete :destroy, {:id => usuario.to_param}
       }.to change(Usuario, :count).by(-1)
     end
 
     it "redirects to the usuarios list" do
-      usuario = Usuario.create! valid_attributes
       delete :destroy, {:id => usuario.to_param}
       expect(response).to redirect_to(usuarios_url)
     end
   end
 end
+
