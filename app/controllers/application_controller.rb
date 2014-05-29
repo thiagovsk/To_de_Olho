@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 
 
 
-  before_filter :configure_permitted_parameters, if: :devise_controller?
+  before_filter  :configure_permitted_parameters, if: :devise_controller?
 
   protected
 
@@ -21,3 +21,5 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:nome, :cpf, :login, :email, :password, :password_confirmation, :current_password) }
   end
 end
+
+ 

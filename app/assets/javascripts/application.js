@@ -17,3 +17,5 @@
 //= require_tree .
 //= require dataTables/jquery.dataTables
 //= require dataTables/jquery.dataTables.bootstrap
+$('#myModal').modal('show')
+

@@ -1,14 +1,13 @@
 <%= render "devise/sessions/form_sign_in" %>
+<div class="jumbotron">
+  <h1>Convênios</h1>
+  <p> "Convênios são acordos, ajustes ou qualquer outro instrumento que discipline a transferência de recursos financeiros
+        de dotações consignadas nos Orçamentos Fiscal e da Seguridade Social da União e tenha como participe, de um lado, órgão ou entidade
+        da administração pública federal, direta ou indireta , ou ainda, entidades privadas sem fins lucrativos, visando a execução de programa
+        de governo, envolvendo a realização de projeto, atividade, seviço, aquisição de bens ou evento de interesse recíproco,
+        em regime de mútua cooperação."</p>
+  <%= render 'convenios/form' %>
 
-<div class="slider">
-  <div id="cp_widget_8eeb77c9-673f-44d4-a52e-fa4802d06f4c">...</div>
-  <script type="text/javascript">
-      var cpo = []; cpo["_object"] ="cp_widget_8eeb77c9-673f-44d4-a52e-fa4802d06f4c"; cpo["_fid"] = "AQMAxqb_0bub";
-      var _cpmp = _cpmp || []; _cpmp.push(cpo);
-      (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
-          cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
-          var c = document.getElementsByTagName("script")[0];
-          c.parentNode.insertBefore(cp, c); })();
-  </script>
-  <noscript>Powered by Cincopa <a href='http://www.cincopa.com/video-hosting'>Video Hosting</a> solution.</noscript>
+  <%=link_to ("Veja todos os Convênios"),convenios_path, :target => "_self", class:"btn btn-primary btn-large"%><br>
 </div>
+
