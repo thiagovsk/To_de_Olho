@@ -35,8 +35,9 @@ describe ConveniosController do
 
   describe "GET new" do
     it "assigns a new convenio as @convenio" do
-      get :new, {}, valid_session
-      assigns(:convenios).should be_a_new(Convenio)
+      convenio = Convenio.create! valid_attributes
+      get :new, {search:"SC"}, valid_session
+      assigns(:convenio).should be_a_new(Convenio)
     end
   end
 
