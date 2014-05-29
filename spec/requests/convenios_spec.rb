@@ -1,12 +1,11 @@
 require 'spec_helper'
-=begin
-describe "Usuarios" do
-  describe "GET /usuarios" do
+
+describe "Convenios" do
+  describe "GET /convenios" do
     it "works! (now write some real specs)" do
       # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get usuarios_path
+      get convenios_path
       response.status.should be(200)
     end
   end
 end
-=end

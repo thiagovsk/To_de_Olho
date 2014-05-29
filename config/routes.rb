@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   end
 
   resources :usuarios
+  resources :convenios
   root :to => "application#index"
 
   get '/home' => 'home#index', as: :home_index

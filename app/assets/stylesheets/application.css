@@ -42,7 +42,7 @@ html {
 
     .container{
     min-height: 90%;
-    width: 70%;
+    width: 90%;
     background-color: #fff;
     -webkit-border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
@@ -163,6 +163,16 @@ html {
 	background-color: #627834;
 	background-image: none;
 }
+.btn-orange {
+	color: white;
+	background-color: #ED8A00;
+	background-image: none;
+}
+.btn-orange:hover{
+	color: white;
+	background-color: #FEBD62;
+	background-image: none;
+}
 .btn-danger {
 	background-color: #B33E2F;
 	background-image: none;
@@ -177,8 +187,8 @@ html {
 }
 .btn-div:hover {
 	background-color: #1F3C60;
-	background-image: none;
-}
+	background-image: none
+};
 .brand{
 	background-image: url("background2.png");
 	background-position: center;
@@ -199,6 +209,9 @@ html {
 	margin-right: 10px;
 	margin-top: 10px;
 	border: solid 2px black;
+}
+.strong{
+	font-weight: bold;
 }
 
 

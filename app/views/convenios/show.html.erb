@@ -1,0 +1,160 @@
+<h1>Dados do Convênio</h1>
+<div class="panel-group" id="accordion">
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseDescricao">
+            Descrição do Convênio
+            </a>
+         </h4>
+      </div>
+      <div id="collapseDescricao" class="panel-collapse collapse in">
+         <div class="panel-body ">
+            <table class="table">
+               <tbody>
+                  <tr>
+                     <td class="strong"> Número Convênio:</td>
+                     <td><%= @convenios.numeroconvenio %>  </td>
+                  </tr>
+                  <tr>
+                     <td class="strong">Código Siafi: </td>
+                     <td><%= @convenios.codigosiafi %> </td>
+                  </tr>
+                  <tr>
+                     <td class="strong">Número do Convênio:</td>
+                     <td><%= @convenios.numerooriginal %></td>
+                  </tr>
+                  <tr>
+                     <td class="strong">Objeto do Convênio: </td>
+                     <td><%= @convenios.objetoconvenio %> </td>
+                  </tr>
+                  <tr>
+                     <td class="strong">Município:</td>
+                     <td><%= @convenios.nomemunicipio %> <%= @convenios.uf %></td>
+                  </tr>
+                  <tr>
+                     <td class="strong">Situação do Convênio:</td>
+                     <td> <%= @convenios.situacaoconvenio %></td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </div>
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseData">
+            Datas do Convênio
+            </a>
+         </h4>
+      </div>
+      <div id="collapseData" class="panel-collapse collapse">
+         <div class="panel-body">
+            <table class="table">
+               <tbody>
+                  <tr>
+                     <td class="strong">Data de publicação:</td>
+                     <td><%= @convenios.datapublicacao %></td>
+                  </tr>
+                  <tr>
+                     <td class="strong">Data de Início de Vigência: </td>
+                     <td><%= @convenios.datainiciovigencia %> </td>
+                  </tr>
+                  <tr>
+                     <td class="strong">Data de Fim de Vigência:  </td>
+                     <td><%= @convenios.datafimvigencia %></td>
+                  </tr>
+                  <tr>
+                     <td class="strong">Data da Ultima Liberação: </td>
+                     <td><%= @convenios.dataultimaliberacao %> </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </div>
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseAdministrativo">
+            Informações Administrativas do Convênio
+            </a>
+         </h4>
+      </div>
+      <div id="collapseAdministrativo" class="panel-collapse collapse">
+         <div class="panel-body">
+            <table class="table">
+               <tbody>
+                  <tr>
+                     <td class="strong">         Código do Órgão Superior: </td>
+                     <td><%= @convenios.codigoorgaosuperior %>  </td>
+                  </tr>
+                  <tr>
+                     <td class="strong">        Nome do Órgão Superior:  </td>
+                     <td><%= @convenios.nomeorgaosuperior %> </td>
+                  </tr>
+                  <tr>
+                     <td class="strong">        Código do Concedente: </td>
+                     <td><%= @convenios.codigoconcedente %> </td>
+                  </tr>
+                  <tr>
+                     <td class="strong">        Nome do Concedente: </td>
+                     <td><%= @convenios.nomeconcedente %> </td>
+                  </tr>
+                  <tr>
+                     <td class="strong">        Código do Convenente: </td>
+                     <td><%= @convenios.codigoconvenente %></td>
+                  </tr>
+                  <tr>
+                     <td class="strong">        Nome do Convenente: </td>
+                     <td> <%= @convenios.nomeconvenente %></td>
+                  </tr>
+                  <tr>
+                     <td class="strong">        Tipo do Ente de Convenente: </td>
+                     <td><%= @convenios.tipoenteconvenente %></td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </div>
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+            Valores do Convênio
+            </a>
+         </h4>
+      </div>
+      <div id="collapseFour" class="panel-collapse collapse">
+         <div class="panel-body">
+            <table class="table">
+               <tbody>
+                  <tr>
+                     <td class="strong">         Valor do Convênio: </td>
+                     <td><%= @convenios.valorconvenio %>  </td>
+                  </tr>
+                  <tr>
+                     <td class="strong">               Valor Liberado:  </td>
+                     <td><%= @convenios.valorliberado %> </td>
+                  </tr>
+                  <tr>
+                     <td class="strong">              Valor de Contrapartida: </td>
+                     <td><%= @convenios.valorcontrapartida %></td>
+                  </tr>
+                  <tr>
+                     <td class="strong">Valor da Última Liberação:  </td>
+                     <td><%= @convenios.valorultimaliberacao %> </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </div>
+   <br>
+   <%= link_to raw("<i class=\"icon-white icon-arrow-left\"> Voltar </i>"),
+      convenios_url,:target => "_self",
+      class: "btn btn-primary  btn-small"%>
+   </table>                           
+</div>

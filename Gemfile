@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+# Cancancan Authorization Gem
+gem 'cancancan', '~> 1.8'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 # Use sqlite3 as the database for Active Record
@@ -50,9 +51,19 @@ gem 'omniauth-facebook'
 
 gem 'thin'
 
+gem 'rolify'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'faker'
+  gem 'capybara'
+  gem 'guard-rspec'
+  gem 'launchy'
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
