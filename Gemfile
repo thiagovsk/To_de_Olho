@@ -53,6 +53,8 @@ gem 'thin'
 
 gem 'rolify'
 
+gem 'cucumber', '~> 1.3.15'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
@@ -64,7 +66,11 @@ group :test do
   gem 'capybara'
   gem 'guard-rspec'
   gem 'launchy'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
 end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
