@@ -57,6 +57,8 @@ gem 'rolify'
 
 gem 'cucumber', '~> 1.3.15'
 
+gem "cucumber-rails-training-wheels", :group => :test
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
