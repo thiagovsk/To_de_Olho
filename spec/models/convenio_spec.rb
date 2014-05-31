@@ -14,6 +14,8 @@ describe Convenio do
       expect(results.count).to eq(1)
   end
 
+  it { should have_many(:reclamacao) }
+	
 end
 
 
