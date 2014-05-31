@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class Reclamacao < ActiveRecord::Base
-
+	belongs_to :convenio
  
   before_action :set_reclamacao , only:[:show, :edit, :destroy, :update]
 
