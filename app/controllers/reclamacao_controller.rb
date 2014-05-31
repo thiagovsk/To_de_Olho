@@ -14,7 +14,7 @@ class ReclamacaoController < ApplicationController
     @reclamacoes = Reclamacao.new(reclamacao_params)
     respond_to do |format|
       if @reclamacoes.save
-        format.html { redirect_to reclamacoes_path, notice: 'Usuário Cadastrado com sucesso' }
+        format.html { redirect_to new_reclamacao_path, notice: 'Reclamação Criada com sucesso' }
       else
         format.html { render :new }
       end
@@ -44,8 +44,8 @@ class ReclamacaoController < ApplicationController
     @reclamacoes = Reclamacao.find(params[:id])
   end
 
-  def Reclamacao_params
-    params.fetch(:reclamacao, {}).permit(:reclamacao)
+  def reclamacao_params
+    params.fetch(:reclamacao, {}).permit(:descricao)
     #Ao invés de utilizar params.require, utilize params.fetch
     #Esse problema é intrínseco ao Rails e é solucionado com o fetch
   end
