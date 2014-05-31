@@ -1,0 +1,25 @@
+	<h1 class = "text-center">Lista de Reclamações</h1>
+	<table id="reclamacoes" class="display">
+		<thead> 
+			<tr>
+				<td>Numero Convenio</td>
+				<td>Reclamação</td>
+				<td>Usuário</td>
+			</tr>
+		</thead>
+	 
+		<tbody>
+			<% @reclamacoes.each do |reclamacoes| %>
+
+				<tr> 
+					<td> <%= reclamacoes.convenio %>  </td>
+					<td> <%= reclamacoes.descricao %>  </td>
+					<td> <%= reclamacoes.usuario %>  </td>
+
+				</tr>
+	 
+	 
+			<% end %>
+		</tbody>
+	</table>
+
