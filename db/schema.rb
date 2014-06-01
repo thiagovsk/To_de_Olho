@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140531002944) do
+ActiveRecord::Schema.define(version: 20140601200938) do
 
   create_table "convenios", force: true do |t|
     t.string   "numeroconvenio"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20140531002944) do
     t.text     "descricao"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "convenio_id"
   end
 
   create_table "roles", force: true do |t|

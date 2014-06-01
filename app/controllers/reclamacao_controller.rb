@@ -45,7 +45,7 @@ class ReclamacaoController < ApplicationController
   end
 
   def reclamacao_params
-    params.fetch(:reclamacao, {}).permit(:descricao)
+    params.fetch(:reclamacao, {}).permit(:descricao,:convenio)
     #Ao invés de utilizar params.require, utilize params.fetch
     #Esse problema é intrínseco ao Rails e é solucionado com o fetch
   end
