@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class ReclamacaoController < ApplicationController
-	 before_action :set_reclamacao , only:[:show, :edit, :destroy, :update]
+  before_action :set_reclamacao , only:[:show, :edit, :destroy, :update]
 
   def index
     @reclamacoes = Reclamacao.all

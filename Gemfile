@@ -47,7 +47,7 @@ gem 'authority'
 
 gem 'omniauth'
 
-gem 'omniauth-facebook' 
+gem 'omniauth-facebook'
 
 gem 'thin'
 
@@ -61,7 +61,6 @@ end
 
 group :test do
   gem 'faker'
-  gem 'capybara'
   gem 'guard-rspec'
   gem 'launchy'
 end
@@ -76,4 +75,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-

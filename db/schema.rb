@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140524182105) do
+ActiveRecord::Schema.define(version: 20140531002944) do
 
   create_table "convenios", force: true do |t|
     t.string   "numeroconvenio"
@@ -36,6 +36,12 @@ ActiveRecord::Schema.define(version: 20140524182105) do
     t.string   "valorcontrapartida"
     t.string   "dataultimaliberacao"
     t.string   "valorultimaliberacao"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reclamacaos", force: true do |t|
+    t.text     "descricao"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

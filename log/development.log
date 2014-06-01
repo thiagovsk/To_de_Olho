@@ -83769,3 +83769,85 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-12 14:39:49
 
 
 Started GET "/assets/logo.jpg" for 127.0.0.1 at 2014-05-12 14:39:49 -0300
+  [1m[36m (320.8ms)[0m  [1mCREATE TABLE "convenios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "numeroconvenio" varchar(255), "uf" varchar(255), "codigosiafi" varchar(255), "nomemunicipio" varchar(255), "situacaoconvenio" varchar(255), "numerooriginal" varchar(255), "objetoconvenio" varchar(255), "codigoorgaosuperior" varchar(255), "nomeorgaosuperior" varchar(255), "codigoconcedente" varchar(255), "nomeconcedente" varchar(255), "codigoconvenente" varchar(255), "nomeconvenente" varchar(255), "tipoenteconvenente" varchar(255), "valorconvenio" varchar(255), "valorliberado" varchar(255), "datapublicacao" varchar(255), "datainiciovigencia" varchar(255), "datafimvigencia" varchar(255), "valorcontrapartida" varchar(255), "dataultimaliberacao" varchar(255), "valorultimaliberacao" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (288.6ms)[0m  CREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "resource_id" integer, "resource_type" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (344.6ms)[0m  CREATE  INDEX "index_roles_on_name_and_resource_type_and_resource_id" ON "roles" ("name", "resource_type", "resource_id")
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_roles_on_name_and_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_roles_on_name_and_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (296.8ms)[0m  CREATE  INDEX "index_roles_on_name" ON "roles" ("name")
+  [1m[36m (588.9ms)[0m  [1mCREATE TABLE "usuarios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "cpf" varchar(255), "login" varchar(255), "created_at" datetime, "updated_at" datetime, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "provider" varchar(255), "uid" varchar(255)) [0m
+  [1m[35m (297.3ms)[0m  CREATE UNIQUE INDEX "index_usuarios_on_email" ON "usuarios" ("email")
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+[0m
+  [1m[35m (279.6ms)[0m  CREATE UNIQUE INDEX "index_usuarios_on_reset_password_token" ON "usuarios" ("reset_password_token")
+  [1m[36m (337.8ms)[0m  [1mCREATE TABLE "usuarios_roles" ("usuario_id" integer, "role_id" integer) [0m
+  [1m[35m (560.4ms)[0m  CREATE  INDEX "index_usuarios_roles_on_usuario_id_and_role_id" ON "usuarios_roles" ("usuario_id", "role_id")
+  [1m[36m (295.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (305.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (297.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140524182105')
+  [1m[36m (340.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140419182234')[0m
+  [1m[35m (480.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140429170038')
+  [1m[36m (420.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140426005228')[0m
+  [1m[35m (297.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140510035728')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateReclamacaos (20140531002944)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "reclamacaos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "descricao" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140531002944"]]
+  [1m[36m (455.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_roles_on_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_roles_on_name' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_roles_on_name_and_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_roles_on_name_and_resource_type_and_resource_id' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_usuarios_roles_on_usuario_id_and_role_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_usuarios_roles_on_usuario_id_and_role_id' AND type='index'
+[0m
