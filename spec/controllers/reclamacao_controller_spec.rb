@@ -56,7 +56,6 @@ describe ReclamacaoController do
       end
     end
   end
-
 =begin
   describe "DELETE destroy" do
     it "destroys the requested reclamacao" do
@@ -69,7 +68,7 @@ describe ReclamacaoController do
     it "redirects to the reclamacoes list" do
       reclamacao = Reclamacao.create! valid_attributes
         delete :destroy, {:id => reclamacao.to_param}
-      expect(response).to redirect_to(reclamacoes_url)
+      expect(response).to redirect_to(reclamacao_url)
     end
   end
 =end

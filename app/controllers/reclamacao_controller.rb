@@ -21,13 +21,14 @@ class ReclamacaoController < ApplicationController
     end
   end
 
-
+=begin
   def destroy
     @reclamacoes.destroy
     respond_to do |format|
       format.html { redirect_to reclamacoes_path, notice: 'Deletado com sucesso' }
     end
   end
+=end
 
   def update
     respond_to do |format|
