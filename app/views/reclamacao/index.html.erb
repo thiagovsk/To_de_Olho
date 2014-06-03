@@ -1,20 +1,20 @@
 	<h1 class = "text-center">Lista de Reclamações</h1>
-	<table id="reclamacoes" class="display">
+	<table id="reclamacao" class="display">
 		<thead> 
 			<tr>
 				<td>Numero Convenio</td>
 				<td>Reclamação</td>
-				<td>Usuário</td>
+				<td>Autor</td>
 			</tr>
 		</thead>
 	 
 		<tbody>
-			<% @reclamacoes.each do |reclamacoes| %>
+			<% @reclamacoes.each do |reclamacao| %>
 
 				<tr> 
-					<td> <%= reclamacoes.convenio %>  </td>
-					<td> <%= reclamacoes.descricao %>  </td>
-					<td> <%= reclamacoes.usuario %>  </td>
+					<td> <%= Reclamacao.find(reclamacao.id).convenio.numeroconvenio %>  </td>
+					<td> <%= reclamacao.descricao %>  </td>
+					<td> <%= Reclamacao.find(reclamacao.id).usuario.login %>  </td>				
 
 				</tr>
 	 

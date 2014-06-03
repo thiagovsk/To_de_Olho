@@ -1,5 +1,5 @@
 <%= simple_form_for reclamacao, url: {action:"create"} do |f| %>
 	<%= f.input :descricao , :label => "Descrição da sua reclamação", as: :text%>
-
+	
 	<%= submit_tag "Reclamar",:name => nil,class:"btn btn-primary dropdown-toggle icon-white icon-user" %>
 <%end%>
