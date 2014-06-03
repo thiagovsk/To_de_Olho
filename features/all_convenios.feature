@@ -10,3 +10,8 @@ Feature: View Convenios
 		Then I should be on convenios page
 
 	
+	@selenium
+	Scenario: Access details of Convenios
+		Given I am on the convenios page
+		When I follow "Informações Adicionais"
+		Then I should be on convenios page + id ?
