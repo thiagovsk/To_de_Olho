@@ -13,7 +13,7 @@
 			<% @reclamacoes.each do |reclamacao| %>
 
 			<tr> 
-				<td> <%= current_usuario.nome %>  </td>
+				<td> <%= Usuario.find(reclamacao.usuario_id).nome %>  </td>
 				<td> <%= reclamacao.descricao %>  </td>
 				<td> <%= Convenio.find(reclamacao.convenio_id).situacaoconvenio %>  </td>
 				<td> <%= Convenio.find(reclamacao.convenio_id).numeroconvenio %>  </td>				
