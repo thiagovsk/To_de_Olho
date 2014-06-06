@@ -2,21 +2,23 @@
 	<table id="reclamacao" class="display">
 		<thead> 
 			<tr>
-				<td>Numero Convenio</td>
+				<td>Usuario</td>
 				<td>Reclamação</td>
-				<td>Autor</td>
+				<td>Descricao do convenio</td>
+				<td>Numero Convenio</td>
 			</tr>
 		</thead>
 	 
 		<tbody>
 			<% @reclamacoes.each do |reclamacao| %>
 
-				<tr> 
-					<td> <%= Reclamacao.find(reclamacao.id).convenio.numeroconvenio %>  </td>
-					<td> <%= reclamacao.descricao %>  </td>
-					<td> <%= Reclamacao.find(reclamacao.id).usuario.login %>  </td>				
+			<tr> 
+				<td> <%= current_usuario.nome %>  </td>
+				<td> <%= reclamacao.descricao %>  </td>
+				<td> <%= Convenio.find(reclamacao.convenio_id).situacaoconvenio %>  </td>
+				<td> <%= Convenio.find(reclamacao.convenio_id).numeroconvenio %>  </td>				
 
-				</tr>
+			</tr>
 	 
 	 
 			<% end %>

@@ -12,8 +12,4 @@ class Convenio < ActiveRecord::Base
     where("uf like ?", "%#{query}%")
   end
 
-  def to_s
-    situacaoconvenio
-  end
-
 end
