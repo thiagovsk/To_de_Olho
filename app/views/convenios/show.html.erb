@@ -157,7 +157,7 @@
       convenios_url,:target => "_self",
       class: "btn btn-primary  btn-small"%>
       <%= link_to raw("<i class=\"icon-white icon-bullhorn\"> Reclamar </i>"),
-      new_reclamacao_path(@convenios.id),
+      new_reclamacao_path(:convenio_id => @convenio.id),
       class: "btn btn-primary  btn-small"%>
    </table>                           
 </div>
