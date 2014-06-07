@@ -38,5 +38,4 @@ class ConveniosController < ApplicationController
     redirect_to convenios_url, notice:  "Convenios importados com sucesso"
 
   end
-
-end
+ end
