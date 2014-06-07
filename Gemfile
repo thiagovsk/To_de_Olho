@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# paperclip for upload photos
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 # Cancancan Authorization Gem
 gem 'cancancan', '~> 1.8'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -47,7 +49,7 @@ gem 'authority'
 
 gem 'omniauth'
 
-gem 'omniauth-facebook' 
+gem 'omniauth-facebook'
 
 gem 'thin'
 
@@ -75,4 +77,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
