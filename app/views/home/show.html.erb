@@ -1,0 +1,33 @@
+<h1>TOP 5</h1>
+<table id="convenios" class="display">
+
+  <thead>
+    <tr>
+        <th>Número</th>
+        <th>Uf</th>
+        <th>Município</th>
+        <th>Situação</th>
+        <th>Descrição</th>
+        <th>Orgão Superior</th>
+        <th>Valor</th>
+        <th>Mais Detalhes</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @convenios.each do |convenio| %>
+      <tr>
+        <td><%= convenio.numeroconvenio %></td>
+        <td><%= convenio.uf %></td>
+        <td><%= convenio.nomemunicipio %></td>
+        <td><%= convenio.situacaoconvenio %></td>
+        <td><%= convenio.objetoconvenio %></td>
+        <td><%= convenio.nomeorgaosuperior %></td>
+        <td><%= convenio.valorconvenio %></td>
+        
+        
+        
+      </tr>
+    <% end %>
+</tbody>
+</table>

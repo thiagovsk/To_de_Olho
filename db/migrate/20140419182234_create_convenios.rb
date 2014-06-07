@@ -15,7 +15,7 @@ class CreateConvenios < ActiveRecord::Migration
       t.string :codigoconvenente
       t.string :nomeconvenente
       t.string :tipoenteconvenente
-      t.string :valorconvenio
+      t.float  :valorconvenio
       t.string :valorliberado
       t.string :datapublicacao
       t.string :datainiciovigencia
