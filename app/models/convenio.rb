@@ -9,5 +9,6 @@ class Convenio < ActiveRecord::Base
   def self.search(query)
     where("uf like ?", "%#{query}%")
   end
-
+  
+ 
 end
