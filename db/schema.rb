@@ -84,6 +84,10 @@ ActiveRecord::Schema.define(version: 20140609191313) do
     t.string   "last_sign_in_ip"
     t.string   "provider"
     t.string   "uid"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "usuarios", ["email"], name: "index_usuarios_on_email", unique: true

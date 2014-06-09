@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# paperclip for upload photos
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 # Cancancan Authorization Gem
 gem 'cancancan', '~> 1.8'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

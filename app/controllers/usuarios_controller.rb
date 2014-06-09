@@ -1,11 +1,11 @@
 # -*- encoding : utf-8 -*-
 
 class UsuariosController < ApplicationController
-    before_action :authenticate_usuario!
+  before_action :authenticate_usuario!
 
   load_and_authorize_resource
   check_authorization
-  
+
   before_action :set_usuario , only:[:show, :edit, :destroy, :update]
 
   def index
@@ -51,7 +51,7 @@ class UsuariosController < ApplicationController
   end
 
   def usuario_params
-    params.fetch(:usuario, {}).permit(:nome,:cpf,:email,:login)
+    params.fetch(:usuario, {}).permit(:nome,:cpf,:email,:login,:avatar)
     #Ao invés de utilizar params.require, utilize params.fetch
     #Esse problema é intrínseco ao Rails e é solucionado com o fetch
   end
