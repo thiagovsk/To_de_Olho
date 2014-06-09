@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140607175542) do
+ActiveRecord::Schema.define(version: 20140609191313) do
 
   create_table "convenios", force: true do |t|
     t.string   "numeroconvenio"
@@ -39,6 +39,21 @@ ActiveRecord::Schema.define(version: 20140607175542) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "reclamacaos", force: true do |t|
+    t.text     "descricao"
+    t.integer  "convenio_id"
+    t.integer  "usuario_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "foto_file_name"
+    t.string   "foto_content_type"
+    t.integer  "foto_file_size"
+    t.datetime "foto_updated_at"
+  end
+
+  add_index "reclamacaos", ["convenio_id"], name: "index_reclamacaos_on_convenio_id"
+  add_index "reclamacaos", ["usuario_id"], name: "index_reclamacaos_on_usuario_id"
 
   create_table "roles", force: true do |t|
     t.string   "name"

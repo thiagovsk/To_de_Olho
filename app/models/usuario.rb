@@ -4,9 +4,8 @@ class Usuario < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :omniauthable,:validatable,:authentication_keys => [:login]
-
+  has_many :reclamacao
   validates_presence_of :nome
-
   validates_presence_of :login
   validates_uniqueness_of :login
 
@@ -31,6 +30,8 @@ class Usuario < ActiveRecord::Base
                                  password:Devise.friendly_token[0,20],
                                  avatar: auth.info.image
                                  )
-    end    end
+
+      end
+    end
   end
 end

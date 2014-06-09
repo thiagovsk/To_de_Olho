@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   resources :convenios
   root :to => "application#index"
 
+  resources :reclamacao
+  
+
   get '/home' => 'home#index', as: :home_index
   get '/home/:id' =>'home#show', as: :home 
 
