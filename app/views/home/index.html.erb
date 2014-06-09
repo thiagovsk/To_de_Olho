@@ -1,12 +1,14 @@
-
   <div class="tabbable tabs-left" >
     <ul class="nav nav-tabs">
       
-      <li >
-           <%= link_to raw("Todos Convênios "), convenios_path, :target => "_self",class: "btn btn-div btn-lg a" %><br>
+      <li>
+        <%= link_to raw("Todos Convênios "), convenios_path, :target => "_self",class: "btn btn-div btn-lg a" %><br>
       </li>
       <li>
         <%=link_to ("Importar Convênios"),new_convenio_path, :target => "_self", class:"btn btn-div btn-lg  a"%><br>
+      </li>
+      <li>
+        <%=link_to ("Top 5"),home_path, :target => "_self", class:"btn btn-div btn-lg  a"%><br>
       </li>
     </ul>
 

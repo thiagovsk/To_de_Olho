@@ -4,11 +4,14 @@ class Usuario < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :omniauthable,:validatable,:authentication_keys => [:login]
-
+  has_many :reclamacao
   validates_presence_of :nome
-
   validates_presence_of :login
   validates_uniqueness_of :login
+
+  has_attached_file :avatar, :styles => { :medium => "200x200>", :thumb => "50x50>" }, :default_url => "/images/:style/missing.png"
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+
 
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     usuario = Usuario.where(:provider => auth.provider, :uid => auth.uid).first
@@ -25,7 +28,10 @@ class Usuario < ActiveRecord::Base
                                  uid:auth.uid,
                                  email:auth.info.email,
                                  password:Devise.friendly_token[0,20],
+                                 avatar: auth.info.image
                                  )
-    end    end
+
+      end
+    end
   end
 end
