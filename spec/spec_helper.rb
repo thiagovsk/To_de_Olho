@@ -1,11 +1,10 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'simplecov'
 require 'coveralls'
-require 'capybara/rspec'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-    Coveralls::SimpleCov::Formatter,
-    SimpleCov::Formatter::HTMLFormatter,
+  Coveralls::SimpleCov::Formatter,
+  SimpleCov::Formatter::HTMLFormatter,
 ]
 SimpleCov.start
 
@@ -28,7 +27,7 @@ RSpec.configure do |config|
 
   config.include Devise::TestHelpers, :type => :controller
   config.extend ControllerMacros, :type => :controller
-  
+
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:

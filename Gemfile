@@ -47,7 +47,7 @@ gem 'authority'
 
 gem 'omniauth'
 
-gem 'omniauth-facebook' 
+gem 'omniauth-facebook'
 
 gem 'thin'
 
@@ -83,4 +83,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-

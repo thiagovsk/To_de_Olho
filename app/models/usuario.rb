@@ -4,12 +4,12 @@ class Usuario < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :omniauthable,:validatable,:authentication_keys => [:login]
-
+  has_many :reclamacao  
   validates_presence_of :nome
-
   validates_presence_of :login
   validates_uniqueness_of :login
 
+  
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     usuario = Usuario.where(:provider => auth.provider, :uid => auth.uid).first
     if usuario
