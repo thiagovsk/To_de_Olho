@@ -1,0 +1,22 @@
+<div class="jumbotron">
+      <div class="container">
+          <% if usuario_signed_in? %>
+    <h1>Bem Vindo de Volta!</h1>
+    <p class="lead">
+      To de Olho
+    </p>
+  <% else %>
+    <h1>Bem Vindo, Novo Usuário!</h1>
+    <p class="lead ">
+      Se você quiser saber os mistérios por trás deste aplicativo crie sua conta. É grátis e fácil.
+    </p>
+    <div class="row-fluid">
+      <div class="span6">
+        <%= link_to "Logar", new_usuario_session_path, :class => "btn btn-primary active" %>
+        <%= link_to "Criar Conta", new_usuario_registration_path, :class => "btn btn-primary active" %>
+      </div>
+
+    </div>
+  <% end %>
+      </div>
+    </div>
