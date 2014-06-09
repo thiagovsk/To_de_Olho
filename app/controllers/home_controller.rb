@@ -2,16 +2,22 @@
 
 class HomeController < ApplicationController
   
+  def new
+  	@convenios = Convenio.new
+  end
+  
   def index
-    @usuarios = Usuario.all
+    
   end
 
   def show
-    @usuario = Usuario.find(params[:id])
-
-    respond_to do |format|
-      format.js { render :show }
-    end
+      @top_valor = Convenio.order("convenios.valorconvenio desc").limit(5)
+      @top_data = Convenio.order('(convenios.datafimvigencia - convenios.datainiciovigencia) desc').limit(5)
+      #@convenio = Convenio.find(params[:id])
+      #respond_to do |format|
+      #format.js { render :show }
+    
+    
   end
 
 end

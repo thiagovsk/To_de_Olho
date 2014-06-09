@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   
 
   get '/home' => 'home#index', as: :home_index
-  get '/home/:id' =>'home#show', as: :home 
+  get '/home/show' =>'home#show', as: :home 
 
 
 
