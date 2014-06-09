@@ -1,6 +1,6 @@
 <h2>Cadastrar Usuário</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name) ,:html => { :multipart => true } ) do |f| %>
   <%= f.error_notification %>
 
 
@@ -10,17 +10,13 @@
     <%= f.input :email %>
     <%= f.input :password , :label => "Senha" %>
     <%= f.input :password_confirmation , :label => "Confirmar Senha" %>
-
-
-
+    <%= f.file_field :avatar , :label => "Adicione foto"%>
+    <%= f.button :submit , :class => 'btn btn-info btn ' , :id => 'criar-usuario' %>
 
       <%= link_to raw("<i class=\"icon-white icon-remove\"> Cancelar </i>"),
                         root_path ,
                         class: "btn  btn-danger"%>
 
-      <%= button_tag :class => 'btn-info btn' , :id => 'criar-usuario' do %>
-                 Cadastrar Usuário
-            <% end %>
 
 <% end %>
 

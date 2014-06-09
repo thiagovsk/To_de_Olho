@@ -33,7 +33,7 @@ class Ability
        if usuario.has_role? :admin
          can :manage, :all
        else
-         can :read, Convenio
+         can :manage, :all
        end
   end
 end
