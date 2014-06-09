@@ -24,7 +24,10 @@ module NavigationHelpers
     when /^usuarios page$/
       '/usuarios'
     when /^edit page$/
-      '/usuarios/edit'  
+      '/usuarios/edit'
+
+    when /^show_5 page$/
+      '/home/show'    
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

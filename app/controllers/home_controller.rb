@@ -11,7 +11,8 @@ class HomeController < ApplicationController
   end
 
   def show
-      @convenios = Convenio.order("valorconvenio desc").limit(20)
+      @top_valor = Convenio.order("convenios.valorconvenio desc").limit(5)
+      @top_data = Convenio.order('(convenios.datafimvigencia - convenios.datainiciovigencia) desc').limit(5)
       #@convenio = Convenio.find(params[:id])
       #respond_to do |format|
       #format.js { render :show }
