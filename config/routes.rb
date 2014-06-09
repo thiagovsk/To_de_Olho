@@ -6,13 +6,12 @@ Rails.application.routes.draw do
 
   resources :usuarios
   resources :convenios
-  root :to => "application#index"
 
   resources :reclamacao
-  
+
 
   get '/home' => 'home#index', as: :home_index
-  get '/home/show' =>'home#show', as: :home 
+  get '/home/show' =>'home#show', as: :home
 
 
 
