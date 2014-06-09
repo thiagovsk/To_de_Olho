@@ -29,7 +29,7 @@ class Usuario < ActiveRecord::Base
                                  uid:auth.uid,
                                  email:auth.info.email,
                                  password:Devise.friendly_token[0,20],
-                                 #avatar: auth[:info][:image]
+                                 avatar: auth.info.image
                                  )
     end    end
   end
