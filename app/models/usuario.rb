@@ -10,7 +10,7 @@ class Usuario < ActiveRecord::Base
   validates_presence_of :login
   validates_uniqueness_of :login
 
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+  has_attached_file :avatar, :styles => { :medium => "200x200>", :thumb => "50x0>" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
 
@@ -29,6 +29,7 @@ class Usuario < ActiveRecord::Base
                                  uid:auth.uid,
                                  email:auth.info.email,
                                  password:Devise.friendly_token[0,20],
+                                 #avatar: auth[:info][:image]
                                  )
     end    end
   end
