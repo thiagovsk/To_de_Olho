@@ -1,7 +1,7 @@
 <%= simple_form_for reclamacao, url: {action:"create"} do |f| %>
 	<%= f.input :descricao , :label => "Descrição da sua reclamação", as: :text%>
-	<%=  f.hidden_field :convenio_id, :value => params[:convenio_id]  %>
+	<%= f.hidden_field :convenio_id, :value => params[:convenio_id]  %>
 	<%= f.hidden_field :usuario_id, :value => current_usuario.id %>
-	
+	<%= f.file_field :foto %>
 	<%= submit_tag "Reclamar",:name => nil,class:"btn btn-primary dropdown-toggle icon-white icon-user" %>
 <%end%>
