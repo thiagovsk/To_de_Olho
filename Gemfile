@@ -73,6 +73,10 @@ group :test do
   gem 'selenium-webdriver'
 end
 
+gem 'therubyracer'
+gem 'less-rails'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
