@@ -1,4 +1,10 @@
-<h1>TOP 5</h1>
+ <div class="container">
+          <div class="panel panel-default"%>
+           <div class="panel-body">
+
+<div class="page-header">
+   <h1>Top 5</h1>
+</div>
 <table id="top_valor" class="display">
 
   <thead>
@@ -31,36 +37,6 @@
     <% end %>
 </tbody>
 </table>
-
-<table id="top_data" class="display">
-
-  <thead>
-    <tr>
-        <th>Número</th>
-        <th>Uf</th>
-        <th>Município</th>
-        <th>Situação</th>
-        <th>Descrição</th>
-        <th>Orgão Superior</th>
-        <th>Valor</th>
-
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @top_data.each do |convenio| %>
-      <tr>
-        <td><%= convenio.numeroconvenio %></td>
-        <td><%= convenio.uf %></td>
-        <td><%= convenio.nomemunicipio %></td>
-        <td><%= convenio.situacaoconvenio %></td>
-        <td><%= convenio.objetoconvenio %></td>
-        <td><%= convenio.nomeorgaosuperior %></td>
-        <td><%= convenio.valorconvenio %></td>
-
-
-
-      </tr>
-    <% end %>
-</tbody>
-</table>
+</div>
+</div>
+</div>

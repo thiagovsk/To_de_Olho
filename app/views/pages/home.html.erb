@@ -3,17 +3,20 @@
           <% if usuario_signed_in? %>
     <h1>Bem Vindo de Volta!</h1>
     <p class="lead">
-      To de Olho
+  <p> O aplicativo To De Olho, te espera. Comece agora mesmo a acompanhar os gastos da verba pública no seu municipio.</p>
+   <%= link_to "Continuar", home_index_path, :class => "btn btn-primary active" %>
     </p>
   <% else %>
     <h1>Bem Vindo, Novo Usuário!</h1>
     <p class="lead ">
-      Se você quiser saber os mistérios por trás deste aplicativo crie sua conta. É grátis e fácil.
+      Cadastre-se agora e comece a acompanhar e reclamar a respeito dos convênios de sua cidade.
     </p>
     <div class="row-fluid">
       <div class="span6">
+      <%if !(usuario_signed_in?)%>
         <%= link_to "Logar", new_usuario_session_path, :class => "btn btn-primary active" %>
         <%= link_to "Criar Conta", new_usuario_registration_path, :class => "btn btn-primary active" %>
+        <%end%>
       </div>
 
     </div>

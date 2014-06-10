@@ -1,3 +1,5 @@
+<div class="form-divs">
+<div class="border-form-div">
 <%= simple_form_for reclamacao, url: {action:"create"} do |f| %>
 	<%= f.input :descricao , :label => "Descrição da sua reclamação", as: :text%>
 	<%= f.hidden_field :convenio_id, :value => params[:convenio_id]  %>
@@ -5,3 +7,5 @@
 	<%= f.file_field :foto %>
 	<%= submit_tag "Reclamar",:name => nil,class:"btn btn-primary dropdown-toggle icon-white icon-user" %>
 <%end%>
+<div class="form-divs">
+<div class="border-form-div">
