@@ -47,12 +47,14 @@
        <a><%= link_to "To de Olho", root_path, "class" => 'navbar-brand' %></a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
+             <li><%= link_to "Inicio", home_index_path  %></li>
             <li><%= link_to "Todos Os Convenios", convenios_path  %></li>
+            <li><%= link_to "Reclamações" , reclamacao_index_path  %></li>
           </ul>
            <% if usuario_signed_in? %>
           <ul class="nav navbar-nav navbar-right">
           <div class="btn-group " >
-      <button type="button" class=" btn btn-success btn-lg dropdown-toggle icon-white icon-user"data-toggle="dropdown">
+      <button type="button" class=" btn btn-success btn-lg dropdown-toggle icon-white icon-user pull-right"data-toggle="dropdown">
       Usuario <span class="caret"></span>
       </button>
       <ul class="dropdown-menu" role="menu">
