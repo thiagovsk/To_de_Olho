@@ -16,6 +16,7 @@ Feature: Create usuario
 			|	Email		  | teste@teste.com |
 			|	Senha		  |	  12345678 	    |
 			| Confirmação de Senha | 12345678   |
+			#Still missing image submission
 
 		When I press "criar-usuario"
 		Then I should be on usuarios page
