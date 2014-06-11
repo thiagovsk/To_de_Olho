@@ -11,7 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140609191313) do
+ActiveRecord::Schema.define(version: 20140611201122) do
+
+  create_table "abaixo_assinados", force: true do |t|
+    t.integer  "usuario_id"
+    t.string   "titulo"
+    t.string   "destinatario"
+    t.text     "termo"
+    t.integer  "convenio_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "abaixo_assinados", ["convenio_id"], name: "index_abaixo_assinados_on_convenio_id"
+  add_index "abaixo_assinados", ["usuario_id"], name: "index_abaixo_assinados_on_usuario_id"
+
+  create_table "assinaturas", force: true do |t|
+    t.integer  "usuario_id"
+    t.integer  "abaixo_assinado_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "assinaturas", ["abaixo_assinado_id"], name: "index_assinaturas_on_abaixo_assinado_id"
+  add_index "assinaturas", ["usuario_id"], name: "index_assinaturas_on_usuario_id"
 
   create_table "convenios", force: true do |t|
     t.string   "numeroconvenio"
@@ -39,6 +62,14 @@ ActiveRecord::Schema.define(version: 20140609191313) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "historico_de_assinaturas", force: true do |t|
+    t.integer  "assinatura_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "historico_de_assinaturas", ["assinatura_id"], name: "index_historico_de_assinaturas_on_assinatura_id"
 
   create_table "reclamacaos", force: true do |t|
     t.text     "descricao"
