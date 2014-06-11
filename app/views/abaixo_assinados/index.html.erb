@@ -1,2 +1,45 @@
-<h1>AbaixoAssinados#index</h1>
-<p>Find me in app/views/abaixo_assinados/index.html.erb</p>
+ <div class="container">
+          <div class="panel panel-default"%>
+           <div class="panel-body">
+
+<div class="page-header">
+   <h1>Lista de Abaixo-Assinados</h1>
+</div>
+<table class= "table table-striped" id="abaixo_assinados">
+
+  <thead>
+    <tr>
+        <th>Criado por</th>
+        <th>Convenio Relacionado</th>
+        <th>Destinado a</th>
+        <th>Titulo</th>
+        <th>Termos do Abaixo-Assinado</th>
+        <th>Total de Assinaturas</th>
+        <th>Data</th>
+        <th>Veja Mais</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @abaixo_assinados.each do |abaixo_assinado| %>
+      <tr>
+        <td><%= abaixo_assinado.usuario.nome %></td>
+        <td><%= abaixo_assinado.convenio.numeroconvenio %></td>
+        <td><%= abaixo_assinado.destinatario %></td>
+        <td><%= abaixo_assinado.termo %></td>
+        <td><%= abaixo_assinado.objetoabaixo_assinado %></td>
+        <td>%= abaixo_assinado.historico_de_assinaturas.usuarios.length %></td>
+        <td><%= abaixo_assinado.data %></td>
+        <td>
+            <%=link_to raw("<i class=\"icon-white icon-plus\"> Informações Adicionais </i>"),
+                           abaixo_assinado_path(abaixo_assinado),
+                           class: "btn btn-info  btn-small"%>
+        </td>      
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+

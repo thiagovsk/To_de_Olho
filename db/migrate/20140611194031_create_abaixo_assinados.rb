@@ -5,6 +5,7 @@ class CreateAbaixoAssinados < ActiveRecord::Migration
       t.string :titulo
       t.string :destinatario
       t.text :termo
+      t.date :data
       t.references :convenio, index: true
 
       t.timestamps

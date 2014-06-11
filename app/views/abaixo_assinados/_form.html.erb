@@ -1,0 +1,13 @@
+<div class="form-divs">
+<div class="border-form-div">
+<%= simple_form_for :abaixo_assinado, url: new_abaixo_assinado_path do |f| %>
+	<%= f.input :titulo , label: "Titulo do Seu Abaixo Assinado", as: :string%>
+	<%= f.input :convenio_id, label: "Numero do Convenio Relacionado", as: :integer%>
+	<%= f.input :destinatario, label: "Publico Alvo", as: :string%>
+	<%= f.input :destinatario, label: "Termos Do Documento", as: :text%>
+	<%= f.hidden_field :data, value: current_usuario.id %>
+	<%= f.hidden_field :usuario_id, value: Time.current.to_date %>
+	<%= submit_tag "Criar Abaixo-Assinado",class:"btn btn-primary dropdown-toggle icon-white icon-user" %>
+<%end%>
+<div class="form-divs">
+<div class="border-form-div">

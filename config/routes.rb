@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :usuarios
   resources :convenios
-
+  resources :abaixo_assinados
   resources :reclamacao
 
 
