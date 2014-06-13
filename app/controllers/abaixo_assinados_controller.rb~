@@ -1,6 +1,8 @@
 class AbaixoAssinadosController < ApplicationController
   before_action :set_abaixo_assinado, :only => [:show, :create, :update, :destroy]
  
+  serialize :assinaturas
+ 
   def index
   	@abaixo_assinados = AbaixoAssinado.all
   end

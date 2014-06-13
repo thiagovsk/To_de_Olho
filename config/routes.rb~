@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'abaixo_assinados/index'
+
+  get 'abaixo_assinados/new'
+
+  get 'abaixo_assinados/edit'
+
+  get 'abaixo_assinados/info'
+
   devise_for :usuarios, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
   resources :convenios do
     collection {post :import}
