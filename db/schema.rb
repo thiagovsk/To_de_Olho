@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140611194031) do
+ActiveRecord::Schema.define(version: 20140613200930) do
 
   create_table "abaixo_assinados", force: true do |t|
     t.integer  "usuario_id"
@@ -26,6 +26,13 @@ ActiveRecord::Schema.define(version: 20140611194031) do
 
   add_index "abaixo_assinados", ["convenio_id"], name: "index_abaixo_assinados_on_convenio_id"
   add_index "abaixo_assinados", ["usuario_id"], name: "index_abaixo_assinados_on_usuario_id"
+
+  create_table "assinaturas", force: true do |t|
+    t.integer  "usuario_id"
+    t.integer  "abaixo_assinado_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "convenios", force: true do |t|
     t.string   "numeroconvenio"

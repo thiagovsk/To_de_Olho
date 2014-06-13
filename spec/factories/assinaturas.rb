@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :assinatura do
-    usuario nil
-    abaixo_assinado nil
+    usuario ""
+    abaixo_assinado ""
   end
 end

@@ -7,6 +7,7 @@ class Usuario < ActiveRecord::Base
   has_many :reclamacao
   has_many :abaixo_assinados
   has_many :assinaturas
+  has_one :historico_assinatura , :through => :assinatura
   
   validates_presence_of :nome
   validates_presence_of :login

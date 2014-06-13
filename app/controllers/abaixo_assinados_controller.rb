@@ -1,5 +1,4 @@
 class AbaixoAssinadosController < ApplicationController
-  before_action :set_abaixo_assinado, :only => [:show, :create, :update, :destroy]
  
   def index
   	@abaixo_assinados = AbaixoAssinado.all
@@ -13,7 +12,11 @@ class AbaixoAssinadosController < ApplicationController
     @abaixo_assinados = AbaixoAssinado.new(abaixo_assinado_params)
     respond_to do |format|
       if @abaixo_assinados.save
-        format.html { redirect_to abaixo_assinados_path, notice: 'Abaixo Assinado criado com sucesso' }
+	if(Assinatura.new(:usuario_id => current_usuario.id,:abaixo_assinado_id => @abaixo_assinados.id).save)
+          format.html { redirect_to @abaixo_assinados, notice: 'Abaixo Assinado criado com sucesso' }
+	else
+	  format.html { redirect_to new_abaixo_assinado_path, notice: 'Erro ao atribuir assinatura' }
+	end
       else
         format.html { render :new }
       end
@@ -26,6 +29,10 @@ class AbaixoAssinadosController < ApplicationController
   def update
   end
 
+  def show
+	@abaixo_assinados = AbaixoAssinado.find(params[:id])
+  end 
+
   def edit
   end
 
@@ -33,10 +40,6 @@ class AbaixoAssinadosController < ApplicationController
   end
 
   private
-  def set_abaixo_assinado
-    @abaixo_assinados = AbaixoAssinado.find(params[:id])
-  end
-
   def abaixo_assinado_params
     params.fetch(:abaixo_assinado, {}).permit(:titulo,:destinatario,:termo,:data,:assinaturas,:convenio_id,:usuario_id)
   end
