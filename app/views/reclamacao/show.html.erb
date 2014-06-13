@@ -1,0 +1,78 @@
+<div class="row">
+   <div class=".col-md-3 "> </div>
+      <div class=".col-md-6 col-md-offset-3">
+         <div class="panel panel-default">
+            <div class="panel-body">
+<div class="page-header">
+   <h1>Reclamação</h1>
+</div>
+<div class="panel-group" id="accordion">
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseDescricao">
+            Dados da Reclamação
+            </a>
+         </h4>
+      </div>
+      <div id="collapseDescricao" class="panel-collapse collapse in">
+         <div class="panel-body ">
+            <table class="table">
+               <tbody>
+                  <tr>
+                     <td class="strong"> Usuario:</td>
+                     <td><%= Usuario.find(@reclamacoes.usuario_id).nome %>  </td>
+                  </tr>
+                  <tr>
+                     <td class="strong"> Reclamação: </td>
+                     <td><%= @reclamacoes.descricao %> </td>
+                  </tr>
+                  <tr>
+                     <td class="strong"> Descrição do Convênio: </td>
+                     <td><%= Convenio.find(@reclamacoes.convenio_id).situacaoconvenio %> </td>
+                  </tr>
+                  <tr>
+                     <td class="strong"> Número do Convênio: </td>
+                     <td><%= link_to raw(Convenio.find(@reclamacoes.convenio_id).numeroconvenio),
+                           convenio_path(@reclamacoes.convenio_id) %> </td>
+                  </tr> 
+                  <tr>
+                     <td class="strong"> UF: </td>
+                     <td><%= Convenio.find(@reclamacoes.convenio_id).uf %> </td>
+                  </tr>
+                  <tr>
+                     <td class="strong"> Município: </td>
+                     <td><%= Convenio.find(@reclamacoes.convenio_id).nomemunicipio %> </td>
+                  </tr>
+                  <tr>
+                     <td class="strong"> Objeto do Convênio: </td>
+                     <td><%= Convenio.find(@reclamacoes.convenio_id).objetoconvenio %> </td>
+                  </tr>
+                  <tr>
+                     <td class="strong"> Valor do Convênio: </td>
+                     <td><%= Convenio.find(@reclamacoes.convenio_id).valorconvenio %> </td>
+                  </tr>
+                  <tr>
+                     <td class="strong"> Imagem: </td>
+                     <td><%= image_tag @reclamacoes.foto(:medium) %></td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </div>
+
+  <%= link_to raw("<i class=\"icon-white icon-arrow-left\"> Voltar </i>"),
+      reclamacao_index_path,class: "btn btn-primary  btn-small"%>
+
+  <%= link_to raw("<i class=\"icon-white icon-facebook\"> Compartilhar Reclamação </i>"),
+      "http://www.facebook.com/sharer.php?u=reclamacao_url(@reclamacoes)",
+      #"http://www.facebook.com/sharer.php?u=http://localhost:3000/convenios/@convenios_id/"
+      :target => "_blank" ,class: "btn btn-primary btn-small"%>
+
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
