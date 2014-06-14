@@ -14,8 +14,10 @@
          <div class="panel-body ">
             <table class="table">
                <tbody>
-                 <%= image_tag @reclamacoes.foto(:medium) %>
-                  <tr>"<%= @reclamacoes.descricao %> "</tr>
+                  <td>
+                     <tr><%= image_tag @reclamacoes.foto(:medium) %></tr>
+                     <tr><i><big><big> "<%= @reclamacoes.descricao %> "</big></big></i></tr>
+                  </td>
                </tbody>
             </table>
       </div>
