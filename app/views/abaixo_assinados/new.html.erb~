@@ -1,20 +1,12 @@
 <div class="form-divs">
 <div class="border-form-div">
 <%= simple_form_for @abaixo_assinados, url: {action:"create"} do |f| %>
-	<%= f.input :titulo , label: "Titulo do Seu Abaixo Assinado", as: :text%>
+	<%= f.input :titulo , label: "Titulo do Seu Abaixo Assinado", as: :string%>
 	<%= f.input :convenio_id, label: "Numero do Convenio Relacionado", as: :integer%>
-	<%= f.input :destinatario, label: "Publico Alvo", as: :text%>
+	<%= f.input :destinatario, label: "Publico Alvo", as: :string%>
 	<%= f.input :termo, label: "Termos Do Documento", as: :text%>
-<<<<<<< HEAD
 	<%= f.hidden_field :usuario_id, value: current_usuario.id, as: :integer %>
-	<%= f.hidden_field :data, value: Time.current.to_date, as: :date%>
 	<%= submit_tag "Criar Abaixo-Assinado",class:"btn btn-primary dropdown-toggle icon-white icon-user" %>
-=======
-	<%= f.hidden_field :assinaturas, value: current_usuario.id %>	
-	<%= f.hidden_field :usuario_id, value: current_usuario.id %>
-	<%= f.hidden_field :data, value: Time.current.to_date %>
-	<%= submit_tag "Criar Abaixo-Assinado",:name => nil,class:"btn btn-primary dropdown-toggle icon-white icon-user" %>
->>>>>>> 12dfb0c7dcea1220db1b250e77781b0c13991e8f
 <%end%>
 </div>
 </div>

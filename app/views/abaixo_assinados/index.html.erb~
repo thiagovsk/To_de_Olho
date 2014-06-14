@@ -28,8 +28,8 @@
         <td><%= abaixo_assinado.destinatario %></td>
 	<td><%= abaixo_assinado.titulo %></td>        
 	<td><%= abaixo_assinado.termo %></td>
-        <td><%= #To DO %></td>
-        <td><%= abaixo_assinado.data %></td>
+        <td>TO DO></td>
+        <td><%=@abaixo_assinado.created_at.to_s(:abaixo_assinado)%></td>
         <td>
             <%=link_to raw("<i class=\"icon-white icon-plus\"> Informações Adicionais </i>"),
                            abaixo_assinado_path(abaixo_assinado),

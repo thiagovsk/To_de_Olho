@@ -1,1 +1,56 @@
-<%= @abaixo_assinados.id%>
+<div class="row">
+        <div class=".col-md-3 "> </div>
+       <div class=".col-md-6 col-md-offset-3">
+          <div class="panel panel-default">
+           <div class="panel-body">
+
+<div class="page-header">
+   <h1>Dados do Abaixo assinado</h1>
+</div>
+<div class="panel-group" id="accordion">
+   <div class="panel panel-default">
+      <div class="panel-heading">
+         <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseDescricao">
+            Descrição do Abaixo assinado
+            </a>
+         </h4>
+      </div>
+      <div id="collapseDescricao" class="panel-collapse collapse in">
+         <div class="panel-body ">
+            <table class="table">
+               <tbody>
+                  <tr>
+                     <td class="strong"> Autor:</td>
+                     <td><%= @abaixo_assinados.usuario.nome %>  </td>
+                  </tr>
+                  <tr>
+                     <td class="strong"> Convenio Relacionado:</td>
+                     <td><%= @abaixo_assinados.convenio.numeroconvenio %>  </td>
+                  </tr>
+                  <tr>
+                     <td class="strong"> Autor:</td>
+                     <td><%= @abaixo_assinados.destinatario%>  </td>
+                  </tr>
+                  <tr>
+                     <td class="strong"> Título:</td>
+                     <td><%= @abaixo_assinados.titulo%>  </td>
+                  </tr>
+                  <tr>
+                     <td class="strong"> Termo:</td>
+                     <td><%= @abaixo_assinados.termo%>  </td>
+                  </tr>
+                  <tr>
+                     <td class="strong"> Data:</td>
+                     <td><%= @abaixo_assinados.data%></td>
+                  </tr>
+                  
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </div>
+   
+   </table>
+</div>
+</div>

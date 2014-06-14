@@ -1,5 +1,4 @@
 class AbaixoAssinadosController < ApplicationController
-  before_action :set_abaixo_assinado, :only => [:show, :update, :destroy]
  
   def index
   	@abaixo_assinados = AbaixoAssinado.all
@@ -41,10 +40,6 @@ class AbaixoAssinadosController < ApplicationController
   end
 
   private
-  def set_abaixo_assinado
-    @abaixo_assinados = AbaixoAssinado.find(params[:id])
-  end
-
   def abaixo_assinado_params
     params.fetch(:abaixo_assinado, {}).permit(:titulo,:destinatario,:termo,:data,:assinaturas,:convenio_id,:usuario_id)
   end

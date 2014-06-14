@@ -41,7 +41,7 @@ class AbaixoAssinadosController < ApplicationController
 
   private
   def abaixo_assinado_params
-    params.fetch(:abaixo_assinado, {}).permit(:titulo,:destinatario,:termo,:data,:assinaturas,:convenio_id,:usuario_id)
+    params.fetch(:abaixo_assinado, {}).permit(:titulo,:destinatario,:termo,:assinaturas,:convenio_id,:usuario_id)
   end
 
 end
