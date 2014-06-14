@@ -5,32 +5,19 @@
            <div class="panel-body">
 
 <div class="page-header">
-   <h1></h1>
-</div>
-
-<div class="page-header">
 
 <div class="panel-group" id="accordion">
    <div class="panel panel-default">
       <div class="panel-heading">
-         <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseDescricao">
-            Detalhes do Convênio
-            </a>
-         </h4>
+         
       </div>
-      <div id="collapseDescricao" class="panel-collapse collapse in">
          <div class="panel-body ">
             <table class="table">
                <tbody>
                  <%= image_tag @reclamacoes.foto(:medium) %>
-<tr>
-   <td class="strong"></td>
-   <td><h2>"<%= @reclamacoes.descricao %> "</h2></td>
-</tr>
+                  <tr>"<%= @reclamacoes.descricao %> "</tr>
                </tbody>
             </table>
-         </div>
       </div>
    </div>
 </div>
@@ -38,12 +25,12 @@
    <div class="panel panel-default">
       <div class="panel-heading">
          <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseDescricao">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseConvenio">
             Detalhes do Convênio
             </a>
          </h4>
       </div>
-      <div id="collapseDescricao" class="panel-collapse collapse in">
+      <div id="collapseConvenio" class="panel-collapse collapse in">
          <div class="panel-body ">
             <table class="table">
                <tbody>
@@ -54,10 +41,6 @@
                   <tr>
                      <td class="strong">Código Siafi: </td>
                      <td><%= Convenio.find(@reclamacoes.convenio_id).codigosiafi %> </td>
-                  </tr>
-                  <tr>
-                     <td class="strong">Número do Convênio:</td>
-                     <td><%= Convenio.find(@reclamacoes.convenio_id).numerooriginal %></td>
                   </tr>
                   <tr>
                      <td class="strong">Objeto do Convênio: </td>
@@ -72,9 +55,10 @@
                      <td> <%= Convenio.find(@reclamacoes.convenio_id).situacaoconvenio %></td>
                   </tr>
                   <tr>
-                        <%=link_to raw("<i class=\"icon-white icon-plus\"> Mais Informações </i>"),
+                        <td></td>
+                        <td><%=link_to raw("<i class=\"icon-white icon-plus\"> Mais Informações </i>"),
                            convenio_path(@reclamacoes.convenio_id),
-                           class: "btn btn-info  btn-small"%>
+                           class: "btn btn-info  btn-small"%></td>
                   </tr>
                </tbody>
             </table>
@@ -85,12 +69,12 @@
    <div class="panel panel-default">
       <div class="panel-heading">
          <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseDescricao">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseUsuario">
             Detalhes do Usuário
             </a>
          </h4>
       </div>
-      <div id="collapseDescricao" class="panel-collapse collapse in">
+      <div id="collapseUsuario" class="panel-collapse collapse in">
          <div class="panel-body ">
             <table class="table">
                <tbody>
