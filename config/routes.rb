@@ -6,13 +6,12 @@ Rails.application.routes.draw do
 
   resources :usuarios
   resources :convenios
-
   resources :reclamacao
 
 
   get '/home' => 'home#index', as: :home_index
   get '/home/show' =>'home#show', as: :home
-
+  get '/convenios/associate/:id' => 'convenios#associate', as: :associate
 
 
   # The priority is based upon order of creation: first created -> highest priority.

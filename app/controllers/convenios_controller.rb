@@ -16,6 +16,9 @@ class ConveniosController < ApplicationController
     end
   end
 
+  def associate
+    @reclamacoes = Reclamacao.new
+  end
 
   def new
     @convenios = Convenio.new

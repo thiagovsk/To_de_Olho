@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="panel panel-default"%>
+        <div class="panel-body">
+
+<div class="page-header">
+   <h1>Reclamações sobre o convênio</h1>
+</div>
+	<table id="reclamacao" class="table table-striped">
+		<thead> 
+			<tr>
+				<td>Usuario</td>
+				<td>Reclamação</td>
+				<td>Imagem</td>
+			</tr>
+		</thead>
+	 
+		<tbody>
+			<% @reclamacoes = Reclamacao.where(:convenio_id => "#{@convenio.id}")%>
+			<% @reclamacoes.each do |reclamacao| %>
+
+			<tr> 
+				<td> <%= Usuario.find(reclamacao.usuario_id).nome %>  </td>
+				<td> <%= reclamacao.descricao %>  </td>
+				<td> <%= image_tag reclamacao.foto(:medium) %> </td>	
+			</tr>
+			
+			<% end %>
+		</tbody>
+	</table>
+		</div>
+	</div>
+</div>
