@@ -33,8 +33,7 @@
                   </tr>
                   <tr>
                      <td class="strong"> Número do Convênio: </td>
-                     <td><%= link_to raw(Convenio.find(@reclamacoes.convenio_id).numeroconvenio),
-                           convenio_path(@reclamacoes.convenio_id) %> </td>
+                     <td><%= Convenio.find(@reclamacoes.convenio_id).numeroconvenio %> </td>
                   </tr> 
                   <tr>
                      <td class="strong"> UF: </td>
