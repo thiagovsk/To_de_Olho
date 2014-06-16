@@ -22,28 +22,34 @@
                <tbody>
                   <tr>
                      <td class="strong"> Autor:</td>
-                     <td><%= @abaixo_assinados.usuario.nome %>  </td>
+                     <td><%= @abaixo_assinado.usuario.nome %>  </td>
                   </tr>
                   <tr>
                      <td class="strong"> Convenio Relacionado:</td>
-                     <td><%= @abaixo_assinados.convenio.numeroconvenio %>  </td>
+                     <td><%= @abaixo_assinado.convenio.numeroconvenio %>  </td>
                   </tr>
                   <tr>
                      <td class="strong"> Autor:</td>
-                     <td><%= @abaixo_assinados.destinatario%>  </td>
+                     <td><%= @abaixo_assinado.destinatario%>  </td>
                   </tr>
                   <tr>
                      <td class="strong"> Título:</td>
-                     <td><%= @abaixo_assinados.titulo%>  </td>
+                     <td><%= @abaixo_assinado.titulo%>  </td>
                   </tr>
                   <tr>
                      <td class="strong"> Termo:</td>
-                     <td><%= @abaixo_assinados.termo%>  </td>
+                     <td><%= @abaixo_assinado.termo%>  </td>
                   </tr>
                   <tr>
                      <td class="strong"> Data:</td>
-                     <td><%=@abaixo_assinados.created_at.to_s(:abaixo_assinado)%></td>
+                     <td><%=@abaixo_assinado.created_at.to_s(:abaixo_assinado)%></td>
                   </tr>
+                  <tr>
+                     <td> <%=link_to raw("<i class=\"icon-white icon-remove\"> Assinar </i>"), assinar_url(id: @abaixo_assinado.id),
+                           class: "btn btn-info btn-small"%>
+                     </td>
+                  </tr>
+                  
                   
                </tbody>
             </table>
