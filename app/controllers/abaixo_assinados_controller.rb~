@@ -1,6 +1,6 @@
 class AbaixoAssinadosController < ApplicationController
   before_action :set_abaixo_assinado, only: [:show, :assinar]
-  helper_method :assinaturas_length
+  helper_method :set_assinaturas_by_abaixo_assinado_id
 
   def index
   	@abaixo_assinados = AbaixoAssinado.all

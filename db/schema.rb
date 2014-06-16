@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 20140613200930) do
     t.string   "titulo"
     t.string   "destinatario"
     t.text     "termo"
-    t.date     "data"
     t.integer  "convenio_id"
     t.datetime "created_at"
     t.datetime "updated_at"
