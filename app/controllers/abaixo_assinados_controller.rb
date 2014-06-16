@@ -1,13 +1,13 @@
 class AbaixoAssinadosController < ApplicationController
   before_action :set_abaixo_assinado, only: [:show, :assinar]
-
+  before_action :set_assinatura, only: [:index]
 
   def index
   	@abaixo_assinados = AbaixoAssinado.all
   end
 
   def new
-  	@abaixo_assinados = AbaixoAssinado.new
+  	@abaixo_assinado = AbaixoAssinado.new
   end
 
   def create
@@ -57,5 +57,11 @@ class AbaixoAssinadosController < ApplicationController
   def set_abaixo_assinado
     @abaixo_assinado = AbaixoAssinado.find(params[:id])
   end
+
+  def set_assinatura
+    @assinaturas = Assinatura.all
+  end
+
+  
 
 end
