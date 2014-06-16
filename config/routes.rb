@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/home' => 'home#index', as: :home_index
   get '/home/show' =>'home#show', as: :home
   get '/assinar/:id' => 'abaixo_assinados#assinar', as: :assinar
+  get '/abaixo_assinado/info' => 'abaixo_assinados#info', as: :info
 
 
 

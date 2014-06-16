@@ -51,6 +51,7 @@ class AbaixoAssinadosController < ApplicationController
   end
 
   def info
+    @convenio_id = params[:convenio_id]
   end
 
   private

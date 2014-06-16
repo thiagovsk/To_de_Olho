@@ -45,7 +45,8 @@
                      <td><%=@abaixo_assinado.created_at.to_s(:abaixo_assinado)%></td>
                   </tr>
                   <tr>
-                     <td> <%=link_to raw("<i class=\"icon-white icon-remove\"> Assinar </i>"), assinar_url(id: @abaixo_assinado.id),
+                     <td> <%=link_to raw("<i class=\"icon-white icon-remove\"> Assinar </i>"), 
+			   assinar_url(id: @abaixo_assinado.id),
                            class: "btn btn-info btn-small"%>
                      </td>
                   </tr>
