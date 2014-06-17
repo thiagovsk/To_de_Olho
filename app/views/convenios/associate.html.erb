@@ -27,6 +27,12 @@
 			<% end %>
 		</tbody>
 	</table>
+
+	<%= link_to raw("<i class=\"fa fa-arrow-circle-left\"> Voltar ao Convênio </i>"),
+      convenio_path(@convenio),class: "btn btn-primary  btn-small"%>
+    <%= link_to raw("<i class=\"fa fa-exclamation-triangle\"> Reclamar!! </i>"),
+      new_reclamacao_path(:convenio_id => @convenio.id), class: "btn btn-primary  btn-small"%>
+
 		</div>
 	</div>
 </div>
