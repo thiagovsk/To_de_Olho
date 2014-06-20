@@ -1,5 +1,6 @@
 class Convenio < ActiveRecord::Base
   has_many :reclamacao
+  has_many :abaixo_assinado
 
 
   def self.import(file)

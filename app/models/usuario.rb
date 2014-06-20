@@ -6,6 +6,9 @@ class Usuario < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :omniauthable,:validatable,:authentication_keys => [:login]
   has_many :reclamacao
+  has_many :abaixo_assinados
+  has_many :assinaturas
+  
   validates_presence_of :nome
   validates_presence_of :login
   validates_uniqueness_of :login
