@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/home/show' =>'home#show', as: :home
   get '/assinar/:id' => 'abaixo_assinados#assinar', as: :assinar
   get '/abaixo_assinado/info' => 'abaixo_assinados#info', as: :info
+  get '/convenios/associate/:id' => 'convenios#associate', as: :associate
 
 
 

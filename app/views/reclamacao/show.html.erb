@@ -1,108 +1,113 @@
-<div class="row">
-        <div class=".col-md-3 "> </div>
-       <div class=".col-md-6 col-md-offset-3">
-          <div class="panel panel-default">
-           <div class="panel-body">
-
-<div class="page-header">
-
-<div class="panel-group" id="accordion">
+<div class=".col-md-3 "> </div>
+<div class=".col-md-6 col-md-offset-3">
    <div class="panel panel-default">
-      <div class="panel-heading">
-         
-      </div>
-         <div class="panel-body ">
-            <table class="table">
-               <tbody>
-                  <td>
-                     <tr><%= image_tag @reclamacoes.foto(:medium) %></tr>
-                     <tr><i><big><big> "<%= @reclamacoes.descricao %> "</big></big></i></tr>
-                  </td>
-               </tbody>
-            </table>
-      </div>
-   </div>
-</div>
-<div class="panel-group" id="accordion">
-   <div class="panel panel-default">
-      <div class="panel-heading">
-         <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseConvenio">
-            Detalhes do Convênio
-            </a>
-         </h4>
-      </div>
-      <div id="collapseConvenio" class="panel-collapse collapse in">
-         <div class="panel-body ">
-            <table class="table">
-               <tbody>
-                  <tr>
-                     <td class="strong"> Número Convênio:</td>
-                     <td><%= Convenio.find(@reclamacoes.convenio_id).numeroconvenio %></td>
-                  </tr>
-                  <tr>
-                     <td class="strong">Código Siafi: </td>
-                     <td><%= Convenio.find(@reclamacoes.convenio_id).codigosiafi %> </td>
-                  </tr>
-                  <tr>
-                     <td class="strong">Objeto do Convênio: </td>
-                     <td><%= Convenio.find(@reclamacoes.convenio_id).objetoconvenio %> </td>
-                  </tr>
-                  <tr>
-                     <td class="strong">Município:</td>
-                     <td><%= Convenio.find(@reclamacoes.convenio_id).nomemunicipio %>
-                  </tr>
-                  <tr>
-                     <td class="strong">Situação do Convênio:</td>
-                     <td> <%= Convenio.find(@reclamacoes.convenio_id).situacaoconvenio %></td>
-                  </tr>
-                  <tr>
-                        <td></td>
-                        <td><%=link_to raw("<i class=\"icon-white icon-plus\"> Mais Informações </i>"),
-                           convenio_path(@reclamacoes.convenio_id),
-                           class: "btn btn-info  btn-small"%></td>
-                  </tr>
-               </tbody>
-            </table>
+      <div class="panel-body">
+         <div class="page-header">
+            <div class="panel-group" id="accordion">
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                  </div>
+                  <div class="panel-body ">
+                     <table class="table">
+                        <tbody>
+                           <td>
+                           <tr><%= image_tag @reclamacoes.foto(:medium) %></tr>
+                           <tr><i><big><big> "<%= @reclamacoes.descricao %> "</big></big></i></tr>
+                           </td>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+            <div class="panel-group" id="accordion">
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseConvenio">
+                        Detalhes do Convênio
+                        </a>
+                     </h4>
+                  </div>
+                  <div id="collapseConvenio" class="panel-collapse collapse in">
+                     <div class="panel-body ">
+                        <table class="table">
+                           <tbody>
+                              <tr>
+                                 <td class="strong"> Número Convênio:</td>
+                                 <td><%= Convenio.find(@reclamacoes.convenio_id).numeroconvenio %></td>
+                              </tr>
+                              <tr>
+                                 <td class="strong">Código Siafi: </td>
+                                 <td><%= Convenio.find(@reclamacoes.convenio_id).codigosiafi %> </td>
+                              </tr>
+                              <tr>
+                                 <td class="strong">Objeto do Convênio: </td>
+                                 <td><%= Convenio.find(@reclamacoes.convenio_id).objetoconvenio %> </td>
+                              </tr>
+                              <tr>
+                                 <td class="strong">Município:</td>
+                                 <td><%= Convenio.find(@reclamacoes.convenio_id).nomemunicipio %>
+                              </tr>
+                              <tr>
+                                 <td class="strong">Situação do Convênio:</td>
+                                 <td> <%= Convenio.find(@reclamacoes.convenio_id).situacaoconvenio %></td>
+                              </tr>
+                              <tr>
+                                 <td></td>
+                                 <td><%=link_to raw("<i class=\"icon-white icon-plus\"> Mais Informações </i>"),
+                                    convenio_path(@reclamacoes.convenio_id),
+                                    class: "btn btn-info  btn-small"%></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div class="panel-group" id="accordion">
+                  <div class="panel panel-default">
+                     <div class="panel-heading">
+                        <h4 class="panel-title">
+                           <a data-toggle="collapse" data-parent="#accordion" href="#collapseUsuario">
+                           Detalhes do Usuário
+                           </a>
+                        </h4>
+                     </div>
+                     <div id="collapseUsuario" class="panel-collapse collapse in">
+                        <div class="panel-body ">
+                           <table class="table">
+                              <tbody>
+                                 <tr>
+                                    <td class="strong"> Nome:</td>
+                                    <td><%= Usuario.find(@reclamacoes.usuario_id).nome %>  </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="strong">Email: </td>
+                                    <td><%= Usuario.find(@reclamacoes.usuario_id).email %> </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="strong">Avatar:</td>
+                                    <td><%= image_tag Usuario.find(@reclamacoes.usuario_id).avatar(:medium) %></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                  </div>
+                  <%= link_to raw("<i class=\"fa fa-arrow-circle-left\"> Voltar </i>"),
+                     reclamacao_index_path,class: "btn btn-primary  btn-small"%>
+                  <%= link_to raw("<i class=\"fa fa-tag\"> Convênio!!</i>"),
+                     convenio_path(:reclamacao_id => @reclamacoes.id), class: "btn btn-primary  btn-small"%>
+                  <%= link_to raw("<i class=\"fa fa-facebook-square\"> Compartilhar Reclamação </i>"),
+                     "http://www.facebook.com/sharer.php?u=reclamacao_url(@reclamacoes)",
+                     #"http://www.facebook.com/sharer.php?u=http://localhost:3000/convenios/@convenios_id/"
+                     :target => "_blank" ,class: "btn btn-primary btn-small"%>
+               </div>
+            </div>
          </div>
       </div>
    </div>
-   <div class="panel-group" id="accordion">
-   <div class="panel panel-default">
-      <div class="panel-heading">
-         <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#collapseUsuario">
-            Detalhes do Usuário
-            </a>
-         </h4>
-      </div>
-      <div id="collapseUsuario" class="panel-collapse collapse in">
-         <div class="panel-body ">
-            <table class="table">
-               <tbody>
-                  <tr>
-                     <td class="strong"> Nome:</td>
-                     <td><%= Usuario.find(@reclamacoes.usuario_id).nome %>  </td>
-                  </tr>
-                  <tr>
-                     <td class="strong">Email: </td>
-                     <td><%= Usuario.find(@reclamacoes.usuario_id).email %> </td>
-                  </tr>
-                  <tr>
-                     <td class="strong">Avatar:</td>
-                     <td><%= image_tag Usuario.find(@reclamacoes.usuario_id).avatar(:medium) %></td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-      </div>
-   </div>
-   <br>
-
-   </table>
-
 </div>
-<div id="fb-root"></div> 
+<div id="fb-root"></div>
 <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; 
    if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&appId=1603488076542893&version=v2.0"; 
    fjs.parentNode.insertBefore(js, fjs); }

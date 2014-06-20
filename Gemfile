@@ -54,9 +54,13 @@ gem 'thin'
 
 gem 'rolify'
 
-#gem 'cucumber', '~> 1.3.15'
+gem 'therubyracer'
 
-#gem "cucumber-rails-training-wheels", :group => :test
+gem 'less-rails'
+
+gem 'cucumber', '~> 1.3.15'
+
+gem "cucumber-rails-training-wheels", :group => :test
 
 group :development, :test do
   gem 'rspec-rails'
@@ -68,13 +72,10 @@ group :test do
   gem 'faker'
   gem 'guard-rspec'
   gem 'launchy'
-  # gem 'cucumber-rails', require: false
+  gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'selenium-webdriver'
 end
-
-gem 'therubyracer'
-gem 'less-rails'
 
 
 # Use ActiveModel has_secure_password

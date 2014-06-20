@@ -22,7 +22,6 @@ class ReclamacaoController < ApplicationController
     end
   end
 
-
   def destroy
     @reclamacoes.destroy
     respond_to do |format|
@@ -52,3 +51,4 @@ class ReclamacaoController < ApplicationController
     #Esse problema é intrínseco ao Rails e é solucionado com o fetch
   end
 end
+

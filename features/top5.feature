@@ -1,6 +1,6 @@
 Feature: Show TOP 5
 	As an User
-	I want to see the most expensive covernants.
+	I want to see the most expensive covenants.
 	So that view covenants that may draw more attention to complaints
 
 	
