@@ -25,7 +25,13 @@
 				<td> <%= Convenio.find(reclamacao.convenio_id).situacaoconvenio %>  </td>
 				<td><%=link_to raw(Convenio.find(reclamacao.convenio_id).numeroconvenio),
                            convenio_path(reclamacao.convenio_id) %> </td>
-				<td> <%= image_tag reclamacao.foto(:medium) %>	</td>		
+				<td> <%= image_tag reclamacao.foto(:medium) %>	</td>
+				<td>
+            		<%=link_to raw("<i class=\"icon-white icon-plus\"> Informações Adicionais </i>"),
+                           reclamacao_path(reclamacao),
+                           class: "btn btn-info  btn-small"%>
+
+        		</td>		
 
 			</tr>
 	 

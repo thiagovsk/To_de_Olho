@@ -15,7 +15,7 @@ class ReclamacaoController < ApplicationController
     @reclamacoes = Reclamacao.new(reclamacao_params)
     respond_to do |format|
       if @reclamacoes.save
-        format.html { redirect_to new_reclamacao_path, notice: 'Reclamação Criada com sucesso' }
+        format.html { redirect_to reclamacao_index_path, notice: 'Reclamação Criada com sucesso' }
       else
         format.html { render :new }
       end
