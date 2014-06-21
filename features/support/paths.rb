@@ -33,7 +33,14 @@ module NavigationHelpers
       '/reclamacao'
 
     when /^reclamacoes_id page$/
-      '/reclamacao/1'       
+      '/reclamacao/1'
+
+    when /^convenio_reclamacao_id page$/
+      '/convenios/1?reclamacao_id=1'
+
+    when /^reclamacao_facebook_share page$/
+      'https://www.facebook.com/sharer/sharer.php?u=reclamacao_url(@reclamacoes)'
+    
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
