@@ -23,8 +23,8 @@
   <tbody>
     <% @abaixo_assinados.each do |abaixo_assinado| %>  
         <tr>
-        <td><%= abaixo_assinado.usuario.nome %></td>
-        <td><%= abaixo_assinado.convenio.numeroconvenio %></td>
+        <td><%= Usuario.find(abaixo_assinado.usuario_id).nome %></td>
+        <td><%= Convenio.find(abaixo_assinado.convenio_id).numeroconvenio %></td>
         <td><%= abaixo_assinado.destinatario %></td>
 	<td><%= abaixo_assinado.titulo %></td>        
 	<td><%= abaixo_assinado.termo %></td>
