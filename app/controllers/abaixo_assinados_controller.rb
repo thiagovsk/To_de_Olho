@@ -64,7 +64,7 @@ class AbaixoAssinadosController < ApplicationController
   end
 
   def showusuario
-    
+    @abaixo_assinado = AbaixoAssinado.find(params[:usuario_id])
   end 
 
 end
