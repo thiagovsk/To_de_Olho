@@ -60,7 +60,7 @@
       </button>
       <ul class="dropdown-menu" role="menu">
         <li><a href="">Minhas reclacações</a></li>
-        <li><a href="#">Meus abaixo-assinados </a></li>
+        <li><a href="<%= usuario_abaixo_assinado_path(current_usuario.id) %>">Meus abaixo-assinados </a></li>
         <li><a href="<%= edit_usuario_registration_path %>">Editar Perfil</a></li>
         <li class="divider"></li>
       </ul>

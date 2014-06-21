@@ -10,21 +10,23 @@
             <form action="">
               <fieldset>
                 <div class="clearfix">
-                  <%= f.text_field :login, :autofocus => true, :label => 'Usuário', :placeholder => 'Login'%>
+                  <%= f.text_field :login, :autofocus => true, :label => 'Usuário', :placeholder => 'Login',:size => 35%>
                 </div>
                 <div class="clearfix">
-                  <%= f.password_field :password, :label => 'Senha', :placeholder => 'Senha' %>
+                  <%= f.password_field :password, :label => 'Senha', :placeholder => 'Senha',:size => 35 %>
                 </div>
-                <%= button_tag :class => 'btn btn-info ' ,:id => 'login' do %>
+                <div class="center">
+                <%= button_tag :class => 'fa btn btn-info ' ,:id => 'login' do %>
                     <i class='icon-white icon-upload'></i> Login
                 <% end %>
 
                 <%=link_to raw("<i class=\"icon-white icon-ok\"> Cadastre-se </i>"),
                            new_usuario_registration_path,
-                           class: "btn btn-warning  btn-small"%>
-
+                           class: "fa btn btn-warning  btn-small"%>
+<br>  
                 <%= link_to " Entre com Facebook", usuario_omniauth_authorize_path(:facebook) ,
-                            class: "btn  btn-primary  btn-small icon-thumbs-up ", id: "btn-form-sign-in-face" %>
+                            class: "fa fa-facebook-square btn  btn-primary  btn-small icon-thumbs-up  margin", id: "btn-form-sign-in-face" %>
+              </div>
               </fieldset>
             </form>
           </div>

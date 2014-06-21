@@ -15,7 +15,7 @@
  */
 /* User sign in and sign forms. */
 .border-form-div {
-  max-width: 300px;
+  max-width: 400px;
   padding: 19px 29px 29px;
   margin: 0 auto 20px;
   background-color: #fff;
@@ -64,4 +64,14 @@
 }
 .strong{
   font-weight: bold;
+}
+.margin{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.clearfix{
+  height: 50px;
+}
+.center{
+text-align: center;
 }
