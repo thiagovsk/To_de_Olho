@@ -21,14 +21,15 @@
   </thead>
 
   <tbody>
+    <% @abaixo_assinados = AbaixoAssinado.where(:usuario_id => @usuario.id %>
     <% @abaixo_assinados.each do |abaixo_assinado| %>  
         <tr>
-        <td><%= abaixo_assinado.usuario.nome %></td>
-        <td><%= abaixo_assinado.convenio.numeroconvenio %></td>
+        <td><%= Usuario.find(abaixo_assinado.usuario_id).nome %></td>
+        <td><%= Convenio.find(abaixo_assinado.convenio_id).numeroconvenio %></td>
         <td><%= abaixo_assinado.destinatario %></td>
 	<td><%= abaixo_assinado.titulo %></td>        
 	<td><%= abaixo_assinado.termo %></td>
-        <td><%= assinaturas_length(abaixo_assinado_id)%></td>
+        <td><%= assinaturas_length(abaixo_assinado.id)%></td>
         <td><%= abaixo_assinado.created_at.to_s(:abaixo_assinado)%></td>
         <td>
             <%=link_to raw("<i class=\"icon-white icon-plus\"> Informações Adicionais </i>"),
@@ -42,4 +43,3 @@
 </div>
 </div>
 </div>
-

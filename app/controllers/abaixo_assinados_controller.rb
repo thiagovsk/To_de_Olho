@@ -45,6 +45,10 @@ class AbaixoAssinadosController < ApplicationController
 
   def show
 	
+  end
+
+  def showusuario
+
   end 
 
   def edit
