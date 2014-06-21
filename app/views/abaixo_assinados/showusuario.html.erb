@@ -21,7 +21,7 @@
   </thead>
 
   <tbody>
-    <% @abaixo_assinados.each do |abaixo_assinado| %>  
+    <% current_usuario.abaixo_assinados.each do |abaixo_assinado| %> 
         <tr>
         <td><%= Usuario.find(abaixo_assinado.usuario_id).nome %></td>
         <td><%= Convenio.find(abaixo_assinado.convenio_id).numeroconvenio %></td>
@@ -36,6 +36,7 @@
                            class: "btn btn-info  btn-small"%>
         </td>      
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>

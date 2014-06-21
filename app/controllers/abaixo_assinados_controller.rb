@@ -64,7 +64,7 @@ class AbaixoAssinadosController < ApplicationController
   end
 
   def showusuario
-    @abaixo_assinados = AbaixoAssinado.where(:usuario_id => @usuario.id)
+    
   end 
 
 end
