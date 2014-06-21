@@ -47,10 +47,6 @@ class AbaixoAssinadosController < ApplicationController
 	
   end
 
-  def showusuario
-
-  end 
-
   def edit
   end
 
@@ -66,5 +62,9 @@ class AbaixoAssinadosController < ApplicationController
   def set_abaixo_assinado
     @abaixo_assinado = AbaixoAssinado.find(params[:id])
   end
+
+  def showusuario
+    @abaixo_assinados = AbaixoAssinado.where(:usuario_id => @usuario.id)
+  end 
 
 end

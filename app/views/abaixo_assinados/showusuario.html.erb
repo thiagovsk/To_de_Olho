@@ -21,7 +21,6 @@
   </thead>
 
   <tbody>
-    <% @abaixo_assinados = AbaixoAssinado.where(:usuario_id => @usuario.id %>
     <% @abaixo_assinados.each do |abaixo_assinado| %>  
         <tr>
         <td><%= Usuario.find(abaixo_assinado.usuario_id).nome %></td>
