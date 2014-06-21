@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :abaixo_assinados, :only => [:index,:show, :new, :create]
   resources :reclamacao
 
-
+  get '/abaixo_assinados/showusuario', :to => 'abaixo_assinados#showusuario'
   get '/home' => 'home#index', as: :home_index
   get '/home/show' =>'home#show', as: :home
   get '/assinar/:id' => 'abaixo_assinados#assinar', as: :assinar
