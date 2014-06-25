@@ -7,7 +7,7 @@ class AbaixoAssinadosController < ApplicationController
   end
 
   def new
-  	@abaixo_assinados = AbaixoAssinado.new
+  	@abaixo_assinado = AbaixoAssinado.new
   end
 
   def create
