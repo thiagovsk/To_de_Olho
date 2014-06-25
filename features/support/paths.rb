@@ -27,6 +27,7 @@ module NavigationHelpers
 
     when /^usuarios page$/
       '/usuarios'
+      
     when /^edit page$/
       '/usuarios/edit'
 

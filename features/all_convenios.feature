@@ -10,13 +10,9 @@ Feature: View Convenios
 		Given I am on the root page
 		When I follow "Todos Os Convenios"
 		Then I should be on convenios page
-
 	
-	@selenium
+	@selenium		
 	Scenario: Access details of Convenios
-		Given I am on covenant_id page
-		
-	Scenario: teste
 		Given I am on convenios page
 		When I follow "Informações Adicionais"
 		Then I should be on covenant_id page
