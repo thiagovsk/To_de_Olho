@@ -6,7 +6,11 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
   Coveralls::SimpleCov::Formatter,
   SimpleCov::Formatter::HTMLFormatter,
 ]
-SimpleCov.start
+SimpleCov.start do
+  add_filter "/test/"
+  add_filter "/spec/"
+  add_filter "/config/"
+end
 
 
 ENV["RAILS_ENV"] ||= 'test'
