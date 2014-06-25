@@ -7,7 +7,13 @@ class HomeController < ApplicationController
   end
 
   def index
-
+    respond_to do |format|
+      if !current_usuario
+        format.html { redirect_to root_path, alert: 'Você precisa logar para acessar essa página' }
+      else
+        format.html
+      end
+    end
   end
 
   def show
