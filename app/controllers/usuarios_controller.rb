@@ -16,6 +16,14 @@ class UsuariosController < ApplicationController
     @usuarios = Usuario.new
   end
 
+  def show
+    if params[:id]
+      @usuarios = Usuario.find(params[:id])
+    else
+      @usuarios = current_usuario
+    end
+  end
+
   def create
     @usuarios = Usuario.new(usuario_params)
     respond_to do |format|

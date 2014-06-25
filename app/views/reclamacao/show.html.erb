@@ -91,7 +91,7 @@
                   <%= link_to raw("<i class=\"fa fa-arrow-circle-left\"> Voltar </i>"),
                      reclamacao_index_path,class: "btn btn-primary  btn-small"%>
                   <%= link_to raw("<i class=\"fa fa-tag\"> Convênio!!</i>"),
-                     convenio_path(:reclamacao_id => @reclamacoes.id), class: "btn btn-primary  btn-small"%>
+                     convenio_path(@reclamacoes.convenio_id), class: "btn btn-primary  btn-small"%>
                   <%= link_to raw("<i class=\"fa fa-facebook-square\"> Compartilhar Reclamação </i>"),
                      "http://www.facebook.com/sharer.php?u=reclamacao_url(@reclamacoes)",
                      #"http://www.facebook.com/sharer.php?u=http://localhost:3000/convenios/@convenios_id/"

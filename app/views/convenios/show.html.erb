@@ -164,8 +164,7 @@
       convenios_url,:target => "_self",
       class: "btn btn-primary  btn-small"%>
 
-   <%= link_to raw("<i class=\"fa fa-exclamation-triangle\"> Reclamar!! </i>"),
-      new_reclamacao_path(:convenio_id => @convenio.id), class: "btn btn-primary  btn-small"%>
+   <%= link_to raw("<i class=\"fa fa-exclamation-triangle\"> Reclamar!! </i>"),new_reclamacao_path(:convenio_id => @convenio.id), class: "btn btn-primary  btn-small"%>
    
    <%= link_to raw("<i class=\"fa fa-unlock\"> Reclamações?</i>"),
       associate_path(@convenio), class: "btn btn-primary  btn-small"%>
@@ -174,8 +173,9 @@
       "http://www.facebook.com/sharer.php?u=convenios_url(@convenios)",
       #"http://www.facebook.com/sharer.php?u=http://localhost:3000/convenios/@convenios_id/"
       :target => "_blank" ,class: "btn btn-primary btn-small"%>
+   
+   <%= link_to raw("<i class=\"glyphicon glyphicon-exclamation-sign\"> Criar Abaixo Assinado </i>"),
 
-   <%= link_to raw("<i class=\"fa\"> Criar Abaixo Assinado </i>"),
       info_path(:convenio_id => @convenio.id),
       class: "btn btn-primary  btn-small margin"%>
    </table>
