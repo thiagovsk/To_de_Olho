@@ -80,7 +80,7 @@
                                  </tr>
                                  <tr>
                                     <td class="strong">Avatar:</td>
-                                    <td><%= image_tag Usuario.find(@reclamacoes.usuario_id).avatar(:medium) %></td>
+                                    <td><img src="<%= Usuario.find(@reclamacoes.usuario_id).avatar(:medium) %>" class="img-circle"></td>
                                  </tr>
                               </tbody>
                            </table>

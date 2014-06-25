@@ -1,6 +1,5 @@
 <div class="row">
-	<div class=".col-md-3 "> </div>
-    	<div class=".col-md-6 col-md-offset-3">
+    	<div class="container">
         	<div class="panel panel-default">
         		<div class="panel-body">
 
@@ -9,12 +8,12 @@
 </div>
 <br>
   <%= form_tag import_convenios_path, multipart: true do%>
- -  <%= file_field_tag :file%>
- -  <%= submit_tag "Importar CSV"%>
+ 	<%= file_field_tag :file%>
+ 	<%= submit_tag "Importar CSV"%>
 <%end%>
 				</div>
 			</div>
 		</div>
-<div class=".col-md-3 "> </div>
+
 </div>
 
