@@ -12,11 +12,15 @@ module NavigationHelpers
       '/'
     when /^home page$/
       '/home'
+
     when /^sign-up page$/
       '/usuarios/sign_up'
 
     when /^convenios page$/
       '/convenios'
+
+    when /^covenant_id page$/
+      '/convenios/1'
 
     when /^sign-in page$/
       '/usuarios/sign_in'
@@ -40,6 +44,9 @@ module NavigationHelpers
 
     when /^reclamacao_facebook_share page$/
       'https://www.facebook.com/sharer/sharer.php?u=reclamacao_url(@reclamacoes)'
+
+    when /^import_covenant page$/
+      '/convenios/new'
     
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
