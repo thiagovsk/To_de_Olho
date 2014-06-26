@@ -13,6 +13,7 @@ module ControllerMacros
       sign_in usuario
     end
   end
+
   def sign_in
     before(:each) do
       @request.env["devise.mapping"] = Devise.mappings[:admin]

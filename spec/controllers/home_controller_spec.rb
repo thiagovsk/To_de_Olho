@@ -10,9 +10,8 @@ RSpec.describe HomeController, :type => :controller do
   }
   describe "GET index" do
     it "assigns all usuarios as @usuarios" do
-      usuario = Usuario.create! valid_attributes
       get :index, {}
-      expect(Usuario.last).to eq(Usuario.last)
+      expect(assigns(:usuarios)).to eq(assigns(:usuario))
     end
     it "assigns all usuarios as current_usuario" do
       sign_in FactoryGirl.create(:admin)

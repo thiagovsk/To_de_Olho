@@ -6,8 +6,7 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
   Coveralls::SimpleCov::Formatter,
   SimpleCov::Formatter::HTMLFormatter,
 ]
-SimpleCov.start do
-end
+SimpleCov.start
 
 
 ENV["RAILS_ENV"] ||= 'test'
@@ -28,6 +27,9 @@ RSpec.configure do |config|
 
   config.include Devise::TestHelpers, :type => :controller
   config.extend ControllerMacros, :type => :controller
+  config.expect_with :rspec do |c|
+    c.syntax = [:should, :expect]
+  end
 
   # ## Mock Framework
   #
