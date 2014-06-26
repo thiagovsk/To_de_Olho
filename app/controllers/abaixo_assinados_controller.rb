@@ -22,7 +22,7 @@ class AbaixoAssinadosController < ApplicationController
   end
 
   def assinar
-    @assinatura = Assinatura.new(:usuario_id => current_usuario.id, :abaixo_assinado_id => @abaixo_assinado.id)
+    @assinatura = Assinatura.new(assinatura_params)
     respond_to do |format|
       if @assinatura.save
         format.html { redirect_to home_index_path, notice: 'Assinatura efetuada!' }
@@ -53,6 +53,10 @@ class AbaixoAssinadosController < ApplicationController
   private
   def abaixo_assinado_params
     params.fetch(:abaixo_assinado, {}).permit(:titulo,:destinatario,:termo,:assinaturas,:convenio_id,:usuario_id)
+  end
+
+  def assinatura_params
+    params.fetch(:assinatura, {}).permit(:abaixo_assinado_id,:usuario_id)
   end
 
   def set_abaixo_assinado
