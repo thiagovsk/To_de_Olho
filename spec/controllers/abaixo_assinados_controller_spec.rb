@@ -7,11 +7,11 @@ describe AbaixoAssinadosController,type: :controller do
   @usuario = Usuario.create(:nome => "Usuario teste", :cpf => "999.999.99-99",
                             :email => "exa@teste.com.br", :login => "Tes",
                             :password => "1111111111h", :password_confirmation => "1111111111h")
-
-  let(:valid_attributes) { { :titulo => "AbaixoAssinados",:termo => "Vitor ",:destinatario => "Thiago " , :usuario_id => 1 ,:convenio_id  => 1} }
+  let(:valid_attributes) { { :usuario_id => 1, :convenio_id => 1, :titulo => "Reforma Tributaria", :destinatario => "Todos", 
+    :termo => "alguma coisa grande aqui"} }
   let(:valid_session) { {} }
-  let(:valid_aassinatura) { { :usuario_id => 1 ,:abaixo_assinado.id  => 1} }
-
+  let(:valid_assinatura) { { :usuario_id => 1 ,:abaixo_assinado_id  => 1} }
+  
 
 =begin
   describe "Assinaturas lenght" do
@@ -25,13 +25,25 @@ describe AbaixoAssinadosController,type: :controller do
 
 
 
-  describe "GET new" do
-    it "assigns a new AbaixoAssinados as @AbaixoAssinados" do
+  describe "GET" do
+    it "assigns a new AbaixoAssinado as @AbaixoAssinado" do
       get :new, {}, valid_session
       expect(assigns(:abaixo_assinado)).to be_a_new(AbaixoAssinado)
     end
+    it "assigns all abaixo_assinados as @abaixo_assinados" do
+      abaixo_assinado = AbaixoAssinado.create! valid_attributes
+      get :index, {}, valid_session
+      expect(assigns(:abaixo_assinados)).to eq([abaixo_assinado])
+    end
   end
 
+
+  describe "GET assinar" do
+    it "assigns a new Assinatura as @assinatura" do
+      get :assinar, {}, valid_session
+      expect(assigns(:assinatura)).to be_a_new(Assinatura)
+    end
+  end
 
   describe "POST create" do
     describe "with valid params" do

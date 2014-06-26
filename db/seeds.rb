@@ -23,8 +23,4 @@ Convenio.create([{:id => 1, :numeroconvenio => "900037",
    :dataultimaliberacao => "2011-12-28", :valorultimaliberacao => "97500.00",
    :created_at => "2010-10-20", :updated_at => "2013-10-25"}])
 
-Reclamacao.create([{ :descricao => "Obra inacabada", :convenio_id => 1, :usuario_id => 1 }])
-
-AbaixoAssinado.create([{ :titulo => "Teste", :destinatario => "Teste", :termo => "Teste",
-						 :convenio_id => 1, :usuario_id => 1 }])
 

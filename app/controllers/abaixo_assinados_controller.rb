@@ -13,12 +13,8 @@ class AbaixoAssinadosController < ApplicationController
   def create
     @abaixo_assinados = AbaixoAssinado.new(abaixo_assinado_params)
     respond_to do |format|
-      if @abaixo_assinados.save
-        if(Assinatura.new(:usuario_id => current_usuario.id,:abaixo_assinado_id => @abaixo_assinados.id).save)
-          format.html { redirect_to @abaixo_assinados, notice: 'Abaixo Assinado criado com sucesso' }
-        else
-          format.html { redirect_to new_abaixo_assinado_path, notice: 'Erro ao atribuir assinatura' }
-        end
+      if @abaixo_assinados.save and Assinatura.new(:usuario_id => current_usuario.id,:abaixo_assinado_id => @abaixo_assinados.id).save
+        format.html { redirect_to @abaixo_assinados, notice: 'Abaixo Assinado criado com sucesso' }
       else
         format.html { render :new }
       end
