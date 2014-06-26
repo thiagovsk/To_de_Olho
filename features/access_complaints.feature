@@ -22,10 +22,4 @@ Feature: Access the Complaints of a covenant
 		Given I am on reclamacoes_id page
 		When I follow "Voltar"
 		Then I should be on reclamacoes page
-
-	Scenario: Share the complaints page
-		Given I am on reclamacoes_id page
-		When I follow "Compartilhar Reclamação"
-		Then I should be on reclamacao_facebook_share page
-		When I press "Compartilhar link"
-		Then I should be on reclamacoes_id page
+		

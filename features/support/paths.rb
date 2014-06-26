@@ -40,9 +40,6 @@ module NavigationHelpers
     when /^reclamacoes_id page$/
       '/reclamacao/1'
 
-    when /^reclamacao_facebook_share page$/
-      'https://www.facebook.com/sharer/sharer.php?u=reclamacao_url(@reclamacoes)'
-
     
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
