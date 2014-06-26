@@ -7,7 +7,7 @@ describe ApplicationController do
   describe "after sign in" do
     it "should redirect to home index page" do
       usuario = Usuario.create! valid_attributes
-      controller.after_sign_in_path_for(@usuario).should == home_index_path
+      controller.after_sign_in_path_for(@usuario).should == home_index
     end
   end
 
