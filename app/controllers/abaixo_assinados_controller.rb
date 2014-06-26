@@ -1,5 +1,4 @@
 class AbaixoAssinadosController < ApplicationController
-  before_action :set_abaixo_assinado, only: [:show, :assinar]
   helper_method :assinaturas_length
 
   def index
@@ -36,18 +35,18 @@ class AbaixoAssinadosController < ApplicationController
     Assinatura.search_by_abaixo_assinado_id(abaixo_assinado_id).length
   end
 
-  def update
-  end
-
   def show
-	
+	  @abaixo_assinado = AbaixoAssinado.find(params[:id])
   end
-
-  def edit
-  end
-
+  
+  def showusuario
+  end 
+  
   def info
     @convenio_id = params[:convenio_id]
+  end
+
+  def update
   end
 
   private
@@ -58,13 +57,5 @@ class AbaixoAssinadosController < ApplicationController
   def assinatura_params
     params.fetch(:assinatura, {}).permit(:abaixo_assinado_id,:usuario_id)
   end
-
-  def set_abaixo_assinado
-    @abaixo_assinado = AbaixoAssinado.find(params[:id])
-  end
-
-  def showusuario
-    @abaixo_assinado = AbaixoAssinado.find(params[:usuario_id])
-  end 
 
 end

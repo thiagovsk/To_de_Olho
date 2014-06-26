@@ -6,14 +6,14 @@ Rails.application.routes.draw do
 
   resources :usuarios
   resources :convenios
-  resources :abaixo_assinados, :only => [:index,:show, :new, :create]
+  resources :abaixo_assinados, :only => [:index,:show, :new, :create, :assinar]
   resources :reclamacao
 
   get '/abaixo_assinados/showusuario/:id', :to => 'abaixo_assinados#showusuario',as: :usuario_abaixo_assinado
   get '/home' => 'home#index', as: :home_index
 
   get '/home/show' => 'home#show', as: :home
-  post '/assinar/:id' => 'abaixo_assinados#assinar', as: :assinar
+  post '/abaixo_assinados' => 'abaixo_assinados#assinar', as: :assinar
   get '/abaixo_assinado/info' => 'abaixo_assinados#info', as: :info
   get '/convenios/associate/:id' => 'convenios#associate', as: :associate
   get '/usuarios/:id' => 'usuarios#show', as: :teste
