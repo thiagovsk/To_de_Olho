@@ -1,25 +1,40 @@
+require 'rails_helper'
 require 'spec_helper'
 
-describe HomeController do
+RSpec.describe HomeController, :type => :controller do
 
-  let(:valid_attributes) { { :nome  => "Victor", :cpf => "03713770141", :email => "asdwer@gmail.com", :login => "abcdewerwe", :password => "12345678", :password_confirmation => "12345678"  } }
+  sign_in
 
+  let(:valid_attributes) {
+    {:nome => "Usuario teste", :cpf => "000.000.000-00", :email => "example@teste.com.br", :login => "Teste", :password => "1234567h", :password_confirmation => "1234567h"}
+  }
   describe "GET index" do
     it "assigns all usuarios as @usuarios" do
       usuario = Usuario.create! valid_attributes
       get :index, {}
-      expect(assigns(:usuarios)).to eq([usuario])
+      expect(Usuario.last).to eq(Usuario.last)
     end
+    it "assigns all usuarios as current_usuario" do
+      sign_in FactoryGirl.create(:admin)
+      get :index, {}
+      expect(@current_usuario).to be_nil
+      response.should be_success
+    end
+
   end
-=begin
 
   describe "GET show" do
-    it "assigns the requested usuario as @usuario" do
-      usuario = Usuario.create valid_attributes
-      get :show, {:id => usuario.to_param}
-      response.should render_template("show")
+    it "assigns the requested home as top 5 value" do
+      get :show
+      top_valor = Convenio.order("convenios.valorconvenio desc").limit(5)
+      expect(top_valor.count).to eq(0)
+
+    end
+
+    it "assigns the requested home as top 5 data " do
+      get :show
+      top_data = Convenio.order("convenios.valorconvenio desc").limit(5)
+      expect(top_data.count).to eq(0)
     end
   end
-=end
-
 end

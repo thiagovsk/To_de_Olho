@@ -2,10 +2,6 @@
 
 class HomeController < ApplicationController
 
-  def new
-    @convenios = Convenio.new
-  end
-
   def index
     respond_to do |format|
       if !current_usuario
@@ -22,8 +18,6 @@ class HomeController < ApplicationController
     #@convenio = Convenio.find(params[:id])
     #respond_to do |format|
     #format.js { render :show }
-
-
   end
 
 end

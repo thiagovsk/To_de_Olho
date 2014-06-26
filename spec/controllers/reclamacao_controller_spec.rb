@@ -1,8 +1,6 @@
 require 'spec_helper'
 
-
-
-describe ReclamacaoController do
+RSpec.describe ReclamacaoController, :type => :controller do
 
   let(:valid_attributes) { { :descricao => "hu3hu3h3uh3u brbrbrb"  } }
   let(:valid_session) { {} }
@@ -14,6 +12,7 @@ describe ReclamacaoController do
       expect(assigns(:reclamacoes)).to eq([reclamacao])
     end
   end
+
 
   describe "GET new" do
     it "assigns a new reclamacao as @reclamacao" do
@@ -38,7 +37,7 @@ describe ReclamacaoController do
 
       it "redirects to the created reclamacao" do
         post :create, {:reclamacao => valid_attributes}, valid_session
-        response.should redirect_to(new_reclamacao_path)
+        expect(response.status).to be(302)
       end
     end
 
@@ -56,20 +55,56 @@ describe ReclamacaoController do
       end
     end
   end
-=begin
+
   describe "DELETE destroy" do
     it "destroys the requested reclamacao" do
-      reclamacao = Reclamacao.create! valid_attributes
+      reclamacao = Reclamacao.create!
       expect {
-        delete :destroy, {:id => reclamacao.to_param}
+        delete :destroy, {:id => reclamacao.to_param}, valid_session
       }.to change(Reclamacao, :count).by(-1)
     end
 
-    it "redirects to the reclamacoes list" do
-      reclamacao = Reclamacao.create! valid_attributes
-        delete :destroy, {:id => reclamacao.to_param}
-      expect(response).to redirect_to(reclamacao_url)
+    it "redirects to the reclamacaos list" do
+      reclamacao = Reclamacao.create!
+      delete :destroy, {:id => reclamacao.to_param}, valid_session
+      expect(response).to redirect_to(home_index_path)
     end
   end
-=end
+
+  describe "PUT update" do
+    describe "with valid params" do
+      let(:new_attributes) {
+        { :descricao => "minha descricao"  }
+      }
+
+      it "updates the requested reclamacao" do
+        reclamacao = Reclamacao.create! valid_attributes
+        put :update, {:id => reclamacao.to_param, :reclamacao => new_attributes}, valid_session
+        reclamacao.reload
+        expect(Reclamacao.last).to eq(reclamacao)
+      end
+
+      it "assigns the requested reclamacao as @reclamacao" do
+        reclamacao = Reclamacao.create!
+        put :update, {:id => reclamacao.to_param, :reclamacao => valid_attributes}, valid_session
+        expect(Reclamacao.last).to eq(reclamacao)
+      end
+
+      it "redirects to the reclamacao" do
+        reclamacao = Reclamacao.create! valid_attributes
+        put :update, {:id => reclamacao.to_param, :reclamacao => valid_attributes}, valid_session
+        expect(response).to redirect_to(home_index_path)
+      end
+    end
+
+    describe "with invalid params" do
+      it "assigns the reclamacao as @reclamacao" do
+        reclamacao = Reclamacao.create! valid_attributes
+        put :update, {:id => reclamacao.to_param, :reclamacao => valid_attributes}, valid_session
+        expect(Reclamacao.last).to eq(reclamacao)
+      end
+
+    end
+
+  end
 end

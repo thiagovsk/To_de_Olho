@@ -1,23 +1,37 @@
 require 'spec_helper'
 
 describe AbaixoAssinadosController,type: :controller do
-  let(:valid_attributes) { { :usuario_id => 1  ,:titulo => "AbaixoAssinados",:termo => "Vitor viadão",:destinatario => "Thiago transão"  } }
-  let(:valid_session) { {} }
 
- describe "GET index" do
-    it "assigns all abaixo_assinado as @abaixo_assinado" do
-      abaixoAssinados = AbaixoAssinado.create! valid_attributes
-      get :index, {}, valid_session
-      expect(assigns(:abaixo_assinados)).to eq([abaixoAssinados])
+  login_admin
+  @convenio = Convenio.create!
+  @usuario = Usuario.create(:nome => "Usuario teste", :cpf => "999.999.99-99",
+                            :email => "exa@teste.com.br", :login => "Tes",
+                            :password => "1111111111h", :password_confirmation => "1111111111h")
+
+  let(:valid_attributes) { { :titulo => "AbaixoAssinados",:termo => "Vitor ",:destinatario => "Thiago " , :usuario_id => 1 ,:convenio_id  => 1} }
+  let(:valid_session) { {} }
+  let(:valid_aassinatura) { { :usuario_id => 1 ,:abaixo_assinado.id  => 1} }
+
+
+=begin
+  describe "Assinaturas lenght" do
+    it "Search lenght of assinatures" do
+      abaixo_assinados = AbaixoAssinado.create!
+      post :assinaturas_length
+      expect(response.status).to be(200)
     end
   end
+=end
+
+
 
   describe "GET new" do
     it "assigns a new AbaixoAssinados as @AbaixoAssinados" do
       get :new, {}, valid_session
-      expect(assigns(:abaixo_assinados)).to be_a_new(AbaixoAssinado)
+      expect(assigns(:abaixo_assinado)).to be_a_new(AbaixoAssinado)
     end
   end
+
 
   describe "POST create" do
     describe "with valid params" do
@@ -35,7 +49,7 @@ describe AbaixoAssinadosController,type: :controller do
 
       it "redirects to the created AbaixoAssinados" do
         post :create, {:abaixo_assinados => valid_attributes}, valid_session
-        response.should redirect_to(AbaixoAssinado)
+        expect(response.status).to be(302)
       end
     end
 
@@ -53,4 +67,4 @@ describe AbaixoAssinadosController,type: :controller do
       end
     end
   end
- end
+end
