@@ -5,7 +5,7 @@ Feature: Share the Complaints of a covenant
 
 	Scenario: Access the page of the complaints
 		Given I am on root page
-		When I follow "Reclamações"
+		When I follows "Reclamações"
 		Then I should be on reclamacoes page
 
 

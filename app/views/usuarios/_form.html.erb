@@ -1,11 +1,9 @@
 <div class="form-divs">
 <div class="border-form-div">
 <%= form_for @usuario, :url => usuarios_path, :html => { :multipart => true } do |form| %>
-  
 
 
 <div class="field">
-   
    <%= form.label :avatar %><br>
    <%= form.file_field :avatar %>
 
@@ -22,7 +20,3 @@
 <% end %>
 </div>
 </div>
-
-
- 
-
