@@ -1,5 +1,6 @@
 require 'spec_helper'
 
+
 describe ConveniosController, :type => :controller do
 
   let(:valid_attributes) { {:id => 1, :numeroconvenio => "900037",
