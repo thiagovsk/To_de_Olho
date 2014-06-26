@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get '/assinar/:id' => 'abaixo_assinados#assinar', as: :assinar
   get '/abaixo_assinado/info' => 'abaixo_assinados#info', as: :info
   get '/convenios/associate/:id' => 'convenios#associate', as: :associate
-  get '/usuarios/:id' => 'usuarios#show', as: :teste
+  get '/usuarios/:id' => 'usuarios#show', as: :minhas_reclamacoes
 
 
 
