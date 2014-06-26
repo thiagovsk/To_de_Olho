@@ -79,8 +79,18 @@ text-align: center;
 
 .white_cont{
   background-color: white;
-  margin: 2px;
+  margin: 0px;
   width:  auto;
   color: #868686;
   text-align: center;
+}
+
+.container-info{
+  margin-left:200px;
+  margin-right:200px;
+  margin-bottom:400px;
+  color: white;
+  text-shadow: black 0.3em 0.3em 0.3em;
+  background:transparent;
+  height: 400px;
 }

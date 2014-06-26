@@ -24,7 +24,7 @@
             <td> <%= reclamacao.descricao %>  </td>
             <td> <%= Convenio.find(reclamacao.convenio_id).situacaoconvenio %>  </td>
             <td> <%= Convenio.find(reclamacao.convenio_id).numeroconvenio %> </td>
-            <td> <%= image_tag reclamacao.foto(:medium) %> </td>  
+            <td> <img src="<%=reclamacao.foto(:medium) %>" class="img-thumbnail"></td>  
          </tr>
          
          <% end %>

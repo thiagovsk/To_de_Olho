@@ -1,104 +1,142 @@
 <div class="jumbotron">
-      <div class="container">
-          <% if usuario_signed_in? %>
-    <h1>Bem Vindo de Volta!</h1>
-    <p class="lead">
-  <p> O aplicativo To De Olho, te espera. Comece agora mesmo a acompanhar os gastos da verba pública no seu municipio.</p>
-   <%= link_to "Continuar", home_index_path, :class => "btn btn-primary active" %>
-    </p>
-  <% else %>
-    <h1>Bem Vindo, Novo Usuário!</h1>
-    <p class="lead ">
-      Cadastre-se agora e comece a acompanhar e reclamar a respeito dos convênios de sua cidade.
-    </p>
-    <div class="row-fluid">
-      <div class="span6">
-      <%if !(usuario_signed_in?)%>
-        <%= link_to "Logar", new_usuario_session_path, :class => "btn btn-primary active" %>
-        <%= link_to "Criar Conta", new_usuario_registration_path, :class => "btn btn-primary active" %>
-        <%end%>
+   <div class="container">
+      <% if usuario_signed_in? %>
+      <h1>Bem Vindo de Volta!</h1>
+      <p class="lead">
+      <p> O aplicativo To De Olho, te espera. Comece agora mesmo a acompanhar os gastos da verba pública no seu municipio.</p>
+      <%= link_to "Continuar", home_index_path, :class => "btn btn-primary active" %>
+      </p>
+      <% else %>
+      <h1>Bem Vindo, Novo Usuário!</h1>
+      <p class="lead ">
+         Cadastre-se agora e comece a acompanhar e reclamar a respeito dos convênios de sua cidade.
+      </p>
+      <div class="row-fluid">
+         <div class="span6">
+            <%if !(usuario_signed_in?)%>
+            <%= link_to "Logar", new_usuario_session_path, :class => "btn btn-primary active" %>
+            <%= link_to "Criar Conta", new_usuario_registration_path, :class => "btn btn-primary active" %>
+            <%end%>
+         </div>
       </div>
-
-    </div>
-  <% end %>
+      <% end %>
+   </div>
+</div>
+<div class="container white_cont">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="span10">
+            <table align="center" style="width:1000px ">
+               <br>
+               <tr>
+                  <td>
+                     <p class="fa fa-usd fa-5x"></p>
+                  </td>
+                  <td>
+                     <p class="fa fa-exchange fa-5x"></p>
+                  </td>
+                  <td>
+                     <p class="fa fa-money fa-5x"></p>
+                  </td>
+                  <td>
+                     <p class="fa fa-eye fa-5x"></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td><big>Pagamos muitos impostos<br><br><br></td>
+                  <td><big>Esperamos retorno em melhorias<br><br><br></td>
+                  <td><big>O governo investe em convenios<br><br><br></td>
+                  <td><big>Aqui podemos inspencionar<br><br><br></td>
+               </tr>
+            </table>
+            <br>
+         </div>
       </div>
-    </div>
-    <div class="container white_cont">
-    <div class="container-fluid">
-  <div class="row">
-    <div class="span1">
-
-    </div>
-    <div class="span10">
-      <h1 class="glyphicon glyphicon-heart fa-5x"></h1></a>
-      <p>O Daniel é viadão
-    </div>
-  </div>
+   </div>
 </div>
+<div class="container white_cont">
+   <div class="container-fluid">
+      <div class="row">
+         <table align="center" style="width:1000px " >
+            <tr>
+               <td>
+                  <p class="fa fa-book fa-5x"></p>
+               </td>
+               <td><big>A Lei nº 12.527/2011 diz que todo orgão público deve disponibilizar seus dados dados para os cidadãos, mas não garante a ficilidade de visualização dos mesmos</big></td>
+               <td>
+                  <p class="fa fa-laptop fa-5x"></p>
+               </td>
+               <td><big>Alguns estudantes de engenharia de Software da Universidade de Brasilia através desse sistema tentam auxiliar a visualização de alguns desses dados, os convenios.</big>
+            </tr>
+         </table>
+         <br><br><br>
+      </div>
+   </div>
 </div>
-    <div class="container white_cont">
-    <div class="container-fluid">
-  <div class="row">
-    <div class="span1">
-
-    </div>
-    <div class="span10">
-      <h1 class="glyphicon glyphicon-heart fa-5x"></h1></a>
-      <p>sdajkbhjaskndsajkdn
-
-    </div>
-  </div>
+</div>    
+<div class="container white_cont">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="span10">
+            <table align="center" style="width:1000px ">
+               <tr>
+                  <br>
+                  <td>
+                     <p class="fa fa-search fa-5x"></p>
+                  </td>
+                  <td>
+                     <p class="fa fa-exclamation-triangle fa-5x"></p>
+                  </td>
+                  <td>
+                     <p class="fa fa-comments-o fa-5x"></p>
+                  </td>
+                  <td>
+                     <p class="fa fa-pencil-square-o fa-5x"></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td><big>Inspecionando convenios<br><br><br></td>
+                  <td><big>Algo pode lhe trazer insatisfação<br><br><br></td>
+                  <td><big>Lhe permitimos divulgar aos outros usuários pela reclamação<br><br><br></td>
+                  <td><big>como também criando uma abaixo assinado digital<br><br><br></td>
+               </tr>
+            </table>
+            <br><br><br>
+         </div>
+      </div>
+   </div>
 </div>
-</div>    <div class="container white_cont">
-    <div class="container-fluid">
-  <div class="row">
-    <div class="span1">
-
-    </div>
-    <div class="span10">
-      <h1 class="glyphicon glyphicon-heart fa-5x"></h1></a>
-      <p>sdajkbhjaskndsajkdn
-
-    </div>
-  </div>
+<div class="container white_cont">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="span10">
+            <table align="center" style="width:1000px " >
+               <tr>
+                  <td>
+                     <p class="fa fa-camera fa-5x"></p>
+                  </td>
+                  <td><big>Aperfeiçoe sua reclamação utilizando da foto como meio de apoio
+                     </big>
+                  </td>
+                  <td>
+                     <p class="fa fa-facebook fa-5x"></p>
+                  </td>
+                  <td><big>Integre com sua rede social
+                     </big>
+                  </td>
+               </tr>
+            </table>
+            <br><br><br>
+         </div>
+      </div>
+   </div>
 </div>
-</div>    <div class="container white_cont">
-    <div class="container-fluid">
-  <div class="row">
-    <div class="span1">
-
-    </div>
-    <div class="span10">
-      <h1 class="glyphicon glyphicon-heart fa-5x"></h1></a>
-      <p>sdajkbhjaskndsajkdn
-
-    </div>
-  </div>
-</div>
-</div>    <div class="container white_cont">
-    <div class="container-fluid">
-  <div class="row">
-    <div class="span1">
-
-    </div>
-    <div class="span10">
-      <h1 class="glyphicon glyphicon-heart fa-5x"></h1></a>
-      <p>sdajkbhjaskndsajkdn
-
-    </div>
-  </div>
-</div>
-</div>    <div class="container white_cont">
-    <div class="container-fluid">
-  <div class="row">
-    <div class="span1">
-
-    </div>
-    <div class="span10">
-      <h1 class="glyphicon glyphicon-heart fa-5x"></h1></a>
-      <p>sdajkbhjaskndsajkdn
-
-    </div>
-  </div>
-</div>
+<div class="container white_cont">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="span10" align="right"><br>
+            <big>Todos os dados de convenios aqui disponibilizados foram retirados do site <a href="https://convenios.gov.br/siconv/"> SINCOV</a>
+         </div>
+      </div>
+   </div>
 </div>
