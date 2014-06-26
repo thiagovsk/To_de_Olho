@@ -4,20 +4,14 @@ Feature: Login Usuario
 	Should fill the login and password field
 
 
-	Before do |Usuario|
-    Usuario.create{:nome => "Usuario teste", :cpf => "000.000.000-00",
-     :email => "example@teste.com.br", :login => "Teste",
-     :password => "1234567h",:password_confirmation => "1234567h"} 
-    end
-
     #@selenium
 	Scenario: Login with valid params
 	Given I am on root page
 	When I follow "Logar"
 	Then I should be on sign-in page
 	When I fill in the following:
-		| Login   |   Teste  |
-		| Senha   | 1234567h |
+		| Login   |   root  	|
+		| Senha   | 123456789   |
 	When I press "login"
 	Then I should be on sign-in page
 
