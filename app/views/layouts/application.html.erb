@@ -55,7 +55,7 @@
           <% if usuario_signed_in? %>
           <ul class="nav navbar-nav navbar-right">
       <div class="btn-group " >
-      <button type="button" class=" btn btn-success btn-lg dropdown-toggle icon-white icon-user pull-right"data-toggle="dropdown">
+      <button type="button" class=" btn btn-success btn dropdown-toggle icon-white icon-user pull-right"data-toggle="dropdown">
       Usuario <span class="caret"></span>
       </button>
           <ul class="dropdown-menu" role="menu">
@@ -64,7 +64,7 @@
             <li><a href="<%= edit_usuario_registration_path %>">Editar Perfil</a></li>
             <li class="divider"></li>
           </ul>
-      <a> <%= link_to "Sair", destroy_usuario_session_path, :method => :delete, :class => 'btn btn-lg  btn-danger ' %></a>
+      <a> <%= link_to "Sair", destroy_usuario_session_path, :method => :delete, :class => 'btn btn btn-danger ' %></a>
       </div>
           </ul>
             <%end%>
