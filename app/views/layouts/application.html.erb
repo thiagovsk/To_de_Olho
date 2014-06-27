@@ -62,11 +62,10 @@
             <li><a href="<%= minhas_reclamacoes_path(current_usuario.id) %>">Minhas reclamações</a></li>
             <li><a href="<%= usuario_abaixo_assinado_path(current_usuario.id) %>"> Meus abaixo-assinados </a></li>
             <li><a href="<%= edit_usuario_registration_path %>">Editar Perfil</a></li>
-            <li class="divider"></li>
+            </ul>
+            </div>
           </ul>
-      <a> <%= link_to "Sair", destroy_usuario_session_path, :method => :delete, :class => 'btn btn btn-danger ' %></a>
-      </div>
-          </ul>
+          <a> <%= link_to "Sair", destroy_usuario_session_path, :method => :delete, :class => 'btn btn-danger pull-right ' %></a>
             <%end%>
         </div>
     </div>

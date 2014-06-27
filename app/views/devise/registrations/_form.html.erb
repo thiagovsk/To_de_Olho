@@ -12,6 +12,7 @@
     <%= f.email_field :email,:placeholder => 'Email' ,:size => 32%>
     <%= f.password_field :password , :label => "Senha",:placeholder => 'Senha' ,:size => 32%>
     <%= f.password_field :password_confirmation , :label => "Confirmar Senha", :placeholder => 'Confirmação de Senha' ,:size => 32%>
+    <%= f.label "Adicione uma foto para perfil de usuario" %>
     <%= f.file_field :avatar , :label => "Adicione foto", :placeholder => 'Imagem'%>
     <%= f.button :submit , :class => 'btn btn-info btn margin' , :id => 'criar-usuario' %>
 
