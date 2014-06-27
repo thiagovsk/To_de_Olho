@@ -1,0 +1,2467 @@
+---
+:saikuro:
+  :files:
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: UsuariosController
+      :complexity: 17
+      :lines: 55
+      :methods:
+      - :name: UsuariosController#update
+        :complexity: 5
+        :lines: 8
+      - :name: UsuariosController#create
+        :complexity: 5
+        :lines: 9
+      - :name: UsuariosController#destroy
+        :complexity: 3
+        :lines: 5
+      - :name: UsuariosController#usuario_params
+        :complexity: 1
+        :lines: 4
+      - :name: UsuariosController#set_usuario
+        :complexity: 1
+        :lines: 2
+      - :name: UsuariosController#new
+        :complexity: 1
+        :lines: 2
+      - :name: UsuariosController#index
+        :complexity: 1
+        :lines: 2
+    :filename: app/controllers/usuarios_controller.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: ApplicationController
+      :complexity: 7
+      :lines: 30
+      :methods:
+      - :name: ApplicationController#configure_permitted_parameters
+        :complexity: 4
+        :lines: 4
+      - :name: ApplicationController#after_sign_in_path_for
+        :complexity: 1
+        :lines: 2
+    :filename: app/controllers/application_controller.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: ConveniosController
+      :complexity: 6
+      :lines: 39
+      :methods:
+      - :name: ConveniosController#index
+        :complexity: 2
+        :lines: 9
+      - :name: ConveniosController#set_convenio
+        :complexity: 1
+        :lines: 2
+      - :name: ConveniosController#convenio_params
+        :complexity: 1
+        :lines: 2
+      - :name: ConveniosController#new
+        :complexity: 1
+        :lines: 2
+      - :name: ConveniosController#import
+        :complexity: 1
+        :lines: 5
+    :filename: app/controllers/convenios_controller.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: HomeController
+      :complexity: 4
+      :lines: 14
+      :methods:
+      - :name: HomeController#show
+        :complexity: 3
+        :lines: 6
+      - :name: HomeController#index
+        :complexity: 1
+        :lines: 2
+    :filename: app/controllers/home_controller.rb
+  - :classes:
+    - :class_name: OmniauthCallbacksController
+      :complexity: 3
+      :lines: 12
+      :methods:
+      - :name: OmniauthCallbacksController#facebook
+        :complexity: 3
+        :lines: 9
+    :filename: app/controllers/omniauth_callbacks_controller.rb
+  - :classes:
+    - :class_name: Convenio
+      :complexity: 3
+      :lines: 12
+      :methods:
+      - :name: Convenio#self.import
+        :complexity: 2
+        :lines: 4
+      - :name: Convenio#self.search
+        :complexity: 1
+        :lines: 2
+    :filename: app/models/convenio.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 3
+      :lines: 14
+      :methods: []
+    - :class_name: "::"
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: "::::"
+      :complexity: 0
+      :lines: 3
+      :methods: []
+    - :class_name: !binary |-
+        Ojo6Ojo6TsO6bWVybw==
+      :complexity: 2
+      :lines: 6
+      :methods: []
+    :filename: app/views/convenios/show.html.erb
+  - :classes:
+    - :class_name: Usuario
+      :complexity: 3
+      :lines: 30
+      :methods:
+      - :name: Usuario#self.find_for_facebook_oauth
+        :complexity: 3
+        :lines: 17
+    :filename: app/models/usuario.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 2
+      :lines: 2
+      :methods: []
+    :filename: app/views/devise/sessions/_form_sign_in.html.erb
+  - :classes:
+    - :class_name: Ability
+      :complexity: 2
+      :lines: 38
+      :methods:
+      - :name: Ability#initialize
+        :complexity: 2
+        :lines: 34
+    :filename: app/models/ability.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 1
+      :lines: 6
+      :methods: []
+    :filename: lib/templates/erb/scaffold/_form.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 1
+      :lines: 0
+      :methods: []
+    :filename: app/views/layouts/application.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: "::"
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: "::::Editar"
+      :complexity: 1
+      :lines: 6
+      :methods: []
+    :filename: app/views/devise/registrations/edit.html.erb
+  - :classes:
+    - :class_name: Lista
+      :complexity: 1
+      :lines: 6
+      :methods: []
+    :filename: app/views/usuarios/index.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 1
+      :lines: 0
+      :methods: []
+    :filename: app/views/usuarios/_form.html.erb
+  - :classes:
+    - :class_name: Usuarios
+      :complexity: 1
+      :lines: 5
+      :methods:
+      - :name: Usuarios#after_update_path_for
+        :complexity: 1
+        :lines: 2
+    :filename: app/controllers/registrations_controller.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 1
+      :lines: 1
+      :methods: []
+    :filename: app/views/convenios/_form.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    :filename: app/views/devise/passwords/edit.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: "::Lista"
+      :complexity: 0
+      :lines: 3
+      :methods: []
+    :filename: app/views/convenios/import.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    :filename: app/views/devise/passwords/new.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    :filename: app/views/devise/unlocks/new.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    :filename: app/views/devise/sessions/_sign_in.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: "::"
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: "::::Inicio"
+      :complexity: 0
+      :lines: 6
+      :methods: []
+    :filename: app/views/home/_navbar.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: "::"
+      :complexity: 0
+      :lines: 3
+      :methods: []
+    - :class_name: "::::"
+      :complexity: 0
+      :lines: 6
+      :methods: []
+    :filename: app/views/home/index.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: "::"
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: !binary |-
+        Ojo6OlTDtA==
+      :complexity: 0
+      :lines: 0
+      :methods: []
+    - :class_name: !binary |-
+        Ojo6OlTDtDo6UXVlbQ==
+      :complexity: 0
+      :lines: 0
+      :methods: []
+    :filename: app/views/home/_navbarPre.html.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    :filename: app/views/devise/confirmations/new.html.erb
+  - :classes:
+    - :class_name: Role
+      :complexity: 0
+      :lines: 5
+      :methods: []
+    :filename: app/models/role.rb
+  - :classes:
+    - :class_name: ConveniosHelper
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    :filename: app/helpers/convenios_helper.rb
+  - :classes:
+    - :class_name: HomeHelper
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    :filename: app/helpers/home_helper.rb
+  - :classes:
+    - :class_name: ApplicationHelper
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    :filename: app/helpers/application_helper.rb
+  - :classes:
+    - :class_name: RegistrationsHelper
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    :filename: app/helpers/registrations_helper.rb
+  - :classes:
+    - :class_name: UsuarioHelper
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    :filename: app/helpers/usuario_helper.rb
+  :classes:
+  - :name: UsuariosController
+    :complexity: 17
+    :lines: 55
+    :defs:
+    - :name: UsuariosController#index
+      :complexity: 1
+      :lines: 2
+    - :name: UsuariosController#new
+      :complexity: 1
+      :lines: 2
+    - :name: UsuariosController#create
+      :complexity: 5
+      :lines: 9
+    - :name: UsuariosController#destroy
+      :complexity: 3
+      :lines: 5
+    - :name: UsuariosController#update
+      :complexity: 5
+      :lines: 8
+    - :name: UsuariosController#set_usuario
+      :complexity: 1
+      :lines: 2
+    - :name: UsuariosController#usuario_params
+      :complexity: 1
+      :lines: 4
+  - :name: ApplicationController
+    :complexity: 7
+    :lines: 30
+    :defs:
+    - :name: ApplicationController#after_sign_in_path_for
+      :complexity: 1
+      :lines: 2
+    - :name: ApplicationController#configure_permitted_parameters
+      :complexity: 4
+      :lines: 4
+  - :name: ConveniosController
+    :complexity: 6
+    :lines: 39
+    :defs:
+    - :name: ConveniosController#index
+      :complexity: 2
+      :lines: 9
+    - :name: ConveniosController#new
+      :complexity: 1
+      :lines: 2
+    - :name: ConveniosController#set_convenio
+      :complexity: 1
+      :lines: 2
+    - :name: ConveniosController#convenio_params
+      :complexity: 1
+      :lines: 2
+    - :name: ConveniosController#import
+      :complexity: 1
+      :lines: 5
+  - :name: HomeController
+    :complexity: 4
+    :lines: 14
+    :defs:
+    - :name: HomeController#index
+      :complexity: 1
+      :lines: 2
+    - :name: HomeController#show
+      :complexity: 3
+      :lines: 6
+  - :name: OmniauthCallbacksController
+    :complexity: 3
+    :lines: 12
+    :defs:
+    - :name: OmniauthCallbacksController#facebook
+      :complexity: 3
+      :lines: 9
+  - :name: Usuario
+    :complexity: 3
+    :lines: 30
+    :defs:
+    - :name: Usuario#self.find_for_facebook_oauth
+      :complexity: 3
+      :lines: 17
+  - :name: Convenio
+    :complexity: 3
+    :lines: 12
+    :defs:
+    - :name: Convenio#self.import
+      :complexity: 2
+      :lines: 4
+    - :name: Convenio#self.search
+      :complexity: 1
+      :lines: 2
+  - :name: ''
+    :complexity: 3
+    :lines: 13
+  - :name: !binary |-
+      Ojo6Ojo6TsO6bWVybw==
+    :complexity: 2
+    :lines: 6
+  - :name: Ability
+    :complexity: 2
+    :lines: 38
+    :defs:
+    - :name: Ability#initialize
+      :complexity: 2
+      :lines: 34
+  - :name: ''
+    :complexity: 2
+    :lines: 2
+  - :name: Usuarios
+    :complexity: 1
+    :lines: 5
+    :defs:
+    - :name: Usuarios#after_update_path_for
+      :complexity: 1
+      :lines: 2
+  - :name: ''
+    :complexity: 1
+    :lines: 6
+  - :name: ''
+    :complexity: 1
+    :lines: 0
+  - :name: "::::Editar"
+    :complexity: 1
+    :lines: 6
+  - :name: Lista
+    :complexity: 1
+    :lines: 6
+  - :name: ''
+    :complexity: 1
+    :lines: 0
+  - :name: ''
+    :complexity: 1
+    :lines: 1
+  - :name: UsuarioHelper
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 2
+  - :name: ''
+    :complexity: 0
+    :lines: 2
+  - :name: "::Lista"
+    :complexity: 0
+    :lines: 3
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 2
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 0
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: "::"
+    :complexity: 0
+    :lines: 1
+  - :name: "::::Inicio"
+    :complexity: 0
+    :lines: 6
+  - :name: "::"
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: "::"
+    :complexity: 0
+    :lines: 3
+  - :name: "::::"
+    :complexity: 0
+    :lines: 6
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: "::"
+    :complexity: 0
+    :lines: 1
+  - :name: !binary |-
+      Ojo6OlTDtA==
+    :complexity: 0
+    :lines: 0
+  - :name: "::::"
+    :complexity: 0
+    :lines: 3
+  - :name: "::"
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: !binary |-
+      Ojo6OlTDtDo6UXVlbQ==
+    :complexity: 0
+    :lines: 0
+  - :name: ''
+    :complexity: 0
+    :lines: 2
+  - :name: Role
+    :complexity: 0
+    :lines: 5
+  - :name: ConveniosHelper
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: HomeHelper
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: ApplicationHelper
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: RegistrationsHelper
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  :methods:
+  - :name: UsuariosController#create
+    :complexity: 5
+    :lines: 9
+  - :name: UsuariosController#update
+    :complexity: 5
+    :lines: 8
+  - :name: ApplicationController#configure_permitted_parameters
+    :complexity: 4
+    :lines: 4
+  - :name: UsuariosController#destroy
+    :complexity: 3
+    :lines: 5
+  - :name: Usuario#self.find_for_facebook_oauth
+    :complexity: 3
+    :lines: 17
+  - :name: OmniauthCallbacksController#facebook
+    :complexity: 3
+    :lines: 9
+  - :name: HomeController#show
+    :complexity: 3
+    :lines: 6
+  - :name: Convenio#self.import
+    :complexity: 2
+    :lines: 4
+  - :name: Ability#initialize
+    :complexity: 2
+    :lines: 34
+  - :name: ConveniosController#index
+    :complexity: 2
+    :lines: 9
+  - :name: ConveniosController#set_convenio
+    :complexity: 1
+    :lines: 2
+  - :name: ConveniosController#new
+    :complexity: 1
+    :lines: 2
+  - :name: ConveniosController#convenio_params
+    :complexity: 1
+    :lines: 2
+  - :name: ConveniosController#import
+    :complexity: 1
+    :lines: 5
+  - :name: ApplicationController#after_sign_in_path_for
+    :complexity: 1
+    :lines: 2
+  - :name: UsuariosController#usuario_params
+    :complexity: 1
+    :lines: 4
+  - :name: UsuariosController#set_usuario
+    :complexity: 1
+    :lines: 2
+  - :name: HomeController#index
+    :complexity: 1
+    :lines: 2
+  - :name: Convenio#self.search
+    :complexity: 1
+    :lines: 2
+  - :name: Usuarios#after_update_path_for
+    :complexity: 1
+    :lines: 2
+  - :name: UsuariosController#new
+    :complexity: 1
+    :lines: 2
+  - :name: UsuariosController#index
+    :complexity: 1
+    :lines: 2
+:flog:
+  :total: 225.14338621718505
+  :average: 8.040835222042324
+  :method_containers:
+  - :name: main
+    :path: ''
+    :total_score: 53.40159173657656
+    :highest_score: 53.40159173657656
+    :average_score: 53.40159173657656
+    :methods:
+      main#none:
+        :operators:
+          :branch: 19.90000000000001
+          :any?: 1.0
+          :assignment: 17.400000000000006
+          :root: 1.6
+          :[]: 1.4000000000000001
+          :first: 1.2000000000000002
+          :nil?: 1.2000000000000002
+          :dirname: 1.7000000000000002
+          :+: 1.5000000000000002
+          :unshift: 1.3000000000000003
+          :require: 3.200000000000001
+          :namespace: 1.4000000000000004
+          :new: 4.800000000000002
+          :desc: 4.300000000000002
+          :task: 11.500000000000004
+          :exist?: 3.600000000000002
+          :<<: 3.800000000000002
+          :puts: 1.5000000000000007
+          :abort: 1.4000000000000006
+        :score: 53.40159173657656
+        :path: 
+  - :name: Usuario::find_for_facebook_oauth
+    :path: app/models/usuario.rb
+    :total_score: 30.834568668946872
+    :highest_score: 30.834568668946872
+    :average_score: 30.834568668946872
+    :methods:
+      Usuario::find_for_facebook_oauth:
+        :operators:
+          :assignment: 4.5
+          :provider: 2.9000000000000004
+          :uid: 2.9000000000000004
+          :where: 2.6
+          :first: 2.2
+          :branch: 2.2
+          :info: 5.2
+          :email: 4.6000000000000005
+          :extra: 1.9000000000000001
+          :raw_info: 1.7000000000000002
+          :name: 1.5000000000000002
+          :friendly_token: 1.7000000000000002
+          :lit_fixnum: 0.42500000000000004
+          :[]: 1.5000000000000002
+          :create: 1.3000000000000003
+        :score: 30.834568668946872
+        :path: app/models/usuario.rb:13
+  - :name: OmniauthCallbacksController
+    :path: app/controllers/omniauth_callbacks_controller.rb
+    :total_score: 19.351744107444166
+    :highest_score: 19.351744107444166
+    :average_score: 19.351744107444166
+    :methods:
+      OmniauthCallbacksController#facebook:
+        :operators:
+          :assignment: 2.2
+          :request: 3.2
+          :env: 2.8
+          :[]: 2.4000000000000004
+          :current_usuario: 1.2
+          :find_for_facebook_oauth: 1.0
+          :branch: 2.2
+          :persisted?: 1.0
+          :sign_in_and_redirect: 1.2000000000000002
+          :is_navigational_format?: 1.2000000000000002
+          :set_flash_message: 1.3000000000000003
+          :session: 1.2000000000000002
+          :root_path: 1.4000000000000001
+          :redirect_to: 1.2000000000000002
+        :score: 19.351744107444166
+        :path: app/controllers/omniauth_callbacks_controller.rb:3
+  - :name: UsuariosController
+    :path: app/controllers/usuarios_controller.rb
+    :total_score: 43.8566711390202
+    :highest_score: 11.742657280190036
+    :average_score: 5.482083892377525
+    :methods:
+      UsuariosController#create:
+        :operators:
+          :assignment: 1.0
+          :usuario_params: 1.2
+          :new: 1.0
+          :branch: 4.5
+          :respond_to: 1.0
+          :save: 1.1
+          :html: 2.4000000000000004
+          :usuarios_path: 1.5000000000000002
+          :redirect_to: 1.3000000000000003
+          :render: 1.3000000000000003
+        :score: 11.742657280190036
+        :path: app/controllers/usuarios_controller.rb:19
+      UsuariosController#update:
+        :operators:
+          :branch: 4.5
+          :respond_to: 1.0
+          :usuario_params: 1.3
+          :update: 1.1
+          :html: 2.4000000000000004
+          :usuarios_path: 1.5000000000000002
+          :redirect_to: 1.3000000000000003
+          :render: 1.3000000000000003
+        :score: 10.874741376235118
+        :path: app/controllers/usuarios_controller.rb:38
+      UsuariosController#destroy:
+        :operators:
+          :destroy: 1.0
+          :branch: 2.1
+          :respond_to: 1.0
+          :html: 1.1
+          :usuarios_path: 1.4000000000000001
+          :redirect_to: 1.2000000000000002
+        :score: 6.074537019394977
+        :path: app/controllers/usuarios_controller.rb:31
+      UsuariosController#none:
+        :operators:
+          :before_action: 2.0
+          :load_and_authorize_resource: 1.0
+          :check_authorization: 1.0
+          :private: 1.0
+        :score: 5.0
+        :path: 
+      UsuariosController#set_usuario:
+        :operators:
+          :assignment: 1.0
+          :params: 1.4
+          :[]: 1.2
+          :find: 1.0
+        :score: 3.7363083384538807
+        :path: app/controllers/usuarios_controller.rb:49
+      UsuariosController#usuario_params:
+        :operators:
+          :params: 1.4
+          :fetch: 1.2
+          :permit: 1.0
+        :score: 3.5999999999999996
+        :path: app/controllers/usuarios_controller.rb:53
+      UsuariosController#new:
+        :operators:
+          :assignment: 1.0
+          :new: 1.0
+        :score: 1.4142135623730951
+        :path: app/controllers/usuarios_controller.rb:15
+      UsuariosController#index:
+        :operators:
+          :assignment: 1.0
+          :all: 1.0
+        :score: 1.4142135623730951
+        :path: app/controllers/usuarios_controller.rb:11
+  - :name: ApplicationController
+    :path: app/controllers/application_controller.rb
+    :total_score: 22.09119116766653
+    :highest_score: 10.746627377926528
+    :average_score: 7.363730389222177
+    :methods:
+      ApplicationController#none:
+        :operators:
+          :alias_method: 2.0
+          :protect_from_forgery: 1.0
+          :helper_method: 1.0
+          :branch: 1.0
+          :rescue_from: 1.0
+          :root_url: 1.3
+          :message: 1.3
+          :redirect_to: 1.1
+          :before_filter: 1.0
+          :protected: 1.0
+        :score: 10.746627377926528
+        :path: 
+      ApplicationController#configure_permitted_parameters:
+        :operators:
+          :branch: 3.0
+          :devise_parameter_sanitizer: 3.5999999999999996
+          :for: 3.0
+          :permit: 3.3000000000000003
+        :score: 10.34456378974
+        :path: app/controllers/application_controller.rb:25
+      ApplicationController#after_sign_in_path_for:
+        :operators:
+          :home_index_path: 1.0
+        :score: 1.0
+        :path: app/controllers/application_controller.rb:9
+  - :name: ConveniosController
+    :path: app/controllers/convenios_controller.rb
+    :total_score: 26.772777590190618
+    :highest_score: 9.222255689363639
+    :average_score: 4.462129598365103
+    :methods:
+      ConveniosController#index:
+        :operators:
+          :branch: 1.0
+          :params: 2.9
+          :[]: 2.5
+          :assignment: 2.2
+          :search: 1.3
+          :order: 1.1
+          :all: 1.1
+        :score: 9.222255689363639
+        :path: app/controllers/convenios_controller.rb:8
+      ConveniosController#import:
+        :operators:
+          :params: 1.4
+          :[]: 1.2
+          :import: 1.0
+          :convenios_url: 1.2
+          :redirect_to: 1.0
+        :score: 5.8
+        :path: app/controllers/convenios_controller.rb:35
+      ConveniosController#set_convenio:
+        :operators:
+          :assignment: 1.0
+          :params: 1.4
+          :[]: 1.2
+          :find: 1.0
+        :score: 3.7363083384538807
+        :path: app/controllers/convenios_controller.rb:25
+      ConveniosController#convenio_params:
+        :operators:
+          :params: 1.4
+          :require: 1.2
+          :permit: 1.0
+        :score: 3.5999999999999996
+        :path: app/controllers/convenios_controller.rb:30
+      ConveniosController#none:
+        :operators:
+          :before_action: 1.0
+          :load_and_authorize_resource: 1.0
+          :check_authorization: 1.0
+        :score: 3.0
+        :path: 
+      ConveniosController#new:
+        :operators:
+          :assignment: 1.0
+          :new: 1.0
+        :score: 1.4142135623730951
+        :path: app/controllers/convenios_controller.rb:20
+  - :name: HomeController
+    :path: app/controllers/home_controller.rb
+    :total_score: 8.695696927732106
+    :highest_score: 7.281483365359011
+    :average_score: 4.347848463866053
+    :methods:
+      HomeController#show:
+        :operators:
+          :assignment: 1.0
+          :params: 1.4
+          :[]: 1.2
+          :find: 1.0
+          :branch: 2.1
+          :respond_to: 1.0
+          :js: 1.1
+          :render: 1.2000000000000002
+        :score: 7.281483365359011
+        :path: app/controllers/home_controller.rb:9
+      HomeController#index:
+        :operators:
+          :assignment: 1.0
+          :all: 1.0
+        :score: 1.4142135623730951
+        :path: app/controllers/home_controller.rb:5
+  - :name: Usuario
+    :path: ''
+    :total_score: 5.0
+    :highest_score: 5.0
+    :average_score: 5.0
+    :methods:
+      Usuario#none:
+        :operators:
+          :rolify: 1.0
+          :devise: 1.0
+          :validates_presence_of: 2.0
+          :validates_uniqueness_of: 1.0
+        :score: 5.0
+        :path: 
+  - :name: Convenio::import
+    :path: app/models/convenio.rb
+    :total_score: 4.707440918375927
+    :highest_score: 4.707440918375927
+    :average_score: 4.707440918375927
+    :methods:
+      Convenio::import:
+        :operators:
+          :branch: 1.0
+          :path: 1.2
+          :foreach: 1.0
+          :to_hash: 1.3
+          :create!: 1.1
+        :score: 4.707440918375927
+        :path: app/models/convenio.rb:3
+  - :name: Ability
+    :path: app/models/ability.rb
+    :total_score: 6.431703961232068
+    :highest_score: 4.431703961232068
+    :average_score: 3.215851980616034
+    :methods:
+      Ability#initialize:
+        :operators:
+          :assignment: 1.0
+          :new: 1.0
+          :branch: 1.0
+          :has_role?: 1.0
+          :can: 2.2
+        :score: 4.431703961232068
+        :path: app/models/ability.rb:4
+      Ability#none:
+        :operators:
+          :include: 2.0
+        :score: 2.0
+        :path: 
+  - :name: Role
+    :path: ''
+    :total_score: 3.0
+    :highest_score: 3.0
+    :average_score: 3.0
+    :methods:
+      Role#none:
+        :operators:
+          :has_and_belongs_to_many: 1.0
+          :belongs_to: 1.0
+          :scopify: 1.0
+        :score: 3.0
+        :path: 
+  - :name: Convenio::search
+    :path: app/models/convenio.rb
+    :total_score: 1.0
+    :highest_score: 1.0
+    :average_score: 1.0
+    :methods:
+      Convenio::search:
+        :operators:
+          :where: 1.0
+        :score: 1.0
+        :path: app/models/convenio.rb:9
+:cane:
+  :total_violations: 67
+  :violations:
+    :abc_complexity:
+    - :file: app/models/usuario.rb
+      :method: Usuario.find_for_facebook_oauth
+      :complexity: '20'
+    :line_style:
+    - :line: app/controllers/convenios_controller.rb:31
+      :description: Line is >80 characters (430)
+    - :line: app/controllers/convenios_controller.rb:36
+      :description: Line contains trailing whitespace
+    - :line: app/controllers/usuarios_controller.rb:8
+      :description: Line contains trailing whitespace
+    - :line: app/controllers/usuarios_controller.rb:23
+      :description: Line is >80 characters (91)
+    - :line: app/controllers/usuarios_controller.rb:41
+      :description: Line is >80 characters (92)
+    - :line: app/controllers/registrations_controller.rb:2
+      :description: Line contains hard tabs
+    - :line: app/controllers/registrations_controller.rb:3
+      :description: Line contains hard tabs
+    - :line: app/controllers/registrations_controller.rb:4
+      :description: Line contains trailing whitespace
+    - :line: app/controllers/registrations_controller.rb:4
+      :description: Line contains hard tabs
+    - :line: app/controllers/registrations_controller.rb:5
+      :description: Line contains trailing whitespace
+    - :line: app/controllers/registrations_controller.rb:5
+      :description: Line contains hard tabs
+    - :line: app/controllers/application_controller.rb:12
+      :description: Line contains trailing whitespace
+    - :line: app/controllers/application_controller.rb:26
+      :description: Line is >80 characters (139)
+    - :line: app/controllers/application_controller.rb:27
+      :description: Line is >80 characters (123)
+    - :line: app/controllers/application_controller.rb:28
+      :description: Line is >80 characters (151)
+    - :line: app/controllers/application_controller.rb:32
+      :description: Line contains trailing whitespace
+    - :line: app/controllers/home_controller.rb:4
+      :description: Line contains trailing whitespace
+    - :line: app/controllers/omniauth_callbacks_controller.rb:2
+      :description: Line contains trailing whitespace
+    - :line: app/controllers/omniauth_callbacks_controller.rb:4
+      :description: Line is >80 characters (93)
+    - :line: app/controllers/omniauth_callbacks_controller.rb:6
+      :description: Line is >80 characters (108)
+    - :line: app/controllers/omniauth_callbacks_controller.rb:7
+      :description: Line is >80 characters (90)
+    - :line: app/models/usuario.rb:6
+      :description: Line is >80 characters (104)
+    - :line: app/models/role.rb:4
+      :description: Line contains trailing whitespace
+    - :line: spec/controllers/application_controller_spec.rb:5
+      :description: Line is >80 characters (192)
+    - :line: spec/controllers/convenios_controller_spec.rb:10
+      :description: Line is >80 characters (83)
+    - :line: spec/controllers/convenios_controller_spec.rb:11
+      :description: Line is >80 characters (92)
+    - :line: spec/controllers/convenios_controller_spec.rb:13
+      :description: Line is >80 characters (102)
+    - :line: spec/controllers/convenios_controller_spec.rb:21
+      :description: Line contains trailing whitespace
+    - :line: spec/controllers/usuarios_controller_spec.rb:13
+      :description: Line is >80 characters (172)
+    - :line: spec/controllers/home_controller_spec.rb:5
+      :description: Line is >80 characters (192)
+    - :line: spec/models/convenio_spec.rb:11
+      :description: Line contains hard tabs
+    - :line: spec/models/ability_spec.rb:6
+      :description: Line contains hard tabs
+    - :line: spec/models/ability_spec.rb:7
+      :description: Line contains trailing whitespace
+    - :line: spec/models/ability_spec.rb:8
+      :description: Line contains hard tabs
+    - :line: spec/models/ability_spec.rb:9
+      :description: Line contains hard tabs
+    - :line: spec/models/ability_spec.rb:11
+      :description: Line contains hard tabs
+    - :line: spec/models/ability_spec.rb:14
+      :description: Line contains hard tabs
+    - :line: spec/models/ability_spec.rb:15
+      :description: Line contains hard tabs
+    - :line: spec/models/ability_spec.rb:16
+      :description: Line contains hard tabs
+    - :line: spec/models/ability_spec.rb:31
+      :description: Line contains hard tabs
+    - :line: spec/factories/usuarios.rb:5
+      :description: Line contains hard tabs
+    - :line: spec/factories/usuarios.rb:7
+      :description: Line contains hard tabs
+    - :line: spec/factories/usuarios.rb:8
+      :description: Line contains hard tabs
+    - :line: spec/factories/usuarios.rb:9
+      :description: Line contains hard tabs
+    - :line: spec/factories/usuarios.rb:10
+      :description: Line contains hard tabs
+    - :line: spec/factories/usuarios.rb:11
+      :description: Line contains hard tabs
+    - :line: spec/factories/usuarios.rb:12
+      :description: Line contains hard tabs
+    - :line: spec/factories/usuarios.rb:13
+      :description: Line contains hard tabs
+    - :line: spec/factories/usuarios.rb:15
+      :description: Line contains hard tabs
+    - :line: spec/factories/usuarios.rb:16
+      :description: Line contains hard tabs
+    - :line: spec/factories/usuarios.rb:17
+      :description: Line contains hard tabs
+    - :line: spec/factories/usuarios.rb:18
+      :description: Line contains hard tabs
+    - :line: spec/factories/usuarios.rb:19
+      :description: Line contains hard tabs
+    - :line: spec/factories/usuarios.rb:22
+      :description: Line contains hard tabs
+    - :line: spec/requests/convenios_spec.rb:6
+      :description: Line is >80 characters (97)
+    - :line: spec/requests/usuarios_spec.rb:6
+      :description: Line is >80 characters (97)
+    - :line: spec/spec_helper.rb:31
+      :description: Line contains trailing whitespace
+    :comment:
+    - :line: app/controllers/convenios_controller.rb:3
+      :class_name: ConveniosController
+    - :line: app/controllers/usuarios_controller.rb:3
+      :class_name: UsuariosController
+    - :line: app/controllers/registrations_controller.rb:1
+      :class_name: Usuarios::RegistrationsController
+    - :line: app/controllers/application_controller.rb:3
+      :class_name: ApplicationController
+    - :line: app/controllers/home_controller.rb:3
+      :class_name: HomeController
+    - :line: app/controllers/omniauth_callbacks_controller.rb:1
+      :class_name: OmniauthCallbacksController
+    - :line: app/models/usuario.rb:1
+      :class_name: Usuario
+    - :line: app/models/convenio.rb:1
+      :class_name: Convenio
+    - :line: app/models/ability.rb:1
+      :class_name: Ability
+:rails_best_practices:
+  :total:
+  - Found 34 errors.
+  :problems:
+  - :file: "/home/thiagovsk/To_de_Olho/app/helpers/convenios_helper.rb"
+    :line: '1'
+    :problem: remove empty helpers
+    :url: http://rails-bestpractices.com/posts/72-remove-empty-helpers
+  - :file: "/home/thiagovsk/To_de_Olho/app/helpers/registrations_helper.rb"
+    :line: '1'
+    :problem: remove empty helpers
+    :url: http://rails-bestpractices.com/posts/72-remove-empty-helpers
+  - :file: "/home/thiagovsk/To_de_Olho/app/helpers/usuario_helper.rb"
+    :line: '1'
+    :problem: remove empty helpers
+    :url: http://rails-bestpractices.com/posts/72-remove-empty-helpers
+  - :file: "/home/thiagovsk/To_de_Olho/app/helpers/home_helper.rb"
+    :line: '1'
+    :problem: remove empty helpers
+    :url: http://rails-bestpractices.com/posts/72-remove-empty-helpers
+  - :file: "/home/thiagovsk/To_de_Olho/app/controllers/convenios_controller.rb"
+    :line: '30'
+    :problem: remove unused methods (ConveniosController#convenio_params)
+    :url: 
+  - :file: "/home/thiagovsk/To_de_Olho/app/controllers/registrations_controller.rb"
+    :line: '3'
+    :problem: remove unused methods (Usuarios::RegistrationsController#after_update_path_for)
+    :url: 
+  - :file: "/home/thiagovsk/To_de_Olho/app/controllers/application_controller.rb"
+    :line: '9'
+    :problem: remove unused methods (ApplicationController#after_sign_in_path_for)
+    :url: 
+  - :file: "/home/thiagovsk/To_de_Olho/app/views/home/_show.html.erb"
+    :line: '1'
+    :problem: replace instance variable with local variable
+    :url: http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable
+  - :file: "/home/thiagovsk/To_de_Olho/app/views/home/_show.html.erb"
+    :line: '2'
+    :problem: replace instance variable with local variable
+    :url: http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable
+  - :file: "/home/thiagovsk/To_de_Olho/app/views/home/_show.html.erb"
+    :line: '3'
+    :problem: replace instance variable with local variable
+    :url: http://rails-bestpractices.com/posts/27-replace-instance-variable-with-local-variable
+  - :file: "/home/thiagovsk/To_de_Olho/config/routes.rb"
+    :line: '3'
+    :problem: 'restrict auto-generated routes convenios (only: [:new, :index])'
+    :url: http://rails-bestpractices.com/posts/86-restrict-auto-generated-routes
+  - :file: "/home/thiagovsk/To_de_Olho/config/routes.rb"
+    :line: '7'
+    :problem: 'restrict auto-generated routes usuarios (except: [:show, :edit])'
+    :url: http://rails-bestpractices.com/posts/86-restrict-auto-generated-routes
+  - :file: "/home/thiagovsk/To_de_Olho/config/routes.rb"
+    :line: '8'
+    :problem: 'restrict auto-generated routes convenios (only: [:new, :index])'
+    :url: http://rails-bestpractices.com/posts/86-restrict-auto-generated-routes
+  - :file: "/home/thiagovsk/To_de_Olho/app/views/home/show.js.erb"
+    :line: '2'
+    :problem: simplify render in views
+    :url: http://rails-bestpractices.com/posts/61-simplify-render-in-views
+  - :file: "/home/thiagovsk/To_de_Olho/Gemfile"
+    :line: '50'
+    :problem: remove trailing whitespace
+    :url: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+  - :file: "/home/thiagovsk/To_de_Olho/app/models/role.rb"
+    :line: '4'
+    :problem: remove trailing whitespace
+    :url: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+  - :file: "/home/thiagovsk/To_de_Olho/config/routes.rb"
+    :line: '12'
+    :problem: remove trailing whitespace
+    :url: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+  - :file: "/home/thiagovsk/To_de_Olho/config/initializers/rolify.rb"
+    :line: '4'
+    :problem: remove trailing whitespace
+    :url: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+  - :file: "/home/thiagovsk/To_de_Olho/config/initializers/devise.rb"
+    :line: '23'
+    :problem: remove trailing whitespace
+    :url: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+  - :file: "/home/thiagovsk/To_de_Olho/app/controllers/convenios_controller.rb"
+    :line: '36'
+    :problem: remove trailing whitespace
+    :url: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+  - :file: "/home/thiagovsk/To_de_Olho/app/controllers/usuarios_controller.rb"
+    :line: '8'
+    :problem: remove trailing whitespace
+    :url: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+  - :file: "/home/thiagovsk/To_de_Olho/app/controllers/application_controller.rb"
+    :line: '12'
+    :problem: remove trailing whitespace
+    :url: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+  - :file: "/home/thiagovsk/To_de_Olho/app/controllers/home_controller.rb"
+    :line: '4'
+    :problem: remove trailing whitespace
+    :url: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+  - :file: "/home/thiagovsk/To_de_Olho/app/controllers/omniauth_callbacks_controller.rb"
+    :line: '2'
+    :problem: remove trailing whitespace
+    :url: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+  - :file: "/home/thiagovsk/To_de_Olho/app/views/home/_navbarPre.html.erb"
+    :line: '6'
+    :problem: remove trailing whitespace
+    :url: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+  - :file: "/home/thiagovsk/To_de_Olho/app/views/home/index.html.erb"
+    :line: '4'
+    :problem: remove trailing whitespace
+    :url: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+  - :file: "/home/thiagovsk/To_de_Olho/app/views/layouts/application.html.erb"
+    :line: '26'
+    :problem: remove trailing whitespace
+    :url: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+  - :file: "/home/thiagovsk/To_de_Olho/app/views/usuarios/_form.html.erb"
+    :line: '6'
+    :problem: remove trailing whitespace
+    :url: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+  - :file: "/home/thiagovsk/To_de_Olho/app/views/usuarios/index.html.erb"
+    :line: '4'
+    :problem: remove trailing whitespace
+    :url: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+  - :file: "/home/thiagovsk/To_de_Olho/app/views/convenios/show.html.erb"
+    :line: '159'
+    :problem: remove trailing whitespace
+    :url: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+  - :file: "/home/thiagovsk/To_de_Olho/app/views/convenios/import.html.erb"
+    :line: '3'
+    :problem: remove trailing whitespace
+    :url: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+  - :file: "/home/thiagovsk/To_de_Olho/app/views/convenios/index.html.erb"
+    :line: '31'
+    :problem: remove trailing whitespace
+    :url: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+  - :file: "/home/thiagovsk/To_de_Olho/app/views/devise/registrations/edit.html.erb"
+    :line: '17'
+    :problem: remove trailing whitespace
+    :url: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+  - :file: "/home/thiagovsk/To_de_Olho/app/views/devise/registrations/new.html.erb"
+    :line: '3'
+    :problem: remove trailing whitespace
+    :url: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+:flay:
+  :total_score: |-
+    0
+    ERRORS:
+  :matches: []
+:churn:
+  :changes:
+  - :file_path: app/views/home/index.html.erb
+    :times_changed: 22
+  - :file_path: app/assets/stylesheets/application.css
+    :times_changed: 20
+  - :file_path: Gemfile.lock
+    :times_changed: 20
+  - :file_path: Gemfile
+    :times_changed: 19
+  - :file_path: log/development.log
+    :times_changed: 19
+  - :file_path: db/development.sqlite3
+    :times_changed: 17
+  - :file_path: app/views/convenios/index.html.erb
+    :times_changed: 15
+  - :file_path: app/views/devise/sessions/_sign_in.html.erb
+    :times_changed: 13
+  - :file_path: app/controllers/convenios_controller.rb
+    :times_changed: 13
+  - :file_path: app/assets/stylesheets/bootstrap_and_overrides.css
+    :times_changed: 12
+  - :file_path: app/views/devise/sessions/_form_sign_in.html.erb
+    :times_changed: 12
+  - :file_path: config/routes.rb
+    :times_changed: 11
+  - :file_path: app/views/home/_navbarPre.html.erb
+    :times_changed: 11
+  - :file_path: app/views/usuarios/index.html.erb
+    :times_changed: 11
+  - :file_path: app/views/layouts/application.html.erb
+    :times_changed: 11
+  - :file_path: app/controllers/usuarios_controller.rb
+    :times_changed: 10
+  :class_churn: []
+  :method_churn: []
+  :changed_files: []
+  :changed_classes: []
+  :changed_methods: []
+:reek:
+  :matches:
+  - :file_path: app/controllers/application_controller.rb
+    :code_smells:
+    - :method: ApplicationController#after_sign_in_path_for
+      :message: has unused parameter 'resource'
+      :type: UnusedParameters
+    - :method: ApplicationController#configure_permitted_parameters
+      :message: has approx 6 statements
+      :type: TooManyStatements
+    - :method: ApplicationController#configure_permitted_parameters
+      :message: has the variable name 'u'
+      :type: UncommunicativeVariableName
+  - :file_path: app/controllers/convenios_controller.rb
+    :code_smells:
+    - :method: ConveniosController#index
+      :message: calls params[:search] twice
+      :type: DuplicateMethodCall
+  - :file_path: app/controllers/home_controller.rb
+    :code_smells:
+    - :method: HomeController#show
+      :message: contains iterators nested 2 deep
+      :type: NestedIterators
+  - :file_path: app/controllers/omniauth_callbacks_controller.rb
+    :code_smells:
+    - :method: OmniauthCallbacksController
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+    - :method: OmniauthCallbacksController#facebook
+      :message: calls request.env twice
+      :type: DuplicateMethodCall
+    - :method: OmniauthCallbacksController#facebook
+      :message: calls request.env["omniauth.auth"] twice
+      :type: DuplicateMethodCall
+  - :file_path: app/controllers/usuarios_controller.rb
+    :code_smells:
+    - :method: UsuariosController#create
+      :message: calls format.html twice
+      :type: DuplicateMethodCall
+    - :method: UsuariosController#create
+      :message: contains iterators nested 2 deep
+      :type: NestedIterators
+    - :method: UsuariosController#create
+      :message: has approx 6 statements
+      :type: TooManyStatements
+    - :method: UsuariosController#destroy
+      :message: contains iterators nested 2 deep
+      :type: NestedIterators
+    - :method: UsuariosController#update
+      :message: calls format.html twice
+      :type: DuplicateMethodCall
+    - :method: UsuariosController#update
+      :message: contains iterators nested 2 deep
+      :type: NestedIterators
+  - :file_path: app/models/ability.rb
+    :code_smells:
+    - :method: Ability
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/models/convenio.rb
+    :code_smells:
+    - :method: Convenio
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/models/role.rb
+    :code_smells:
+    - :method: Role
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: app/models/usuario.rb
+    :code_smells:
+    - :method: Usuario
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+    - :method: Usuario#self.find_for_facebook_oauth
+      :message: calls auth.info 3 times
+      :type: DuplicateMethodCall
+    - :method: Usuario#self.find_for_facebook_oauth
+      :message: calls auth.info.email 3 times
+      :type: DuplicateMethodCall
+    - :method: Usuario#self.find_for_facebook_oauth
+      :message: calls auth.provider twice
+      :type: DuplicateMethodCall
+    - :method: Usuario#self.find_for_facebook_oauth
+      :message: calls auth.uid twice
+      :type: DuplicateMethodCall
+    - :method: Usuario#self.find_for_facebook_oauth
+      :message: has unused parameter 'signed_in_resource'
+      :type: UnusedParameters
+    - :method: 'app/controllers/registrations_controller.rb:'
+      :message: 'Racc::ParseError: app/controllers/registrations_controller.rb:1 ::
+        parse error on value "]"'
+      :type: tRBRACK
+:roodi:
+  :total:
+  - "\tfrom /usr/local/rvm/gems/ruby-2.1.0/bin/ruby_executable_hooks:15:in `<main>'"
+  :problems:
+  - :file: app/models/ability.rb
+    :line: '4'
+    :problem: Method "initialize" has 29 lines.  It should have 20 or less.
+:stats:
+  :codeLOC: 237
+  :testLOC: 266
+  :code_to_test_ratio: 1.1
+  :lines:
+  - :name: Controllers
+    :lines: 168
+    :loc: 116
+    :classes: 6
+    :methods: 18
+    :methods_per_class: 3
+    :loc_per_method: 4
+  - :name: Helpers
+    :lines: 10
+    :loc: 10
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Models
+    :lines: 89
+    :loc: 52
+    :classes: 4
+    :methods: 4
+    :methods_per_class: 1
+    :loc_per_method: 11
+  - :name: Mailers
+    :lines: 0
+    :loc: 0
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Javascripts
+    :lines: 76
+    :loc: 50
+    :classes: 0
+    :methods: 3
+    :methods_per_class: 0
+    :loc_per_method: 14
+  - :name: Libraries
+    :lines: 0
+    :loc: 0
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Controller tests
+    :lines: 7
+    :loc: 3
+    :classes: 1
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Helper tests
+    :lines: 4
+    :loc: 3
+    :classes: 1
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Model tests
+    :lines: 7
+    :loc: 3
+    :classes: 1
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Mailer tests
+    :lines: 0
+    :loc: 0
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Integration tests
+    :lines: 0
+    :loc: 0
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Routing specs
+    :lines: 67
+    :loc: 49
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Controllers specs
+    :lines: 208
+    :loc: 157
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Models specs
+    :lines: 69
+    :loc: 44
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Requests specs
+    :lines: 23
+    :loc: 10
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Helpers specs
+    :lines: 28
+    :loc: 6
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Total
+    :lines: 756
+    :loc: 503
+    :classes: 13
+    :methods: 25
+    :methods_per_class: 1
+    :loc_per_method: 18
+:hotspots:
+  files:
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/models/usuario.rb:13
+      file_name: app/models/usuario.rb
+      line_number: '13'
+      hash_key: "[\"app/models/usuario.rb:13\", nil, nil]"
+    details:
+      flog: complexity is 30.8
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/omniauth_callbacks_controller.rb:3
+      file_name: app/controllers/omniauth_callbacks_controller.rb
+      line_number: '3'
+      hash_key: "[\"app/controllers/omniauth_callbacks_controller.rb:3\", nil, nil]"
+    details:
+      saikuro: complexity is 3.0
+      flog: complexity is 19.4
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/usuarios_controller.rb:19
+      file_name: app/controllers/usuarios_controller.rb
+      line_number: '19'
+      hash_key: "[\"app/controllers/usuarios_controller.rb:19\", nil, nil]"
+    details:
+      saikuro: complexity is 5.0
+      flog: complexity is 11.7
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/usuarios_controller.rb:38
+      file_name: app/controllers/usuarios_controller.rb
+      line_number: '38'
+      hash_key: "[\"app/controllers/usuarios_controller.rb:38\", nil, nil]"
+    details:
+      saikuro: complexity is 5.0
+      flog: complexity is 10.9
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/application_controller.rb:25
+      file_name: app/controllers/application_controller.rb
+      line_number: '25'
+      hash_key: "[\"app/controllers/application_controller.rb:25\", nil, nil]"
+    details:
+      saikuro: complexity is 4.0
+      flog: complexity is 10.3
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/convenios_controller.rb:8
+      file_name: app/controllers/convenios_controller.rb
+      line_number: '8'
+      hash_key: "[\"app/controllers/convenios_controller.rb:8\", nil, nil]"
+    details:
+      saikuro: complexity is 2.0
+      flog: complexity is 9.2
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/home_controller.rb:9
+      file_name: app/controllers/home_controller.rb
+      line_number: '9'
+      hash_key: "[\"app/controllers/home_controller.rb:9\", nil, nil]"
+    details:
+      saikuro: complexity is 3.0
+      flog: complexity is 7.3
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/usuarios_controller.rb:31
+      file_name: app/controllers/usuarios_controller.rb
+      line_number: '31'
+      hash_key: "[\"app/controllers/usuarios_controller.rb:31\", nil, nil]"
+    details:
+      saikuro: complexity is 3.0
+      flog: complexity is 6.1
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/convenios_controller.rb:35
+      file_name: app/controllers/convenios_controller.rb
+      line_number: '35'
+      hash_key: "[\"app/controllers/convenios_controller.rb:35\", nil, nil]"
+    details:
+      saikuro: complexity is 1.0
+      flog: complexity is 5.8
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/models/ability.rb:4
+      file_name: app/models/ability.rb
+      line_number: '4'
+      hash_key: "[\"app/models/ability.rb:4\", nil, nil]"
+    details:
+      saikuro: complexity is 2.0
+      flog: complexity is 4.4
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/convenios_controller.rb:25
+      file_name: app/controllers/convenios_controller.rb
+      line_number: '25'
+      hash_key: "[\"app/controllers/convenios_controller.rb:25\", nil, nil]"
+    details:
+      saikuro: complexity is 1.0
+      flog: complexity is 3.7
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/usuarios_controller.rb:49
+      file_name: app/controllers/usuarios_controller.rb
+      line_number: '49'
+      hash_key: "[\"app/controllers/usuarios_controller.rb:49\", nil, nil]"
+    details:
+      saikuro: complexity is 1.0
+      flog: complexity is 3.7
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/models/convenio.rb:3
+      file_name: app/models/convenio.rb
+      line_number: '3'
+      hash_key: "[\"app/models/convenio.rb:3\", nil, nil]"
+    details:
+      flog: complexity is 4.7
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/usuarios_controller.rb:53
+      file_name: app/controllers/usuarios_controller.rb
+      line_number: '53'
+      hash_key: "[\"app/controllers/usuarios_controller.rb:53\", nil, nil]"
+    details:
+      saikuro: complexity is 1.0
+      flog: complexity is 3.6
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/convenios_controller.rb:30
+      file_name: app/controllers/convenios_controller.rb
+      line_number: '30'
+      hash_key: "[\"app/controllers/convenios_controller.rb:30\", nil, nil]"
+    details:
+      saikuro: complexity is 1.0
+      flog: complexity is 3.6
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/models/usuario.rb
+      file_name: app/models/usuario.rb
+      line_number: 
+      hash_key: "[\"app/models/usuario.rb\", nil, nil]"
+    details:
+      saikuro: complexity is 3.0
+      reek: found 7 code smells
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/home_controller.rb:5
+      file_name: app/controllers/home_controller.rb
+      line_number: '5'
+      hash_key: "[\"app/controllers/home_controller.rb:5\", nil, nil]"
+    details:
+      saikuro: complexity is 1.0
+      flog: complexity is 1.4
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/usuarios_controller.rb:15
+      file_name: app/controllers/usuarios_controller.rb
+      line_number: '15'
+      hash_key: "[\"app/controllers/usuarios_controller.rb:15\", nil, nil]"
+    details:
+      saikuro: complexity is 1.0
+      flog: complexity is 1.4
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/convenios_controller.rb:20
+      file_name: app/controllers/convenios_controller.rb
+      line_number: '20'
+      hash_key: "[\"app/controllers/convenios_controller.rb:20\", nil, nil]"
+    details:
+      saikuro: complexity is 1.0
+      flog: complexity is 1.4
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/usuarios_controller.rb:11
+      file_name: app/controllers/usuarios_controller.rb
+      line_number: '11'
+      hash_key: "[\"app/controllers/usuarios_controller.rb:11\", nil, nil]"
+    details:
+      saikuro: complexity is 1.0
+      flog: complexity is 1.4
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/application_controller.rb:9
+      file_name: app/controllers/application_controller.rb
+      line_number: '9'
+      hash_key: "[\"app/controllers/application_controller.rb:9\", nil, nil]"
+    details:
+      saikuro: complexity is 1.0
+      flog: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/models/convenio.rb
+      file_name: app/models/convenio.rb
+      line_number: 
+      hash_key: "[\"app/models/convenio.rb\", nil, nil]"
+    details:
+      saikuro: average complexity is 1.5
+      reek: found 1 code smells
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/usuarios_controller.rb
+      file_name: app/controllers/usuarios_controller.rb
+      line_number: 
+      hash_key: "[\"app/controllers/usuarios_controller.rb\", nil, nil]"
+    details:
+      churn: detected high level of churn (changed 10 times)
+      reek: found 6 code smells
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/registrations_controller.rb
+      file_name: app/controllers/registrations_controller.rb
+      line_number: 
+      hash_key: "[\"app/controllers/registrations_controller.rb\", nil, nil]"
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/models/convenio.rb:9
+      file_name: app/models/convenio.rb
+      line_number: '9'
+      hash_key: "[\"app/models/convenio.rb:9\", nil, nil]"
+    details:
+      flog: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/convenios_controller.rb
+      file_name: app/controllers/convenios_controller.rb
+      line_number: 
+      hash_key: "[\"app/controllers/convenios_controller.rb\", nil, nil]"
+    details:
+      churn: detected high level of churn (changed 13 times)
+      reek: found 1 code smells
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/application_controller.rb
+      file_name: app/controllers/application_controller.rb
+      line_number: 
+      hash_key: "[\"app/controllers/application_controller.rb\", nil, nil]"
+    details:
+      reek: found 3 code smells
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/omniauth_callbacks_controller.rb
+      file_name: app/controllers/omniauth_callbacks_controller.rb
+      line_number: 
+      hash_key: "[\"app/controllers/omniauth_callbacks_controller.rb\", nil, nil]"
+    details:
+      reek: found 3 code smells
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/views/devise/sessions/_form_sign_in.html.erb
+      file_name: app/views/devise/sessions/_form_sign_in.html.erb
+      line_number: 
+      hash_key: "[\"app/views/devise/sessions/_form_sign_in.html.erb\", nil, nil]"
+    details:
+      churn: detected high level of churn (changed 12 times)
+  - location:
+      class_name: 
+      method_name: 
+      file_path: Gemfile.lock
+      file_name: Gemfile.lock
+      line_number: 
+      hash_key: "[\"Gemfile.lock\", nil, nil]"
+    details:
+      churn: detected high level of churn (changed 20 times)
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/views/convenios/index.html.erb
+      file_name: app/views/convenios/index.html.erb
+      line_number: 
+      hash_key: "[\"app/views/convenios/index.html.erb\", nil, nil]"
+    details:
+      churn: detected high level of churn (changed 15 times)
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/views/devise/sessions/_sign_in.html.erb
+      file_name: app/views/devise/sessions/_sign_in.html.erb
+      line_number: 
+      hash_key: "[\"app/views/devise/sessions/_sign_in.html.erb\", nil, nil]"
+    details:
+      churn: detected high level of churn (changed 13 times)
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/assets/stylesheets/application.css
+      file_name: app/assets/stylesheets/application.css
+      line_number: 
+      hash_key: "[\"app/assets/stylesheets/application.css\", nil, nil]"
+    details:
+      churn: detected high level of churn (changed 20 times)
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/assets/stylesheets/bootstrap_and_overrides.css
+      file_name: app/assets/stylesheets/bootstrap_and_overrides.css
+      line_number: 
+      hash_key: "[\"app/assets/stylesheets/bootstrap_and_overrides.css\", nil, nil]"
+    details:
+      churn: detected high level of churn (changed 12 times)
+  - location:
+      class_name: 
+      method_name: 
+      file_path: log/development.log
+      file_name: log/development.log
+      line_number: 
+      hash_key: "[\"log/development.log\", nil, nil]"
+    details:
+      churn: detected high level of churn (changed 19 times)
+  - location:
+      class_name: 
+      method_name: 
+      file_path: config/routes.rb
+      file_name: config/routes.rb
+      line_number: 
+      hash_key: "[\"config/routes.rb\", nil, nil]"
+    details:
+      churn: detected high level of churn (changed 11 times)
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/views/home/_navbarPre.html.erb
+      file_name: app/views/home/_navbarPre.html.erb
+      line_number: 
+      hash_key: "[\"app/views/home/_navbarPre.html.erb\", nil, nil]"
+    details:
+      churn: detected high level of churn (changed 11 times)
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/views/usuarios/index.html.erb
+      file_name: app/views/usuarios/index.html.erb
+      line_number: 
+      hash_key: "[\"app/views/usuarios/index.html.erb\", nil, nil]"
+    details:
+      churn: detected high level of churn (changed 11 times)
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/views/layouts/application.html.erb
+      file_name: app/views/layouts/application.html.erb
+      line_number: 
+      hash_key: "[\"app/views/layouts/application.html.erb\", nil, nil]"
+    details:
+      churn: detected high level of churn (changed 11 times)
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/views/home/index.html.erb
+      file_name: app/views/home/index.html.erb
+      line_number: 
+      hash_key: "[\"app/views/home/index.html.erb\", nil, nil]"
+    details:
+      churn: detected high level of churn (changed 22 times)
+  - location:
+      class_name: 
+      method_name: 
+      file_path: Gemfile
+      file_name: Gemfile
+      line_number: 
+      hash_key: "[\"Gemfile\", nil, nil]"
+    details:
+      churn: detected high level of churn (changed 19 times)
+  - location:
+      class_name: 
+      method_name: 
+      file_path: db/development.sqlite3
+      file_name: db/development.sqlite3
+      line_number: 
+      hash_key: "[\"db/development.sqlite3\", nil, nil]"
+    details:
+      churn: detected high level of churn (changed 17 times)
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/models/ability.rb
+      file_name: app/models/ability.rb
+      line_number: 
+      hash_key: "[\"app/models/ability.rb\", nil, nil]"
+    details:
+      reek: found 1 code smells
+      roodi: found 1 design problems
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/models/role.rb
+      file_name: app/models/role.rb
+      line_number: 
+      hash_key: "[\"app/models/role.rb\", nil, nil]"
+    details:
+      reek: found 1 code smells
+  - location:
+      class_name: 
+      method_name: 
+      file_path: app/controllers/home_controller.rb
+      file_name: app/controllers/home_controller.rb
+      line_number: 
+      hash_key: "[\"app/controllers/home_controller.rb\", nil, nil]"
+    details:
+      reek: found 1 code smells
+  classes:
+  - location:
+      class_name: main
+      method_name: 
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: "[nil, \"main\", nil]"
+    details:
+      flog: complexity is 53.4
+  - location:
+      class_name: OmniauthCallbacksController
+      method_name: 
+      file_path: app/controllers/omniauth_callbacks_controller.rb:3
+      file_name: app/controllers/omniauth_callbacks_controller.rb
+      line_number: '3'
+      hash_key: "[\"app/controllers/omniauth_callbacks_controller.rb:3\", \"OmniauthCallbacksController\",
+        nil]"
+    details:
+      saikuro: complexity is 3.0
+      flog: complexity is 19.4
+      reek: found 3 code smells
+  - location:
+      class_name: Usuario
+      method_name: 
+      file_path: app/models/usuario.rb
+      file_name: app/models/usuario.rb
+      line_number: 
+      hash_key: "[\"app/models/usuario.rb\", \"Usuario\", nil]"
+    details:
+      saikuro: complexity is 3.0
+      flog: average complexity is 17.9
+      reek: found 1 code smells
+  - location:
+      class_name: ApplicationController
+      method_name: 
+      file_path: app/controllers/application_controller.rb:25
+      file_name: app/controllers/application_controller.rb
+      line_number: '25'
+      hash_key: "[\"app/controllers/application_controller.rb:25\", \"ApplicationController\",
+        nil]"
+    details:
+      saikuro: average complexity is 2.5
+      flog: average complexity is 7.4
+      reek: found 3 code smells
+  - location:
+      class_name: UsuariosController
+      method_name: 
+      file_path: app/controllers/usuarios_controller.rb:38
+      file_name: app/controllers/usuarios_controller.rb
+      line_number: '38'
+      hash_key: "[\"app/controllers/usuarios_controller.rb:38\", \"UsuariosController\",
+        nil]"
+    details:
+      saikuro: average complexity is 2.4
+      flog: average complexity is 5.5
+      reek: found 6 code smells
+  - location:
+      class_name: HomeController
+      method_name: 
+      file_path: app/controllers/home_controller.rb:9
+      file_name: app/controllers/home_controller.rb
+      line_number: '9'
+      hash_key: "[\"app/controllers/home_controller.rb:9\", \"HomeController\", nil]"
+    details:
+      saikuro: average complexity is 2.0
+      flog: average complexity is 4.3
+      reek: found 1 code smells
+  - location:
+      class_name: Ability
+      method_name: 
+      file_path: app/models/ability.rb:4
+      file_name: app/models/ability.rb
+      line_number: '4'
+      hash_key: "[\"app/models/ability.rb:4\", \"Ability\", nil]"
+    details:
+      saikuro: complexity is 2.0
+      flog: average complexity is 3.2
+      reek: found 1 code smells
+  - location:
+      class_name: ConveniosController
+      method_name: 
+      file_path: app/controllers/convenios_controller.rb:8
+      file_name: app/controllers/convenios_controller.rb
+      line_number: '8'
+      hash_key: "[\"app/controllers/convenios_controller.rb:8\", \"ConveniosController\",
+        nil]"
+    details:
+      saikuro: average complexity is 1.2
+      flog: average complexity is 4.5
+      reek: found 1 code smells
+  - location:
+      class_name: Convenio
+      method_name: 
+      file_path: app/models/convenio.rb
+      file_name: app/models/convenio.rb
+      line_number: 
+      hash_key: "[\"app/models/convenio.rb\", \"Convenio\", nil]"
+    details:
+      saikuro: average complexity is 1.5
+      flog: average complexity is 2.9
+      reek: found 1 code smells
+  - location:
+      class_name: Role
+      method_name: 
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: "[nil, \"Role\", nil]"
+    details:
+      flog: complexity is 3.0
+      reek: found 1 code smells
+  - location:
+      class_name: Usuarios
+      method_name: 
+      file_path: app/controllers/registrations_controller.rb
+      file_name: app/controllers/registrations_controller.rb
+      line_number: 
+      hash_key: "[\"app/controllers/registrations_controller.rb\", \"Usuarios\", nil]"
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: Usuario#self
+      method_name: 
+      file_path: app/models/usuario.rb
+      file_name: app/models/usuario.rb
+      line_number: 
+      hash_key: "[\"app/models/usuario.rb\", \"Usuario#self\", nil]"
+    details:
+      reek: found 5 code smells
+  - location:
+      class_name: app/controllers/registrations_controller
+      method_name: 
+      file_path: app/models/usuario.rb
+      file_name: app/models/usuario.rb
+      line_number: 
+      hash_key: "[\"app/models/usuario.rb\", \"app/controllers/registrations_controller\",
+        nil]"
+    details:
+      reek: found 1 code smells
+  methods:
+  - location:
+      class_name: main
+      method_name: main#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: "[nil, \"main\", \"main#none\"]"
+      simple_method_name: "#none"
+    details:
+      flog: complexity is 53.4
+  - location:
+      class_name: Usuario
+      method_name: Usuario#find_for_facebook_oauth
+      file_path: app/models/usuario.rb:13
+      file_name: app/models/usuario.rb
+      line_number: '13'
+      hash_key: "[\"app/models/usuario.rb:13\", \"Usuario\", \"Usuario#find_for_facebook_oauth\"]"
+      simple_method_name: "#find_for_facebook_oauth"
+    details:
+      flog: complexity is 30.8
+  - location:
+      class_name: OmniauthCallbacksController
+      method_name: OmniauthCallbacksController#facebook
+      file_path: app/controllers/omniauth_callbacks_controller.rb:3
+      file_name: app/controllers/omniauth_callbacks_controller.rb
+      line_number: '3'
+      hash_key: "[\"app/controllers/omniauth_callbacks_controller.rb:3\", \"OmniauthCallbacksController\",
+        \"OmniauthCallbacksController#facebook\"]"
+      simple_method_name: "#facebook"
+    details:
+      saikuro: complexity is 3.0
+      flog: complexity is 19.4
+      reek: found 2 code smells
+  - location:
+      class_name: UsuariosController
+      method_name: UsuariosController#create
+      file_path: app/controllers/usuarios_controller.rb:19
+      file_name: app/controllers/usuarios_controller.rb
+      line_number: '19'
+      hash_key: "[\"app/controllers/usuarios_controller.rb:19\", \"UsuariosController\",
+        \"UsuariosController#create\"]"
+      simple_method_name: "#create"
+    details:
+      saikuro: complexity is 5.0
+      flog: complexity is 11.7
+      reek: found 3 code smells
+  - location:
+      class_name: UsuariosController
+      method_name: UsuariosController#update
+      file_path: app/controllers/usuarios_controller.rb:38
+      file_name: app/controllers/usuarios_controller.rb
+      line_number: '38'
+      hash_key: "[\"app/controllers/usuarios_controller.rb:38\", \"UsuariosController\",
+        \"UsuariosController#update\"]"
+      simple_method_name: "#update"
+    details:
+      saikuro: complexity is 5.0
+      flog: complexity is 10.9
+      reek: found 2 code smells
+  - location:
+      class_name: ApplicationController
+      method_name: ApplicationController#configure_permitted_parameters
+      file_path: app/controllers/application_controller.rb:25
+      file_name: app/controllers/application_controller.rb
+      line_number: '25'
+      hash_key: "[\"app/controllers/application_controller.rb:25\", \"ApplicationController\",
+        \"ApplicationController#configure_permitted_parameters\"]"
+      simple_method_name: "#configure_permitted_parameters"
+    details:
+      saikuro: complexity is 4.0
+      flog: complexity is 10.3
+      reek: found 2 code smells
+  - location:
+      class_name: ConveniosController
+      method_name: ConveniosController#index
+      file_path: app/controllers/convenios_controller.rb:8
+      file_name: app/controllers/convenios_controller.rb
+      line_number: '8'
+      hash_key: "[\"app/controllers/convenios_controller.rb:8\", \"ConveniosController\",
+        \"ConveniosController#index\"]"
+      simple_method_name: "#index"
+    details:
+      saikuro: complexity is 2.0
+      flog: complexity is 9.2
+      reek: found 1 code smells
+  - location:
+      class_name: ApplicationController
+      method_name: ApplicationController#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: "[nil, \"ApplicationController\", \"ApplicationController#none\"]"
+      simple_method_name: "#none"
+    details:
+      flog: complexity is 10.7
+  - location:
+      class_name: HomeController
+      method_name: HomeController#show
+      file_path: app/controllers/home_controller.rb:9
+      file_name: app/controllers/home_controller.rb
+      line_number: '9'
+      hash_key: "[\"app/controllers/home_controller.rb:9\", \"HomeController\", \"HomeController#show\"]"
+      simple_method_name: "#show"
+    details:
+      saikuro: complexity is 3.0
+      flog: complexity is 7.3
+      reek: found 1 code smells
+  - location:
+      class_name: UsuariosController
+      method_name: UsuariosController#destroy
+      file_path: app/controllers/usuarios_controller.rb:31
+      file_name: app/controllers/usuarios_controller.rb
+      line_number: '31'
+      hash_key: "[\"app/controllers/usuarios_controller.rb:31\", \"UsuariosController\",
+        \"UsuariosController#destroy\"]"
+      simple_method_name: "#destroy"
+    details:
+      saikuro: complexity is 3.0
+      flog: complexity is 6.1
+      reek: found 1 code smells
+  - location:
+      class_name: ConveniosController
+      method_name: ConveniosController#import
+      file_path: app/controllers/convenios_controller.rb:35
+      file_name: app/controllers/convenios_controller.rb
+      line_number: '35'
+      hash_key: "[\"app/controllers/convenios_controller.rb:35\", \"ConveniosController\",
+        \"ConveniosController#import\"]"
+      simple_method_name: "#import"
+    details:
+      saikuro: complexity is 1.0
+      flog: complexity is 5.8
+  - location:
+      class_name: Ability
+      method_name: Ability#initialize
+      file_path: app/models/ability.rb:4
+      file_name: app/models/ability.rb
+      line_number: '4'
+      hash_key: "[\"app/models/ability.rb:4\", \"Ability\", \"Ability#initialize\"]"
+      simple_method_name: "#initialize"
+    details:
+      saikuro: complexity is 2.0
+      flog: complexity is 4.4
+  - location:
+      class_name: Usuario
+      method_name: Usuario#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: "[nil, \"Usuario\", \"Usuario#none\"]"
+      simple_method_name: "#none"
+    details:
+      flog: complexity is 5.0
+  - location:
+      class_name: UsuariosController
+      method_name: UsuariosController#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: "[nil, \"UsuariosController\", \"UsuariosController#none\"]"
+      simple_method_name: "#none"
+    details:
+      flog: complexity is 5.0
+  - location:
+      class_name: UsuariosController
+      method_name: UsuariosController#set_usuario
+      file_path: app/controllers/usuarios_controller.rb:49
+      file_name: app/controllers/usuarios_controller.rb
+      line_number: '49'
+      hash_key: "[\"app/controllers/usuarios_controller.rb:49\", \"UsuariosController\",
+        \"UsuariosController#set_usuario\"]"
+      simple_method_name: "#set_usuario"
+    details:
+      saikuro: complexity is 1.0
+      flog: complexity is 3.7
+  - location:
+      class_name: ConveniosController
+      method_name: ConveniosController#set_convenio
+      file_path: app/controllers/convenios_controller.rb:25
+      file_name: app/controllers/convenios_controller.rb
+      line_number: '25'
+      hash_key: "[\"app/controllers/convenios_controller.rb:25\", \"ConveniosController\",
+        \"ConveniosController#set_convenio\"]"
+      simple_method_name: "#set_convenio"
+    details:
+      saikuro: complexity is 1.0
+      flog: complexity is 3.7
+  - location:
+      class_name: Convenio
+      method_name: Convenio#import
+      file_path: app/models/convenio.rb:3
+      file_name: app/models/convenio.rb
+      line_number: '3'
+      hash_key: "[\"app/models/convenio.rb:3\", \"Convenio\", \"Convenio#import\"]"
+      simple_method_name: "#import"
+    details:
+      flog: complexity is 4.7
+  - location:
+      class_name: ConveniosController
+      method_name: ConveniosController#convenio_params
+      file_path: app/controllers/convenios_controller.rb:30
+      file_name: app/controllers/convenios_controller.rb
+      line_number: '30'
+      hash_key: "[\"app/controllers/convenios_controller.rb:30\", \"ConveniosController\",
+        \"ConveniosController#convenio_params\"]"
+      simple_method_name: "#convenio_params"
+    details:
+      saikuro: complexity is 1.0
+      flog: complexity is 3.6
+  - location:
+      class_name: UsuariosController
+      method_name: UsuariosController#usuario_params
+      file_path: app/controllers/usuarios_controller.rb:53
+      file_name: app/controllers/usuarios_controller.rb
+      line_number: '53'
+      hash_key: "[\"app/controllers/usuarios_controller.rb:53\", \"UsuariosController\",
+        \"UsuariosController#usuario_params\"]"
+      simple_method_name: "#usuario_params"
+    details:
+      saikuro: complexity is 1.0
+      flog: complexity is 3.6
+  - location:
+      class_name: Usuario
+      method_name: Usuario#self.find_for_facebook_oauth
+      file_path: app/models/usuario.rb
+      file_name: app/models/usuario.rb
+      line_number: 
+      hash_key: "[\"app/models/usuario.rb\", \"Usuario\", \"Usuario#self.find_for_facebook_oauth\"]"
+      simple_method_name: "#self.find_for_facebook_oauth"
+    details:
+      saikuro: complexity is 3.0
+      reek: found 5 code smells
+  - location:
+      class_name: Role
+      method_name: Role#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: "[nil, \"Role\", \"Role#none\"]"
+      simple_method_name: "#none"
+    details:
+      flog: complexity is 3.0
+  - location:
+      class_name: ConveniosController
+      method_name: ConveniosController#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: "[nil, \"ConveniosController\", \"ConveniosController#none\"]"
+      simple_method_name: "#none"
+    details:
+      flog: complexity is 3.0
+  - location:
+      class_name: UsuariosController
+      method_name: UsuariosController#new
+      file_path: app/controllers/usuarios_controller.rb:15
+      file_name: app/controllers/usuarios_controller.rb
+      line_number: '15'
+      hash_key: "[\"app/controllers/usuarios_controller.rb:15\", \"UsuariosController\",
+        \"UsuariosController#new\"]"
+      simple_method_name: "#new"
+    details:
+      saikuro: complexity is 1.0
+      flog: complexity is 1.4
+  - location:
+      class_name: HomeController
+      method_name: HomeController#index
+      file_path: app/controllers/home_controller.rb:5
+      file_name: app/controllers/home_controller.rb
+      line_number: '5'
+      hash_key: "[\"app/controllers/home_controller.rb:5\", \"HomeController\", \"HomeController#index\"]"
+      simple_method_name: "#index"
+    details:
+      saikuro: complexity is 1.0
+      flog: complexity is 1.4
+  - location:
+      class_name: UsuariosController
+      method_name: UsuariosController#index
+      file_path: app/controllers/usuarios_controller.rb:11
+      file_name: app/controllers/usuarios_controller.rb
+      line_number: '11'
+      hash_key: "[\"app/controllers/usuarios_controller.rb:11\", \"UsuariosController\",
+        \"UsuariosController#index\"]"
+      simple_method_name: "#index"
+    details:
+      saikuro: complexity is 1.0
+      flog: complexity is 1.4
+  - location:
+      class_name: ConveniosController
+      method_name: ConveniosController#new
+      file_path: app/controllers/convenios_controller.rb:20
+      file_name: app/controllers/convenios_controller.rb
+      line_number: '20'
+      hash_key: "[\"app/controllers/convenios_controller.rb:20\", \"ConveniosController\",
+        \"ConveniosController#new\"]"
+      simple_method_name: "#new"
+    details:
+      saikuro: complexity is 1.0
+      flog: complexity is 1.4
+  - location:
+      class_name: ApplicationController
+      method_name: ApplicationController#after_sign_in_path_for
+      file_path: app/controllers/application_controller.rb:9
+      file_name: app/controllers/application_controller.rb
+      line_number: '9'
+      hash_key: "[\"app/controllers/application_controller.rb:9\", \"ApplicationController\",
+        \"ApplicationController#after_sign_in_path_for\"]"
+      simple_method_name: "#after_sign_in_path_for"
+    details:
+      saikuro: complexity is 1.0
+      flog: complexity is 1.0
+      reek: found 1 code smells
+  - location:
+      class_name: Convenio
+      method_name: Convenio#self.import
+      file_path: app/models/convenio.rb
+      file_name: app/models/convenio.rb
+      line_number: 
+      hash_key: "[\"app/models/convenio.rb\", \"Convenio\", \"Convenio#self.import\"]"
+      simple_method_name: "#self.import"
+    details:
+      saikuro: complexity is 2.0
+  - location:
+      class_name: Ability
+      method_name: Ability#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: "[nil, \"Ability\", \"Ability#none\"]"
+      simple_method_name: "#none"
+    details:
+      flog: complexity is 2.0
+  - location:
+      class_name: Usuarios
+      method_name: Usuarios#after_update_path_for
+      file_path: app/controllers/registrations_controller.rb
+      file_name: app/controllers/registrations_controller.rb
+      line_number: 
+      hash_key: "[\"app/controllers/registrations_controller.rb\", \"Usuarios\", \"Usuarios#after_update_path_for\"]"
+      simple_method_name: "#after_update_path_for"
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: Convenio
+      method_name: Convenio#self.search
+      file_path: app/models/convenio.rb
+      file_name: app/models/convenio.rb
+      line_number: 
+      hash_key: "[\"app/models/convenio.rb\", \"Convenio\", \"Convenio#self.search\"]"
+      simple_method_name: "#self.search"
+    details:
+      saikuro: complexity is 1.0
+  - location:
+      class_name: Convenio
+      method_name: Convenio#search
+      file_path: app/models/convenio.rb:9
+      file_name: app/models/convenio.rb
+      line_number: '9'
+      hash_key: "[\"app/models/convenio.rb:9\", \"Convenio\", \"Convenio#search\"]"
+      simple_method_name: "#search"
+    details:
+      flog: complexity is 1.0
+  - location:
+      class_name: app/controllers/registrations_controller
+      method_name: 'app/controllers/registrations_controller.rb:'
+      file_path: app/models/usuario.rb
+      file_name: app/models/usuario.rb
+      line_number: 
+      hash_key: "[\"app/models/usuario.rb\", \"app/controllers/registrations_controller\",
+        \"app/controllers/registrations_controller.rb:\"]"
+      simple_method_name: ".rb:"
+    details:
+      reek: found 1 code smells
