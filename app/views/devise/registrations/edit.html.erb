@@ -4,8 +4,9 @@
         <h2>Editar <%= resource_name.to_s.humanize  %></h2>
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, :multipart => true }) do |f| %>
         <%= f.error_notification %>
-            <img src="<%= @usuario.avatar.url(:medium) %>" class="img-circle">
-              <%= f.file_field :avatar %>
+            <img src="<%= @usuario.avatar.url(:medium) %>" class="img-circle">          
+          <%= f.file_field :avatar %>
+          <%= f.label "Altere a foto do perfil" %>
            <br>
           <%= f.email_field :email, required: true, autofocus: true ,:placeholder => 'Email' %>
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>

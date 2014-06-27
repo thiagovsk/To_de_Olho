@@ -12,6 +12,7 @@
             <td>Descricao do convenio</td>
             <td>Numero Convenio</td>
             <td>Imagem</td>
+            <td>Informaçoes</td>
          </tr>
       </thead>
     
@@ -19,12 +20,12 @@
          <% @reclamacoes = Reclamacao.where(:usuario_id => "#{@usuario.id}")%>
          <% @reclamacoes.each do |reclamacao| %>
 
-       
          <tr> 
             <td> <%= reclamacao.descricao %>  </td>
             <td> <%= Convenio.find(reclamacao.convenio_id).situacaoconvenio %>  </td>
             <td> <%= Convenio.find(reclamacao.convenio_id).numeroconvenio %> </td>
-            <td> <img src="<%=reclamacao.foto(:medium) %>" class="img-thumbnail"></td>  
+            <td> <img src="<%=reclamacao.foto(:medium) %>" class="img-thumbnail"></td>
+            <td> <%=link_to raw("<i class=\"fa fa-info-circle\"> Sobre </i>"),reclamacao_path(reclamacao),class: "btn btn-info  btn-small"%> </td>  
          </tr>
          
          <% end %>
