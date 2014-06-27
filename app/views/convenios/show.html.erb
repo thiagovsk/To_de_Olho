@@ -167,11 +167,15 @@
    
    <%= link_to raw("<i class=\"fa fa-unlock\"> Reclamações?</i>"),
       associate_path(@convenio), class: "btn btn-primary  btn-small"%>
+   
 
-   <%= link_to raw("<i class=\"fa fa-facebook-square\"> Compartilhar </i>"),
-      "http://www.facebook.com/sharer.php?u=convenios_url(@convenios)",
-      #"http://www.facebook.com/sharer.php?u=http://localhost:3000/convenios/@convenios_id/"
-      :target => "_blank" ,class: "btn btn-primary btn-small"%>
+   <%= link_to raw("<i class=\"fa fa-facebook-square\"> Compartilhar </i>"),"https://www.facebook.com/dialog/feed?
+  app_id=1603488076542893
+  &caption=http://todolho.com.br/convenios_url(@convenios)
+  &link=http://todolho.com.br/convenios_url(@convenios)
+  &redirect_uri=http://todolho.com.br/convenios_url(@convenios)
+  &description= #{@convenio.objetoconvenio}
+",:target => "_blank" ,class: "btn btn-primary btn-small"%>
    
    <%= link_to raw("<i class=\"glyphicon glyphicon-exclamation-sign\"> Criar abaixo assinado </i>"),
 
