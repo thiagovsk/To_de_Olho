@@ -43,9 +43,12 @@
                         <td><%=@abaixo_assinado.created_at.to_s(:abaixo_assinado)%></td>
                      </tr>
                      <tr>
-                        <td> <%=link_to raw("<i class=\"icon-white icon-remove\"> Assinar </i>"), 
-                           assinar_url(id: @abaixo_assinado.id),
-                                                class: "btn btn-info btn-small"%>
+                        <td> 
+                           <%= simple_form_for Assinatura.new, url: {action:"assinar"} do |f| %>
+                           <%= f.hidden_field :abaixo_assinado_id, :value => params[:id]  %>
+                           <%= f.hidden_field :usuario_id, :value => current_usuario.id %>
+                           <%= submit_tag "Assinar",class:"btn btn-info dropdown-toggle icon-white icon-remove" %>
+                           <%end%>
                         </td>
                      </tr>
                   </tbody>

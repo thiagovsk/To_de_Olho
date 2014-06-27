@@ -1,5 +1,4 @@
 class AbaixoAssinadosController < ApplicationController
-  before_action :set_abaixo_assinado, only: [:show, :assinar]
   helper_method :assinaturas_length
 
   def index
@@ -13,12 +12,8 @@ class AbaixoAssinadosController < ApplicationController
   def create
     @abaixo_assinados = AbaixoAssinado.new(abaixo_assinado_params)
     respond_to do |format|
-      if @abaixo_assinados.save
-        if(Assinatura.new(:usuario_id => current_usuario.id,:abaixo_assinado_id => @abaixo_assinados.id).save)
-          format.html { redirect_to @abaixo_assinados, notice: 'Abaixo Assinado criado com sucesso' }
-        else
-          format.html { redirect_to new_abaixo_assinado_path, notice: 'Erro ao atribuir assinatura' }
-        end
+      if @abaixo_assinados.save and Assinatura.new(:usuario_id => current_usuario.id,:abaixo_assinado_id => @abaixo_assinados.id).save
+        format.html { redirect_to @abaixo_assinados, notice: 'Abaixo Assinado criado com sucesso' }
       else
         format.html { render :new }
       end
@@ -26,7 +21,7 @@ class AbaixoAssinadosController < ApplicationController
   end
 
   def assinar
-    @assinatura = Assinatura.new(:usuario_id => current_usuario.id, :abaixo_assinado_id => @abaixo_assinado.id)
+    @assinatura = Assinatura.new(assinatura_params)
     respond_to do |format|
       if @assinatura.save
         format.html { redirect_to home_index_path, notice: 'Assinatura efetuada!' }
@@ -40,18 +35,18 @@ class AbaixoAssinadosController < ApplicationController
     Assinatura.search_by_abaixo_assinado_id(abaixo_assinado_id).length
   end
 
-  def update
-  end
-
   def show
-	
+	  @abaixo_assinado = AbaixoAssinado.find(params[:id])
   end
-
-  def edit
-  end
-
+  
+  def showusuario
+  end 
+  
   def info
     @convenio_id = params[:convenio_id]
+  end
+
+  def update
   end
 
   private
@@ -59,12 +54,8 @@ class AbaixoAssinadosController < ApplicationController
     params.fetch(:abaixo_assinado, {}).permit(:titulo,:destinatario,:termo,:assinaturas,:convenio_id,:usuario_id)
   end
 
-  def set_abaixo_assinado
-    @abaixo_assinado = AbaixoAssinado.find(params[:id])
+  def assinatura_params
+    params.fetch(:assinatura, {}).permit(:abaixo_assinado_id,:usuario_id)
   end
-
-  def showusuario
-    @abaixo_assinado = AbaixoAssinado.find(params[:usuario_id])
-  end 
 
 end

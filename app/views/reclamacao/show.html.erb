@@ -11,7 +11,8 @@
                         <img src="<%=@reclamacoes.foto(:medium) %>">
                         <div class="caption">
                            <h5 class="fa fa-quote-left fa-2x"></h5>
-                           <h4><%=@reclamacoes.descricao %> "</h4></td>
+                           <h4><%=@reclamacoes.descricao %> </h4></td>
+                           <h5 class="fa fa-quote-right fa-2x"></h5>                                 
                         </div>
                      </div>
                   </div>
@@ -92,9 +93,12 @@
                   <%= link_to raw("<i class=\"fa fa-tag\"> Convênio!!</i>"),
                      convenio_path(@reclamacoes.convenio_id), class: "btn btn-primary  btn-small"%>
                   <%= link_to raw("<i class=\"fa fa-facebook-square\"> Compartilhar Reclamação </i>"),
-                     "http://www.facebook.com/sharer.php?u=reclamacao_url(@reclamacoes)",
-                     #"http://www.facebook.com/sharer.php?u=http://localhost:3000/convenios/@convenios_id/"
-                     :target => "_blank" ,class: "btn btn-primary btn-small"%>
+                     "https://www.facebook.com/dialog/feed?                        app_id=1603488076542893
+                     &caption=http://todolho.com.br/reclamacao_url(@reclamacoes)
+                     &link=http://todolho.com.br/reclamacao_url(@reclamacoes)
+                     &redirect_uri=http://todolho.com.br/reclamacao_url(@reclamacoes)
+                     &description= #{@reclamacoes.descricao}
+                     ",:target => "_blank" ,class: "btn btn-primary btn-small"%>
                </div><br>
                <div align="center">
                   <div id="fb-root"></div>
@@ -103,7 +107,7 @@
                         fjs.parentNode.insertBefore(js, fjs); }
                         (document, 'script', 'facebook-jssdk'));
                   </script>
-                  <div class="fb-comments" data-href="http://example.com" data-width="470" data-num-posts="2"></div>
+                  <div class="fb-comments" data-href="http://todolho.com.br/reclamacao_url(@reclamacoes)" data-width="470" data-num-posts="2"></div>
                </div>
             </div>
          </div>

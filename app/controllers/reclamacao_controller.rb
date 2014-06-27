@@ -25,7 +25,7 @@ class ReclamacaoController < ApplicationController
   def destroy
     @reclamacoes.destroy
     respond_to do |format|
-      format.html { redirect_to reclamacoes_path, notice: 'Deletado com sucesso' }
+      format.html { redirect_to home_index_path, notice: 'Reclamação Deletada com sucesso' }
     end
   end
 
@@ -33,7 +33,7 @@ class ReclamacaoController < ApplicationController
   def update
     respond_to do |format|
       if @reclamacoes.update(reclamacao_params)
-        format.html { redirect_to reclamacoes_path, notice: 'Alteração realizada com sucesso' }
+        format.html { redirect_to home_index_path, notice: 'Alteração de reclamação realizada com sucesso' }
       else
         format.html { render :new }
       end
@@ -51,4 +51,3 @@ class ReclamacaoController < ApplicationController
     #Esse problema é intrínseco ao Rails e é solucionado com o fetch
   end
 end
-
