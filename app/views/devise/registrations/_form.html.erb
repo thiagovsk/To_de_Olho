@@ -1,26 +1,26 @@
+<div class="form-divs">
+<div class="border-form-div">
 <h2>Cadastrar Usuário</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name) ,:html => { :multipart => true } ) do |f| %>
   <%= f.error_notification %>
 
 
-    <%= f.input :cpf,  autofocus: true %>
-    <%= f.input :nome %>
-    <%= f.input :login %>
-    <%= f.input :email %>
-    <%= f.input :password , :label => "Senha" %>
-    <%= f.input :password_confirmation , :label => "Confirmar Senha" %>
-
-
-
+    <%= f.text_field :cpf,  autofocus: true,:placeholder => 'CPF' ,:size => 32 %>
+    <%= f.text_field :nome, :placeholder => 'Nome' ,:size => 32%>
+    <%= f.text_field :login,:placeholder => 'Login' ,:size => 32%>
+    <%= f.email_field :email,:placeholder => 'Email' ,:size => 32%>
+    <%= f.password_field :password , :label => "Senha",:placeholder => 'Senha' ,:size => 32%>
+    <%= f.password_field :password_confirmation , :label => "Confirmar Senha", :placeholder => 'Confirmação de Senha' ,:size => 32%>
+    <%= f.file_field :avatar , :label => "Adicione foto", :placeholder => 'Imagem'%>
+    <%= f.button :submit , :class => 'btn btn-info btn margin' , :id => 'criar-usuario' %>
 
       <%= link_to raw("<i class=\"icon-white icon-remove\"> Cancelar </i>"),
                         root_path ,
-                        class: "btn  btn-danger"%>
+                        class: "btn  btn-danger margin"%>
 
-      <%= button_tag :class => 'btn-info btn' , :id => 'criar-usuario' do %>
-                 Cadastrar Usuário
-            <% end %>
 
 <% end %>
+</div>
+</div>
 

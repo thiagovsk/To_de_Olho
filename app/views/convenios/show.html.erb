@@ -1,4 +1,10 @@
-<h1>Dados do Convênio</h1>
+<div class="row">
+      <div class="container">
+         <div class="panel panel-default">
+            <div class="panel-body">
+<div class="page-header">
+   <h1>Dados do Convênio</h1>
+</div>
 <div class="panel-group" id="accordion">
    <div class="panel panel-default">
       <div class="panel-heading">
@@ -153,8 +159,29 @@
       </div>
    </div>
    <br>
-   <%= link_to raw("<i class=\"icon-white icon-arrow-left\"> Voltar </i>"),
+   <%= link_to raw("<i class=\"fa fa-arrow-circle-left\"> Voltar aos Convênios </i>"),
       convenios_url,:target => "_self",
       class: "btn btn-primary  btn-small"%>
-   </table>                           
+
+   <%= link_to raw("<i class=\"fa fa-exclamation-triangle\"> Reclamar!! </i>"),new_reclamacao_path(:convenio_id => @convenio.id), class: "btn btn-primary  btn-small"%>
+   
+   <%= link_to raw("<i class=\"fa fa-unlock\"> Reclamações?</i>"),
+      associate_path(@convenio), class: "btn btn-primary  btn-small"%>
+
+   <%= link_to raw("<i class=\"fa fa-facebook-square\"> Compartilhar </i>"),
+      "http://www.facebook.com/sharer.php?u=convenios_url(@convenios)",
+      #"http://www.facebook.com/sharer.php?u=http://localhost:3000/convenios/@convenios_id/"
+      :target => "_blank" ,class: "btn btn-primary btn-small"%>
+   
+   <%= link_to raw("<i class=\"glyphicon glyphicon-exclamation-sign\"> Criar abaixo assinado </i>"),
+
+      info_path(:convenio_id => @convenio.id),
+      class: "btn btn-primary  btn-small"%>
+   </table>
+</div>
+</div>
+</div>
+            </div>
+         </div>
+      </div>
 </div>

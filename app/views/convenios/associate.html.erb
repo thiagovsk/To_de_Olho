@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="panel panel-default"%>
+        <div class="panel-body">
+
+<div class="page-header">
+   <h1>Reclamações sobre o convênio</h1>
+</div>
+	<table id="reclamacao" class="table table-striped">
+		<thead> 
+			<tr>
+				<td>Usuario</td>
+				<td>Reclamação</td>
+				<td>Imagem</td>
+			</tr>
+		</thead>
+	 
+		<tbody>
+			<% @reclamacoes = Reclamacao.where(:convenio_id => "#{@convenio.id}")%>
+			<% @reclamacoes.each do |reclamacao| %>
+
+			<tr> 
+				<td> <%= Usuario.find(reclamacao.usuario_id).nome %>  </td>
+				<td> <%= reclamacao.descricao %>  </td>
+				<td> <%= image_tag reclamacao.foto(:medium) %> </td>	
+			</tr>
+			
+			<% end %>
+		</tbody>
+	</table>
+
+	<%= link_to raw("<i class=\"fa fa-arrow-circle-left\"> Voltar ao Convênio </i>"),
+      convenio_path(@convenio),class: "btn btn-primary  btn-small"%>
+    <%= link_to raw("<i class=\"fa fa-exclamation-triangle\"> Reclamar!! </i>"),
+      new_reclamacao_path(:convenio_id => @convenio.id), class: "btn btn-primary  btn-small"%>
+
+		</div>
+	</div>
+</div>

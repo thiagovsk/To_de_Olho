@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# paperclip for upload photos
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 # Cancancan Authorization Gem
 gem 'cancancan', '~> 1.8'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -23,7 +25,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
-
+gem 'high_voltage'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
@@ -35,8 +37,7 @@ gem 'rails_best_practices'
 
 gem 'simple_form'
 
-gem 'twitter-bootstrap-rails'
-
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git', :branch => 'bootstrap3'
 gem 'rails-i18n'
 
 gem 'jquery-datatables-rails'
@@ -47,11 +48,19 @@ gem 'authority'
 
 gem 'omniauth'
 
-gem 'omniauth-facebook' 
+gem 'omniauth-facebook'
 
 gem 'thin'
 
 gem 'rolify'
+
+gem 'therubyracer'
+
+gem 'less-rails'
+
+gem 'cucumber', '~> 1.3.15'
+
+gem "cucumber-rails-training-wheels", :group => :test
 
 group :development, :test do
   gem 'rspec-rails'
@@ -63,7 +72,12 @@ group :test do
   gem 'faker'
   gem 'guard-rspec'
   gem 'launchy'
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
 end
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -75,4 +89,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-

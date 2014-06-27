@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="panel panel-default"%>
+        <div class="panel-body">
+
+<div class="page-header">
+   <h1>Minhas Reclamações</h1>
+</div>
+   <table id="reclamacao" class="table table-striped">
+      <thead> 
+         <tr>
+            <td>Reclamação</td>
+            <td>Descricao do convenio</td>
+            <td>Numero Convenio</td>
+            <td>Imagem</td>
+         </tr>
+      </thead>
+    
+      <tbody>
+         <% @reclamacoes = Reclamacao.where(:usuario_id => "#{@usuario.id}")%>
+         <% @reclamacoes.each do |reclamacao| %>
+
+       
+         <tr> 
+            <td> <%= reclamacao.descricao %>  </td>
+            <td> <%= Convenio.find(reclamacao.convenio_id).situacaoconvenio %>  </td>
+            <td> <%= Convenio.find(reclamacao.convenio_id).numeroconvenio %> </td>
+            <td> <img src="<%=reclamacao.foto(:medium) %>" class="img-thumbnail"></td>  
+         </tr>
+         
+         <% end %>
+      </tbody>
+   </table>
+
+   <%= link_to raw("<i class=\"fa fa-arrow-circle-left\"> Voltar </i>"),
+      home_path,class: "btn btn-primary  btn-small"%>
+      </div>
+   </div>
+</div>

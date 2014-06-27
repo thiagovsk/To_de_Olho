@@ -5,7 +5,11 @@ require 'coveralls'
 Coveralls.wear!
 
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start do
+  add_filter "/test/"
+  add_filter "/spec/"
+  add_filter "/config/"
+end
 class ActiveSupport::TestCase
 
 

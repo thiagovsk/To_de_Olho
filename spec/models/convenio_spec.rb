@@ -8,12 +8,12 @@ describe Convenio do
   end
 
   it "Pesquisa um convênio por UF" do
-  	Convenio.create(:uf => "DISTRITO FEDERAL")
-      results = Convenio.search('DISTRITO FEDERAL')
+    Convenio.create(:uf => "DISTRITO FEDERAL")
+    results = Convenio.search('DISTRITO FEDERAL')
 
-      expect(results.count).to eq(1)
+    expect(results.count).to eq(1)
   end
 
+  it { should have_many(:reclamacao) }
+
 end
-
-

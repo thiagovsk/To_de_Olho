@@ -6,7 +6,7 @@ jQuery ->
   bScrollCollapse: true
   bProcessing: true
   bDeferRender: true
-  oLanguage: 
+  oLanguage:
   	sInfo: "Exibindo _START_  à _END_  de _TOTAL_ registros"
   	sInfoEmpty: "Exibindo 0 à 0 de 0 entradas"
   	sInfoFiltered: "(filtrado de um total de MAX registros)"

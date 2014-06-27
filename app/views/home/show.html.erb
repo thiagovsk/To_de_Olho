@@ -1,0 +1,103 @@
+ <div class="container">
+          <div class="panel panel-default"%>
+           <div class="panel-body">
+
+<div class="page-header">
+   
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          TOP 5 MAIS CAROS
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+        
+        
+</div>
+<table class="table table-striped" id="top_valor" >
+
+   <thead>
+    <tr>
+        <th>Número</th>
+        <th>Uf</th>
+        <th>Município</th>
+        <th>Situação</th>
+        <th>Descrição</th>
+        <th>Orgão Superior</th>
+        <th>Valor</th>
+        
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @top_valor.each do |convenio| %>
+      <tr>
+        <td><%= convenio.numeroconvenio %></td>
+        <td><%= convenio.uf %></td>
+        <td><%= convenio.nomemunicipio %></td>
+        <td><%= convenio.situacaoconvenio %></td>
+        <td><%= convenio.objetoconvenio %></td>
+        <td><%= convenio.nomeorgaosuperior %></td>
+        <td><%= convenio.valorconvenio %></td>
+        
+        
+        
+      </tr>
+    <% end %>
+</tbody>
+</table>
+
+       </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          TOP 5 MAIS DEMORADOS
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse in">
+      <div class="panel-body">
+
+<table class="table table-striped" id="top_data" >
+
+
+  <thead>
+    <tr>
+        <th>Número</th>
+        <th>Uf</th>
+        <th>Município</th>
+        <th>Situação</th>
+        <th>Descrição</th>
+        <th>Data Inicio</th>
+        <th>Data Fim</th>
+        
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @top_data.each do |convenio| %>
+      <tr>
+        <td><%= convenio.numeroconvenio %></td>
+        <td><%= convenio.uf %></td>
+        <td><%= convenio.nomemunicipio %></td>
+        <td><%= convenio.situacaoconvenio %></td>
+        <td><%= convenio.objetoconvenio %></td>
+        <td><%= convenio.datainiciovigencia %></td>
+        <td><%= convenio.datafimvigencia %></td>
+        
+        
+        
+      </tr>
+    <% end %>
+</tbody>
+</table>
+      </div>
+    </div>
+  </div>

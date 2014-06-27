@@ -1,12 +1,10 @@
-require 'spec_helper'
-=begin
-describe "Usuarios" do
+require 'rails_helper'
+
+RSpec.describe "Usuarios", :type => :request do
   describe "GET /usuarios" do
     it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
       get usuarios_path
-      response.status.should be(200)
+      expect(response.status).to be(302)
     end
   end
 end
-=end

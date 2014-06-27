@@ -16,6 +16,9 @@ class ConveniosController < ApplicationController
     end
   end
 
+  def associate
+    @reclamacoes = Reclamacao.new
+  end
 
   def new
     @convenios = Convenio.new
@@ -38,5 +41,4 @@ class ConveniosController < ApplicationController
     redirect_to convenios_url, notice:  "Convenios importados com sucesso"
 
   end
-
-end
+ end

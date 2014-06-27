@@ -1,0 +1,61 @@
+<div class="row">
+<div class="container">
+<div class="panel panel-default">
+<div class="panel-body">
+   <div class="page-header">
+      <h1>Dados do Abaixo assinado</h1>
+   </div>
+   <div class="panel-group" id="accordion">
+      <div class="panel panel-default">
+         <div class="panel-heading">
+            <h4 class="panel-title">
+               <a data-toggle="collapse" data-parent="#accordion" href="#collapseDescricao">
+               Descrição do Abaixo assinado
+               </a>
+            </h4>
+         </div>
+         <div id="collapseDescricao" class="panel-collapse collapse in">
+            <div class="panel-body ">
+               <table class="table">
+                  <tbody>
+                     <tr>
+                        <td class="strong"> Autor:</td>
+                        <td><%= @abaixo_assinado.usuario.nome %>  </td>
+                     </tr>
+                     <tr>
+                        <td class="strong"> Convenio Relacionado:</td>
+                        <td><%= @abaixo_assinado.convenio.numeroconvenio %>  </td>
+                     </tr>
+                     <tr>
+                        <td class="strong"> Autor:</td>
+                        <td><%= @abaixo_assinado.destinatario%>  </td>
+                     </tr>
+                     <tr>
+                        <td class="strong"> Título:</td>
+                        <td><%= @abaixo_assinado.titulo%>  </td>
+                     </tr>
+                     <tr>
+                        <td class="strong"> Termo:</td>
+                        <td><%= @abaixo_assinado.termo%>  </td>
+                     </tr>
+                     <tr>
+                        <td class="strong"> Data:</td>
+                        <td><%=@abaixo_assinado.created_at.to_s(:abaixo_assinado)%></td>
+                     </tr>
+                     <tr>
+                        <td> 
+                           <%= simple_form_for Assinatura.new, url: {action:"assinar"} do |f| %>
+                           <%= f.hidden_field :abaixo_assinado_id, :value => params[:id]  %>
+                           <%= f.hidden_field :usuario_id, :value => current_usuario.id %>
+                           <%= submit_tag "Assinar",class:"btn btn-info dropdown-toggle icon-white icon-remove" %>
+                           <%end%>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+      </table>
+   </div>
+</div>

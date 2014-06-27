@@ -1,28 +1,27 @@
+<div class="form-divs">
+<div class="border-form-div">
 <div class="row">
-    <div class="page-header espacamento">
-      <div class="container white ">
-      <div  >
         <h2>Editar <%= resource_name.to_s.humanize  %></h2>
-        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, :multipart => true }) do |f| %>
         <%= f.error_notification %>
-        <div class="form-inputs espacamento">
-          <%= f.input :email, required: true, autofocus: true %>
+            <img src="<%= @usuario.avatar.url(:medium) %>" class="img-circle">
+              <%= f.file_field :avatar %>
+           <br>
+          <%= f.email_field :email, required: true, autofocus: true ,:placeholder => 'Email' %>
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
           <% end %>
-          <%= f.input :password, autocomplete: "off", hint: "Deixe em branco caso não queira alterar", required: false, :label => "Nova Senha" %>
-          <%= f.input :password_confirmation, required: false, :label => "Confirmar nova senha" %>
-          <%= f.input :current_password, hint: "Digite sua senha antiga para confirmar a alteração", required: true, :label => "Senha Atual" %>
-        </div>
-        
+          <%= f.password_field :password, autocomplete: "off", hint: "Deixe em branco caso não queira alterar", required: false, :label => "Nova Senha",:placeholder => 'Nova Senha' %>
+          <%= f.password_field :password_confirmation, required: false, :label => "Confirmar nova senha" ,:placeholder => 'Nova Senha' %>
+          <%= f.password_field :current_password, required: true, :label => "Senha Atual",:placeholder => 'Senha Antiga' %>
           <%= button_tag :class => 'btn-info btn' , :id => 'Editar Usuário' do %>
           Editar Usuário
           <% end %>
                <% end %>
         <h3>Cancelar Minha conta</h3>
         <p>Deseja excluir seu usario? <%= link_to "Excluir conta", registration_path(resource_name), data: { confirm: "Tem certeza?" }, method: :delete %></p>
-      </div>
-    </div>
-  </div>
+
+</div>
+</div>
 </div>
 

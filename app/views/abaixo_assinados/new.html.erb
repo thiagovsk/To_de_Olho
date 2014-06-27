@@ -1,0 +1,14 @@
+<div class="form-divs">
+<div class="border-form-div">
+<%= simple_form_for @abaixo_assinado, url: {action:"create"} do |f| %>
+	<%= f.input :titulo , label: "Titulo do Seu Abaixo Assinado", as: :string %>
+	<%= f.input :convenio_id, placeholder: params[:convenio_id],label: "Numero do Convenio Relacionado", as: :integer %>
+	<%= f.input :destinatario, label: "Publico Alvo", as: :string %>
+	<%= f.input :termo, label: "Termos Do Documento", as: :text %>
+	<%= f.hidden_field :convenio_id, :value => params[:convenio_id]  %>
+	<%= f.hidden_field :usuario_id, :value => current_usuario.id %>
+	<%= submit_tag "Criar Abaixo-Assinado",class:"btn btn-primary dropdown-toggle icon-white icon-user" %>
+<%end%>
+</div>
+</div>
+
