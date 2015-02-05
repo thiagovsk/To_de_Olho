@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # paperclip for upload photos
-gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem "paperclip", :git => "http://github.com/thoughtbot/paperclip.git"
 # Cancancan Authorization Gem
 gem 'cancancan', '~> 1.8'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -37,7 +37,7 @@ gem 'rails_best_practices'
 
 gem 'simple_form'
 
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git', :branch => 'bootstrap3'
+gem 'twitter-bootstrap-rails', :git => 'http://github.com/seyhunak/twitter-bootstrap-rails.git', :branch => 'bootstrap3'
 gem 'rails-i18n'
 
 gem 'jquery-datatables-rails'
