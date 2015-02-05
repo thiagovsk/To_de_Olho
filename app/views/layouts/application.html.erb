@@ -48,9 +48,11 @@
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
              <li><%= link_to "Inicio", home_index_path  %></li>
+             <% if usuario_signed_in? %>
             <li><%= link_to "Todos Os Convenios", convenios_path  %></li>
             <li><%= link_to "Reclamações" , reclamacao_index_path  %></li>
             <li><%= link_to "Abaixo assinados" , abaixo_assinados_path  %></li>
+            <% end %>
           </ul>
            <% if usuario_signed_in? %>
           <ul class="nav navbar-nav navbar-right">
