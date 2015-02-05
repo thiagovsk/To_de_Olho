@@ -2,20 +2,27 @@ class AbaixoAssinadosController < ApplicationController
   helper_method :assinaturas_length
 
   def index
-  	@abaixo_assinados = AbaixoAssinado.all
+    @abaixo_assinados = AbaixoAssinado.all
   end
 
   def new
-  	@abaixo_assinado = AbaixoAssinado.new
+    @abaixo_assinado = AbaixoAssinado.new
   end
 
   def create
     @abaixo_assinados = AbaixoAssinado.new(abaixo_assinado_params)
-    respond_to do |format|
-      if @abaixo_assinados.save and Assinatura.new(:usuario_id => current_usuario.id,:abaixo_assinado_id => @abaixo_assinados.id).save
-        format.html { redirect_to @abaixo_assinados, notice: 'Abaixo Assinado criado com sucesso' }
-      else
-        format.html { render :new }
+
+    if @abaixo_assinados.convenio_id.blank?
+      redirect_to abaixo_assinados_path
+      flash[:notice] =  'Assinado criado com sucesso'
+    else
+      respond_to do |format|
+        if @abaixo_assinados.save
+          Assinatura.create(:usuario_id => current_usuario.id,:abaixo_assinado_id => @abaixo_assinados.id)
+          format.html { redirect_to @abaixo_assinados, notice: 'Abaixo Assinado criado com sucesso' }
+        else
+          format.html { render :new }
+        end
       end
     end
   end
@@ -36,12 +43,12 @@ class AbaixoAssinadosController < ApplicationController
   end
 
   def show
-	  @abaixo_assinado = AbaixoAssinado.find(params[:id])
+    @abaixo_assinado = AbaixoAssinado.find(params[:id])
   end
-  
+
   def showusuario
-  end 
-  
+  end
+
   def info
     @convenio_id = params[:convenio_id]
   end
