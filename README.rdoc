@@ -1,4 +1,4 @@
-== To de Olho.
+== To de Olho
 
 Projeto feito na disciplina de metodologias e desenvolvimento de software e gestão de projetos e portifólios pela universidade de brasília, curso egenharia de software.
 
@@ -17,6 +17,9 @@ Para subir uma instância do tô de olho basta :
 Após as dependências e o projeto clonado basta:
 
 cd To_de_Olho
+
 bundle install
+
 rake db:setup
+
 rails s
