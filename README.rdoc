@@ -1,28 +1,22 @@
-== README
+== To de Olho.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projeto feito na disciplina de metodologias e desenvolvimento de software e gestão de projetos e portifólios pela universidade de brasília, curso egenharia de software.
 
-Things you may want to cover:
+O software está disponível em www.todolho.com.br
 
-* Ruby version
+Para subir uma instância do tô de olho basta :
 
-* System dependencies
+* Ruby >= 1.9 ( Recomendamos utilizar o RVM para gerenciar suas versões do ruby)
 
-* Configuration
+* Pacote build-essentials
 
-* Database creation
+* Pacote rmagick (essencial para postagem de fotos)
 
-* Database initialization
+* Pacote nodejs
 
-* How to run the test suite
+Após as dependências e o projeto clonado basta:
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+cd To_de_Olho
+bundle install
+rake db:setup
+rails s
